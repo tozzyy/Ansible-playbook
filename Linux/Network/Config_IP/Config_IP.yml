@@ -1,0 +1,44 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  vars_files: ./network_vars.yml
+  tasks:
+    #Config Service Interface
+    - include_role:
+        name: linux-system-roles.network
+      vars:
+        network_connections:
+          - name: "{{ item.eth_name }}"
+            #state: up
+            type: ethernet
+            ip:
+              address: "{{ item.IP }}"
+              dhcp4: no
+              gateway4: "{{ item.gateway }}"
+              auto6: no
+              #dhcp4_send_hostname: no
+              #dns:
+              #  - "{{ item.dns }}"
+              route:
+                "{{ item.route }}"
+      with_items: "{{ network_service }}"
+    #Config Management Interface
+    - include_role:
+        name: linux-system-roles.network
+      vars:
+        network_connections:
+          - name: "{{ item.eth_name }}"
+            #state: up
+            type: ethernet
+            ip:
+              address: "{{ item.IP }}"
+              dhcp4: no
+              auto6: no
+              #dhcp4_send_hostname: no
+              #dns:
+              #  - "{{ item.dns }}"
+              route:
+                "{{ item.route }}"
+      with_items: "{{ network_mnt }}"
+    - name: Restart SSH services
+      service: name=network state=restarted
