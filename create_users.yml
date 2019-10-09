@@ -1,0 +1,86 @@
+---
+- name: Create Users on Linux servers
+  hosts: all
+  ignore_errors: yes
+  become: yes
+  become_method: su
+  become_user: rootkb
+  tasks:
+  - name: Create Groups
+    group:
+      name="{{ item.groupname }}"
+      gid="{{ item.gid }}"
+      state=present
+    with_items:
+      - { groupname: 'unixgrp', gid: '1000' }
+      - { groupname: 'isadmin', gid: '1001' }
+      - { groupname: 'dbagrp', gid: '1002' }
+      - { groupname: 'mdwgrp', gid: '1003' }
+      - { groupname: 'toolsgrp', gid: '1004' }
+  - name: Create Users and update password for users
+    user:
+      name="{{ item.username }}"
+      group="{{ item.group }}"
+      append=yes
+      shell=/bin/bash
+      createhome=yes
+      comment="{{ item.comment }}"
+      password="{{ item.password }}"
+      state=present
+    with_items:
+      - { username: 'useros',group: 'unixgrp',comment: 'User Account for System Administrator;KBANK',password: '$6$Wije.ySv$MSciHw1jZ0edb9ZHsMTW8EcPaSoSBPO8FXKUf2dlzuybS7ooBc5jiNeZR8UId2KxkqQOIDi.Qjw9UAf1bMUTx0' }
+      - { username: 'userkb',group: 'isadmin',comment: 'User Account For CyberArk;Head of IT Security Infrastructure Management;KBANK-IF',password: '$6$HWaL4v5I$bA/xwrrO0wTR6tROgv/jzmsUdJguQjSVEyQph/tfwkHYFhaB623PjxclnxFZdz9vlKXO3wxANRf.bPMd4NT2s1' }
+      - { username: 'userdba',group: 'dbagrp',comment: 'User Account For Database Administrator;KBANK',password: '$6$NhGznkDU$xM/kKdFUCfM5/tQ9gw3dGvqXwJfqlqa2fktDEpaJC1euPMmV2unGeSOvI82Y1R2m4JK9rwmnGXUMKXY0CQV4g1' }
+      - { username: 'usermdw',group: 'mdwgrp',comment: 'User Account For Middleware Administrator;KBANK',password: '$6$3RcYyXrU$4XfnDZazxCv8HeylxJlLQMO63T4CDahMXWCA0Vo.cR4pwsAixq0KMkPcEl6FUtWyfFD24VBINE8JlH.lPUS020' }
+      - { username: 'usertool',group: 'toolsgrp',comment: 'User Account For Tools Administrator;KBANK',password: '$6$0gf1ck8X$ZEEqfLWN8KZPH//1O77XxfunKRbl09blC3GjhgI/ask.Iw6ufG47uoYzihmfFFN.H9Soll5Q.YgeKlyy64vIO0' }
+#      - { username: 'root',group: 'root',comment: 'Super User;Head of IT Security Infrastructure Management;KBANK-IF',password: '$6$WIdD.jRQ$3ui6mha9zwPTNH4Jr.IVeMu1PNZOfbI4DC1b6jyxFsi5wNm1niose4w4j8cogAZZn9ktkwLqnodYvIzcdMQIM1' }
+      - { username: 'rootkb',group: 'root',comment: 'Root User For KBANK;Head of IT Security Infrastructure Management;KBANK-IF',password: '$6$DBksF9Kd$zi0LnaZgHSLZEG4ssXd2ioKRhRAUhDA77ppIZLemtPolYi01P.gh188MKn5VcHyPmJcTkmjropPvetbEDhzqb.' }
+      - { username: 'rootsm',group: 'root',comment: 'Root User For KBANK;Head of IT Security Infrastructure Management;KBANK-IF;KBANK-IF',password: '$6$1VjD7xnA$XohhzdM2FW2w9FwMea0v60q1ycO6/43NEcJHUAiX1Ga/bQqOZE0kjkJIj7YWg/J.KQaxuCCI.Y8L0S3ZEQZsW.' }
+  - name: Change group id on users "rootkb"
+    lineinfile:
+      dest: /etc/passwd
+      regexp: '^rootkb'
+      line: rootkb:x:0:0:Root User For KBANK;Head of IT Security Infrastructure Management;KBANK-IF:/home/rootkb:/bin/bash
+      backrefs: yes
+  - name: Change group id on users "rootsm"
+    lineinfile:
+      dest: /etc/passwd
+      regexp: '^rootsm'
+      line: rootsm:x:0:0:Root User For KBANK;Head of IT Security Infrastructure Management;KBANK-IF:/home/rootsm:/bin/bash
+      backrefs: yes
+#  - name: Add users to AllowUsers in file /etc/ssh/sshd_config
+#    replace:
+#      backup: yes
+#      dest: /etc/ssh/sshd_config
+#      regexp: '^(AllowUsers(?!.*\b{{ item.username }}\b).*)$'
+#      replace: '\1 {{ item.username }}'
+#    with_items:
+#      - {username: 'useros'}
+#      - {username: 'userkb'}
+#      - {username: 'userdba'}
+#      - {username: 'usermdw'}
+#      - {username: 'usertool'}
+  - name: Add Group to AllowGroups in file /etc/ssh/sshd_config
+    replace:
+      backup: yes
+      dest: /etc/ssh/sshd_config
+      regexp: '^(AllowGroups(?!.*\b{{ item.groupname }}\b).*)$'
+      replace: '\1 {{ item.groupname }}'
+    with_items:
+      - {groupname: unixgrp}
+      - {groupname: isadmin}
+      - {groupname: dbagrp}
+      - {groupname: mdwgrp}
+      - {groupname: toolsgrp}
+  - name: Change Owner path rootkb,rootsm
+    file:
+      path: "{{ item.directory }}"
+      state: directory
+      recurse: yes
+      owner: root
+      group: root
+    with_items:
+      - {directory: /home/rootsm}
+      - {directory: /home/rootkb}
+  - name: Restart SSH services
+    service: name=sshd state=restarted
