@@ -1,0 +1,74 @@
+---
+- name: Create Users on AIX servers
+  hosts: all
+  ignore_errors: yes
+  #strategy: debug
+  gather_facts: no
+  become: yes
+  become_method: su
+  become_user: root
+  tasks:
+  - name: Create Groups
+    shell: |
+      mkgroup "{{ item.groupname }}"
+    with_items:
+      - { groupname: 'aixadmin' }
+      - { groupname: 'mdwadmin' }
+      - { groupname: 'dbadmin' }
+      - { groupname: 'tooladm' }
+  - name: Create Users and update password for users
+    user:
+      name="{{ item.username }}"
+      group="{{ item.group }}"
+      append=yes
+      shell=/usr/bin/ksh
+      createhome=yes
+      comment="{{ item.comment }}"
+      password="{{ item.password }}"
+      state=present
+    with_items:
+      - { username: 'userkb',group: 'aixadmin',comment: 'User Account for Application Team;KBANK',password: '{ssha256}06$pD5X7Bft8H2Hf8Gy$76ogGerk7kPrXDH8eYXEGjEoONpllpdRQouY1urU..t' }
+      - { username: 'userdba',group: 'dbadmin',comment: 'User Account For CyberArk;Head of IT Security Infrastructure Management;KBANK-IF',password: '{ssha256}06$vFUeAW1HbzFuRHCO$XWapFsCzy/7geeocfj3E4/o.3XFT8Lye.Mw1r2Kc.2V' }
+      - { username: 'usermdw',group: 'mdwadmin',comment: 'User Account For Middleware Administrator;KBANK',password: '{ssha256}06$5..GJKVvUmMRDDzv$Mf9Lu1vPsua7TS4EFB2wNb19spPu0GsruWmedYh1.II' }
+      - { username: 'usertool',group: 'tooladm',comment: 'User Account For Tools Administrator;KBANK',password: '{ssha256}06$CeyzItJcAtTwHE57$FXGzgdOKE6lF0bSOcLZ55MqmSrC10d.xxLbB.Jcf.AP' }
+  - name: Create Users "root" and update password for users
+    user:
+      name="{{ item.username }}"
+      group="{{ item.group }}"
+      append=yes
+      shell=/usr/bin/ksh
+      createhome=yes
+      comment="{{ item.comment }}"
+      password="{{ item.password }}"
+      state=present
+    with_items:
+      - { username: 'rootkb',group: 'system',comment: 'Root User For KBANK;Head of IT Security Infrastructure Management;KBANK-IF',password: '{ssha256}06$w0eVsIf8fMoEGdWZ$7R71ySYRHo3XG7r7w2BE35uAKj3pYU8com6szNNI.IM' }
+      - { username: 'rootsm',group: 'system',comment: 'Root User For KBANK;Head of IT Security Infrastructure Management;KBANK-IF',password: '{ssha256}06$W75sHwRsBxxnPR0f$CUst0TCQ7pxDs0s8sRT0G0NOgCFGqKfBFipToP6A..y' }
+  - name: Change group id on users "rootkb"
+    lineinfile:
+      dest: /etc/passwd
+      regexp: '^rootkb'
+      line: rootkb:!:0:0:Root User For KBANK;Head of IT Security Infrastructure Management;KBANK-IF:/home/rootkb:/usr/bin/ksh
+      backrefs: yes
+  - name: Change group id on users "rootsm"
+    lineinfile:
+      dest: /etc/passwd
+      regexp: '^rootsm'
+      line: rootsm:!:0:0:Root User For KBANK;Head of IT Security Infrastructure Management;KBANK-IF:/home/rootsm:/usr/bin/ksh
+      backrefs: yes
+  - name: Change Parameter Users
+    shell: |
+      chuser rlogin=true login=true "{{ item.username }}"
+      pwdadm -c "{{ item.username }}"
+    with_items:
+      - { username: 'userkb'}
+      - { username: 'userdba'}
+      - { username: 'usermdw'}
+      - { username: 'usertool'}
+  - name: Change Parameter Users
+    shell: |
+      chuser su=true sugroups="{{ item.groupname }}" "{{ item.username }}"
+      pwdadm -f NOCHECK "{{ item.username }}"
+    with_items:
+      - { username: 'rootkb', groupname: 'aixadmin' }
+      - { username: 'rootsm', groupname: 'aixadmin,dbadmin,mdwadmin,tooladm'}
