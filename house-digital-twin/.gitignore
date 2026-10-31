@@ -1,0 +1,14 @@
+node_modules/
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+.env*
+
+# Rendered drawing sheets contain personal data (title blocks) - generate locally
+public/sheets/*
+!public/sheets/.gitkeep
+
+# Never commit the source drawings
+*.pdf
+__pycache__/

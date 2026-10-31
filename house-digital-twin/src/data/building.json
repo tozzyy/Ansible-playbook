@@ -1,0 +1,2699 @@
+{
+ "project": "Interactive 3D House Digital Twin - RC 2-storey residence (Phrae)",
+ "units": "metre",
+ "coordinateSystem": {
+  "origin": "Intersection of grid 1 and grid A'",
+  "x": "Along numeric grids (1 -> 5\"), positive = increasing grid number (right on AR-08)",
+  "y": "Along letter grids (A' -> F), positive = towards F (down on AR-08)",
+  "z": "Absolute level, 0.00 = project datum ±0.00 (ระดับอ้างอิง)"
+ },
+ "north": {
+  "source": [
+   {
+    "sheet": "AR-07",
+    "pdfPage": 2,
+    "note": "North arrow + building orientation on site plan"
+   }
+  ],
+  "measured": {
+   "northArrowPageVector": [
+    6.72,
+    -115.56
+   ],
+   "buildingYAxisPageAngleDeg": -37.5,
+   "method": "North arrow line (172.08,195.80)->(178.80,80.24)pt. Building/garage long axis (plan +Y, A->F) runs to the upper-right on AR-07 at -37.5deg (dominant line family 142.3-143.3deg). No-mirror check: garage lands beside the road frontage; a mirrored fit lands in the setback zone."
+  },
+  "status": "unverified",
+  "note": "Derived, +/-1deg. Please confirm on AR-07 before using for sun/CCTV studies.",
+  "planVector": [
+   0.757,
+   0.654
+  ],
+  "northClockwiseFromSheetUpDeg": 130.8,
+  "planPlusYBearingDeg": 49.2
+ },
+ "levels": [
+  {
+   "id": "DATUM",
+   "name": "±0.00 ระดับอ้างอิง",
+   "z": 0.0,
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-11",
+     "pdfPage": 6
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7
+    }
+   ]
+  },
+  {
+   "id": "GARAGE",
+   "name": "พื้นโรงจอดรถ / ห้องเก็บของ (FA1/F1 +0.00)",
+   "z": 0.0,
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "room tags โรงจอดรถ FA1 +0.00, ห้องเก็บของ F1 +0.00"
+    }
+   ]
+  },
+  {
+   "id": "FFL1",
+   "name": "±0.65 ระดับพื้นชั้น 1",
+   "z": 0.65,
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-11",
+     "pdfPage": 6
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7
+    },
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "room tags F1 +0.65"
+    }
+   ]
+  },
+  {
+   "id": "WET1",
+   "name": "พื้นห้องน้ำ/ครัวไทย/ซักล้าง/เฉลียง ชั้น 1 (+0.55)",
+   "z": 0.55,
+   "status": "conflict",
+   "issues": [
+    "ISS-04"
+   ],
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "F2 +0.55"
+    }
+   ]
+  },
+  {
+   "id": "GARAGE_ROOF",
+   "name": "หลังคาน/พื้นหลังคา โรงจอดรถ (+3.70)",
+   "z": 3.7,
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "Beams B5/B6 +3.70 over garage D-F"
+    }
+   ]
+  },
+  {
+   "id": "BEAM2",
+   "name": "หลังคานชั้น 2 (+4.10)",
+   "z": 4.1,
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "Beam tags B?+4.10"
+    }
+   ]
+  },
+  {
+   "id": "WET2",
+   "name": "พื้นห้องน้ำ ชั้น 2 (+4.15)",
+   "z": 4.15,
+   "status": "conflict",
+   "issues": [
+    "ISS-17"
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "F2 +4.15"
+    }
+   ]
+  },
+  {
+   "id": "FFL2",
+   "name": "±4.25 ระดับพื้นชั้น 2",
+   "z": 4.25,
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-11",
+     "pdfPage": 6
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7
+    },
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4
+    }
+   ]
+  },
+  {
+   "id": "ROOF_BEAM",
+   "name": "±7.35 ระดับหลังคาน ชั้นหลังคา",
+   "z": 7.35,
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "4.25 + 3.10 = 7.35; 1.15 to +8.50"
+    }
+   ]
+  },
+  {
+   "id": "WALL_PLATE",
+   "name": "±8.50 ระดับหลังอะเส",
+   "z": 8.5,
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-11",
+     "pdfPage": 6
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7
+    }
+   ]
+  },
+  {
+   "id": "RIDGE",
+   "name": "ระดับหลังอกไก่",
+   "z": null,
+   "status": "conflict",
+   "issues": [
+    "ISS-02"
+   ],
+   "values": [
+    {
+     "z": 11.07,
+     "sheet": "AR-11",
+     "pdfPage": 6
+    },
+    {
+     "z": 10.79,
+     "sheet": "AR-12",
+     "pdfPage": 7
+    }
+   ],
+   "sources": [
+    {
+     "sheet": "AR-11",
+     "pdfPage": 6
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7
+    }
+   ]
+  }
+ ],
+ "grids": {
+  "x": [
+   {
+    "name": "1",
+    "pos": 0.0,
+    "detectedOn": {
+     "AR-08": true,
+     "AR-09": true,
+     "ST-04": true
+    },
+    "status": "verified",
+    "sources": [
+     {
+      "sheet": "AR-08",
+      "pdfPage": 3,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "AR-09",
+      "pdfPage": 4,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "ST-04",
+      "pdfPage": 16,
+      "note": "grid line detected"
+     }
+    ]
+   },
+   {
+    "name": "2",
+    "pos": 2.5,
+    "detectedOn": {
+     "AR-08": true,
+     "AR-09": true,
+     "ST-04": true
+    },
+    "status": "verified",
+    "sources": [
+     {
+      "sheet": "AR-08",
+      "pdfPage": 3,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "AR-09",
+      "pdfPage": 4,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "ST-04",
+      "pdfPage": 16,
+      "note": "grid line detected"
+     }
+    ]
+   },
+   {
+    "name": "2\"",
+    "pos": 4.0,
+    "detectedOn": {
+     "AR-08": true,
+     "AR-09": true,
+     "ST-04": true
+    },
+    "status": "verified",
+    "sources": [
+     {
+      "sheet": "AR-08",
+      "pdfPage": 3,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "AR-09",
+      "pdfPage": 4,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "ST-04",
+      "pdfPage": 16,
+      "note": "grid line detected"
+     }
+    ]
+   },
+   {
+    "name": "2a",
+    "pos": 5.5,
+    "detectedOn": {
+     "AR-08": false,
+     "AR-09": true,
+     "ST-04": true
+    },
+    "status": "verified",
+    "sources": [
+     {
+      "sheet": "AR-09",
+      "pdfPage": 4,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "ST-04",
+      "pdfPage": 16,
+      "note": "grid line detected"
+     }
+    ]
+   },
+   {
+    "name": "3",
+    "pos": 7.0,
+    "detectedOn": {
+     "AR-08": true,
+     "AR-09": true,
+     "ST-04": true
+    },
+    "status": "verified",
+    "sources": [
+     {
+      "sheet": "AR-08",
+      "pdfPage": 3,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "AR-09",
+      "pdfPage": 4,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "ST-04",
+      "pdfPage": 16,
+      "note": "grid line detected"
+     }
+    ]
+   },
+   {
+    "name": "3\"",
+    "pos": 10.0,
+    "detectedOn": {
+     "AR-08": true,
+     "AR-09": false,
+     "ST-04": false
+    },
+    "status": "verified",
+    "sources": [
+     {
+      "sheet": "AR-08",
+      "pdfPage": 3,
+      "note": "grid line detected"
+     }
+    ]
+   },
+   {
+    "name": "4",
+    "pos": 11.0,
+    "detectedOn": {
+     "AR-08": true,
+     "AR-09": true,
+     "ST-04": true
+    },
+    "status": "verified",
+    "sources": [
+     {
+      "sheet": "AR-08",
+      "pdfPage": 3,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "AR-09",
+      "pdfPage": 4,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "ST-04",
+      "pdfPage": 16,
+      "note": "grid line detected"
+     }
+    ]
+   },
+   {
+    "name": "4\"",
+    "pos": 13.0,
+    "detectedOn": {
+     "AR-08": true,
+     "AR-09": true,
+     "ST-04": false
+    },
+    "status": "verified",
+    "sources": [
+     {
+      "sheet": "AR-08",
+      "pdfPage": 3,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "AR-09",
+      "pdfPage": 4,
+      "note": "grid line detected"
+     }
+    ]
+   },
+   {
+    "name": "5",
+    "pos": 16.0,
+    "detectedOn": {
+     "AR-08": true,
+     "AR-09": true,
+     "ST-04": true
+    },
+    "status": "verified",
+    "sources": [
+     {
+      "sheet": "AR-08",
+      "pdfPage": 3,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "AR-09",
+      "pdfPage": 4,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "ST-04",
+      "pdfPage": 16,
+      "note": "grid line detected"
+     }
+    ]
+   },
+   {
+    "name": "5\"",
+    "pos": 17.0,
+    "aliases": [
+     "4'"
+    ],
+    "issues": [
+     "ISS-06"
+    ],
+    "detectedOn": {
+     "AR-08": true,
+     "AR-09": true,
+     "ST-04": false
+    },
+    "status": "conflict",
+    "sources": [
+     {
+      "sheet": "AR-08",
+      "pdfPage": 3,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "AR-09",
+      "pdfPage": 4,
+      "note": "grid line detected"
+     }
+    ]
+   }
+  ],
+  "y": [
+   {
+    "name": "A'",
+    "pos": 0.0,
+    "detectedOn": {
+     "AR-08": true,
+     "AR-09": false,
+     "ST-04": false
+    },
+    "status": "verified",
+    "sources": [
+     {
+      "sheet": "AR-08",
+      "pdfPage": 3,
+      "note": "grid line detected"
+     }
+    ]
+   },
+   {
+    "name": "A",
+    "pos": 5.0,
+    "detectedOn": {
+     "AR-08": true,
+     "AR-09": true,
+     "ST-04": true
+    },
+    "status": "verified",
+    "sources": [
+     {
+      "sheet": "AR-08",
+      "pdfPage": 3,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "AR-09",
+      "pdfPage": 4,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "ST-04",
+      "pdfPage": 16,
+      "note": "grid line detected"
+     }
+    ]
+   },
+   {
+    "name": "B",
+    "pos": 8.5,
+    "detectedOn": {
+     "AR-08": true,
+     "AR-09": true,
+     "ST-04": true
+    },
+    "status": "verified",
+    "sources": [
+     {
+      "sheet": "AR-08",
+      "pdfPage": 3,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "AR-09",
+      "pdfPage": 4,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "ST-04",
+      "pdfPage": 16,
+      "note": "grid line detected"
+     }
+    ]
+   },
+   {
+    "name": "C",
+    "pos": 13.5,
+    "detectedOn": {
+     "AR-08": true,
+     "AR-09": true,
+     "ST-04": true
+    },
+    "status": "verified",
+    "sources": [
+     {
+      "sheet": "AR-08",
+      "pdfPage": 3,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "AR-09",
+      "pdfPage": 4,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "ST-04",
+      "pdfPage": 16,
+      "note": "grid line detected"
+     }
+    ]
+   },
+   {
+    "name": "D",
+    "pos": 16.0,
+    "detectedOn": {
+     "AR-08": true,
+     "AR-09": true,
+     "ST-04": true
+    },
+    "status": "verified",
+    "sources": [
+     {
+      "sheet": "AR-08",
+      "pdfPage": 3,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "AR-09",
+      "pdfPage": 4,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "ST-04",
+      "pdfPage": 16,
+      "note": "grid line detected"
+     }
+    ]
+   },
+   {
+    "name": "E",
+    "pos": 17.7,
+    "detectedOn": {
+     "AR-08": true,
+     "AR-09": false,
+     "ST-04": true
+    },
+    "status": "verified",
+    "sources": [
+     {
+      "sheet": "AR-08",
+      "pdfPage": 3,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "ST-04",
+      "pdfPage": 16,
+      "note": "grid line detected"
+     }
+    ]
+   },
+   {
+    "name": "F",
+    "pos": 26.7,
+    "detectedOn": {
+     "AR-08": true,
+     "AR-09": true,
+     "ST-04": true
+    },
+    "status": "verified",
+    "sources": [
+     {
+      "sheet": "AR-08",
+      "pdfPage": 3,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "AR-09",
+      "pdfPage": 4,
+      "note": "grid line detected"
+     },
+     {
+      "sheet": "ST-04",
+      "pdfPage": 16,
+      "note": "grid line detected"
+     }
+    ]
+   }
+  ]
+ },
+ "columns": [
+  {
+   "id": "C01",
+   "x": 10.001,
+   "y": -0.001,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "3\"/A'",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": false,
+    "ST-04": false
+   },
+   "status": "unverified",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": [
+    "ISS-21"
+   ]
+  },
+  {
+   "id": "C02",
+   "x": 13.002,
+   "y": -0.001,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "4\"/A'",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": false,
+    "ST-04": false
+   },
+   "status": "unverified",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": [
+    "ISS-21"
+   ]
+  },
+  {
+   "id": "C03",
+   "x": 16.002,
+   "y": -0.001,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "5/A'",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": false,
+    "ST-04": false
+   },
+   "status": "unverified",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": [
+    "ISS-21"
+   ]
+  },
+  {
+   "id": "C04",
+   "x": 0.0,
+   "y": 5.0,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "1/A",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": true,
+    "ST-04": true
+   },
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "id": "C05",
+   "x": 2.503,
+   "y": 5.0,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "2/A",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": true,
+    "ST-04": false
+   },
+   "status": "conflict",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": [
+    "ISS-21"
+   ]
+  },
+  {
+   "id": "C06",
+   "x": 5.501,
+   "y": 5.0,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "2a/A",
+   "shownOn": {
+    "AR-08": false,
+    "AR-09": true,
+    "ST-04": true
+   },
+   "status": "conflict",
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": [
+    "ISS-21"
+   ]
+  },
+  {
+   "id": "C07",
+   "x": 7.001,
+   "y": 5.0,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "3/A",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": false,
+    "ST-04": false
+   },
+   "status": "conflict",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": [
+    "ISS-21"
+   ]
+  },
+  {
+   "id": "C08",
+   "x": 11.001,
+   "y": 5.0,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "4/A",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": true,
+    "ST-04": true
+   },
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "id": "C09",
+   "x": 16.002,
+   "y": 5.0,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "5/A",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": true,
+    "ST-04": true
+   },
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "id": "C10",
+   "x": 0.0,
+   "y": 8.498,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "1/B",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": true,
+    "ST-04": true
+   },
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "id": "C11",
+   "x": 2.503,
+   "y": 8.498,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "2/B",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": true,
+    "ST-04": false
+   },
+   "status": "conflict",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": [
+    "ISS-21"
+   ]
+  },
+  {
+   "id": "C12",
+   "x": 7.001,
+   "y": 8.498,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "3/B",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": false,
+    "ST-04": false
+   },
+   "status": "conflict",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": [
+    "ISS-21"
+   ]
+  },
+  {
+   "id": "C13",
+   "x": 11.001,
+   "y": 8.498,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "4/B",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": true,
+    "ST-04": true
+   },
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "id": "C14",
+   "x": 16.002,
+   "y": 8.498,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "5/B",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": true,
+    "ST-04": true
+   },
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "id": "C15",
+   "x": 5.501,
+   "y": 8.503,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "2a/B",
+   "shownOn": {
+    "AR-08": false,
+    "AR-09": true,
+    "ST-04": true
+   },
+   "status": "conflict",
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": [
+    "ISS-21"
+   ]
+  },
+  {
+   "id": "C16",
+   "x": 4.003,
+   "y": 12.295,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": null,
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": false,
+    "ST-04": false
+   },
+   "status": "conflict",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": [
+    "ISS-21"
+   ]
+  },
+  {
+   "id": "C17",
+   "x": 7.001,
+   "y": 12.295,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": null,
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": false,
+    "ST-04": false
+   },
+   "status": "conflict",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": [
+    "ISS-21"
+   ]
+  },
+  {
+   "id": "C18",
+   "x": 0.003,
+   "y": 13.498,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "1/C",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": true,
+    "ST-04": true
+   },
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "id": "C19",
+   "x": 4.0,
+   "y": 13.498,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "2\"/C",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": true,
+    "ST-04": true
+   },
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "id": "C20",
+   "x": 7.001,
+   "y": 13.498,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "3/C",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": true,
+    "ST-04": true
+   },
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "id": "C21",
+   "x": 11.001,
+   "y": 13.498,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "4/C",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": true,
+    "ST-04": true
+   },
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "id": "C22",
+   "x": 16.002,
+   "y": 13.498,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "5/C",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": true,
+    "ST-04": true
+   },
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "id": "C23",
+   "x": 7.001,
+   "y": 15.996,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "3/D",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": true,
+    "ST-04": true
+   },
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "id": "C24",
+   "x": 11.001,
+   "y": 15.996,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "4/D",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": true,
+    "ST-04": true
+   },
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "id": "C25",
+   "x": 11.001,
+   "y": 17.697,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "4/E",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": false,
+    "ST-04": true
+   },
+   "status": "conflict",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": [
+    "ISS-21"
+   ]
+  },
+  {
+   "id": "C26",
+   "x": 17.002,
+   "y": 17.697,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "5\"/E",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": false,
+    "ST-04": true
+   },
+   "status": "conflict",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": [
+    "ISS-21"
+   ]
+  },
+  {
+   "id": "C27",
+   "x": 11.001,
+   "y": 22.198,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": null,
+   "shownOn": {
+    "AR-08": false,
+    "AR-09": false,
+    "ST-04": true
+   },
+   "status": "conflict",
+   "sources": [
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": [
+    "ISS-21"
+   ]
+  },
+  {
+   "id": "C28",
+   "x": 16.999,
+   "y": 22.198,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": null,
+   "shownOn": {
+    "AR-08": false,
+    "AR-09": false,
+    "ST-04": true
+   },
+   "status": "conflict",
+   "sources": [
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": [
+    "ISS-21"
+   ]
+  },
+  {
+   "id": "C29",
+   "x": 11.001,
+   "y": 26.696,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "4/F",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": true,
+    "ST-04": true
+   },
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": []
+  },
+  {
+   "id": "C30",
+   "x": 17.002,
+   "y": 26.696,
+   "size": [
+    0.2,
+    0.2
+   ],
+   "grid": "5\"/F",
+   "shownOn": {
+    "AR-08": true,
+    "AR-09": true,
+    "ST-04": true
+   },
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "column 0.20x0.20"
+    },
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "column 0.20x0.20"
+    }
+   ],
+   "issues": []
+  }
+ ],
+ "doorTypes": [
+  {
+   "code": "D1",
+   "kind": "door",
+   "description": "ประตูบานเปิดคู่ ช่องแสงปิดตาย (double swing + 2 fixed side lights), aluminium",
+   "location": "หน้าบ้าน",
+   "qty": 1,
+   "tableSize": "2.05 x 1.80",
+   "width": 2.6,
+   "leafWidth": 1.8,
+   "height": 2.1,
+   "sill": 0,
+   "status": "verified",
+   "note": "Overall 2.60 = 0.30 + 1.80 + 0.30; frame height 2.10, leaf 2.05",
+   "sources": [
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12
+    }
+   ]
+  },
+  {
+   "code": "D2",
+   "kind": "door",
+   "description": "ประตูบานเปิดเดี่ยว UPVC",
+   "location": "ห้องทั่วไป",
+   "qty": 8,
+   "tableSize": "2.00 x 0.80",
+   "width": 0.9,
+   "leafWidth": 0.8,
+   "height": 2.05,
+   "sill": 0,
+   "status": "verified",
+   "issues": [
+    "ISS-15"
+   ],
+   "sources": [
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12
+    }
+   ]
+  },
+  {
+   "code": "D3",
+   "kind": "door",
+   "description": "ประตูบานเปิดเดี่ยว UPVC",
+   "location": "ทางลาด",
+   "qty": 1,
+   "tableSize": "2.00 x 0.10",
+   "width": 1.1,
+   "leafWidth": 1.0,
+   "height": 2.05,
+   "sill": 0,
+   "status": "conflict",
+   "issues": [
+    "ISS-08"
+   ],
+   "sources": [
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12
+    }
+   ]
+  },
+  {
+   "code": "D4",
+   "kind": "door",
+   "description": "ประตูบานเปิดเดี่ยว positive pressure UPVC",
+   "location": "ห้องนั่งเล่น",
+   "qty": 1,
+   "tableSize": "2.00 x 0.80",
+   "width": 0.9,
+   "leafWidth": 0.8,
+   "height": 2.05,
+   "sill": 0,
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12
+    }
+   ]
+  },
+  {
+   "code": "D5",
+   "kind": "door",
+   "description": "ประตูบานเปิดเดี่ยว UPVC",
+   "location": "ห้องน้ำ",
+   "qty": 5,
+   "tableSize": "2.00 x 0.70",
+   "width": 0.8,
+   "leafWidth": 0.7,
+   "height": 2.05,
+   "sill": 0,
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12
+    }
+   ]
+  },
+  {
+   "code": "D6",
+   "kind": "door",
+   "description": "ประตูบานเปิดเดี่ยว UPVC + มุ้งลวด",
+   "location": "ห้องครัว",
+   "qty": 1,
+   "tableSize": "2.00 x 0.80",
+   "width": 0.9,
+   "leafWidth": 0.8,
+   "height": 2.05,
+   "sill": 0,
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12
+    }
+   ]
+  },
+  {
+   "code": "D7",
+   "kind": "door",
+   "description": "ประตูบานเฟี้ยม 6 บาน (L/6), aluminium",
+   "location": "ห้องอ่านหนังสือ/ห้องฟิตเนส",
+   "qty": 2,
+   "tableSize": "2.00 x 2.40-2.50",
+   "width": 2.45,
+   "height": 2.05,
+   "sill": 0,
+   "status": "unverified",
+   "issues": [
+    "ISS-28"
+   ],
+   "note": "Shared detail '7 / 7.1'. Width given as range 2.40/2.50; 2.45 used only as a placeholder for drawing.",
+   "sources": [
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12
+    }
+   ]
+  },
+  {
+   "code": "D7.1",
+   "kind": "door",
+   "description": "ประตูบานเฟี้ยม 6 บาน (L/6), aluminium",
+   "location": "ห้องอ่านหนังสือ/ห้องฟิตเนส",
+   "qty": null,
+   "tableSize": "2.00 x 2.40-2.50",
+   "width": 2.45,
+   "height": 2.05,
+   "sill": 0,
+   "status": "unverified",
+   "issues": [
+    "ISS-28"
+   ],
+   "sources": [
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12
+    }
+   ]
+  },
+  {
+   "code": "GL1",
+   "kind": "door",
+   "description": "ประตูบานเปิด กระจกเทมเปอร์ 10 มม. (shower screen door)",
+   "location": "ห้องน้ำ",
+   "qty": 4,
+   "tableSize": "1.80 x 0.70",
+   "width": 0.7,
+   "height": 1.8,
+   "sill": 0,
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13
+    }
+   ]
+  }
+ ],
+ "windowTypes": [
+  {
+   "code": "W1",
+   "kind": "window",
+   "description": "หน้าต่างบานเลื่อนคู่ คอล่างปิดตาย (sliding, fixed lower panel)",
+   "location": "หน้าบ้าน",
+   "qty": 2,
+   "tableSize": "2.50 x 1.00",
+   "width": 1.0,
+   "height": 2.5,
+   "sill": 0.3,
+   "status": "verified",
+   "issues": [
+    "ISS-22"
+   ],
+   "sources": [
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12
+    }
+   ]
+  },
+  {
+   "code": "W2",
+   "kind": "window",
+   "description": "หน้าต่างบานเปิด คอล่างปิดตาย",
+   "location": "ห้องนอน 1 (2), ทั่วไป (7)",
+   "qty": 9,
+   "tableSize": "2.05 x 0.60",
+   "width": 0.6,
+   "height": 2.5,
+   "sill": 0.3,
+   "status": "conflict",
+   "issues": [
+    "ISS-09"
+   ],
+   "note": "Two W2 details on AR-26 (qty 2 + qty 7).",
+   "sources": [
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12
+    }
+   ]
+  },
+  {
+   "code": "W2A",
+   "kind": "window",
+   "description": "หน้าต่างบานเปิด",
+   "location": "ทั่วไป",
+   "qty": 2,
+   "tableSize": "1.55 x 0.60",
+   "width": 0.6,
+   "height": 1.55,
+   "sill": 0.8,
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12
+    }
+   ]
+  },
+  {
+   "code": "W2B",
+   "kind": "window",
+   "description": "หน้าต่างบานเปิด คอล่างปิดตาย",
+   "location": "ทั่วไป",
+   "qty": 3,
+   "tableSize": "2.05 x 0.60",
+   "width": 0.6,
+   "height": 1.6,
+   "sill": 1.1,
+   "sillDatum": "ระดับคานชั้น 2 (beam level, not FFL)",
+   "status": "conflict",
+   "issues": [
+    "ISS-10"
+   ],
+   "sources": [
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13
+    }
+   ]
+  },
+  {
+   "code": "W2C",
+   "kind": "window",
+   "description": "หน้าต่างบานเปิด",
+   "location": "ทั่วไป",
+   "qty": 1,
+   "tableSize": "2.05 x 0.60",
+   "width": 0.6,
+   "height": 1.7,
+   "sill": 0.3,
+   "status": "conflict",
+   "issues": [
+    "ISS-11"
+   ],
+   "sources": [
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13
+    }
+   ]
+  },
+  {
+   "code": "W3",
+   "kind": "window",
+   "description": "หน้าต่างบานเปิด/ปิดตาย (tall stair window)",
+   "location": "ชานพักบันได",
+   "qty": 3,
+   "tableSize": "4.50 x 0.60",
+   "width": 0.6,
+   "height": 4.5,
+   "sill": 1.95,
+   "sillDatum": "FFL1 (= landing 1.80 + 0.15)",
+   "status": "verified",
+   "issues": [
+    "ISS-07"
+   ],
+   "sources": [
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13
+    },
+    {
+     "sheet": "AR-28",
+     "pdfPage": 14
+    }
+   ]
+  },
+  {
+   "code": "W4",
+   "kind": "window",
+   "description": "หน้าต่างโค้ง ปิดตาย R1.30 (arched fixed)",
+   "location": "ทางเข้าหน้าบ้าน",
+   "qty": 1,
+   "tableSize": "2.75 x 2.60",
+   "width": 2.6,
+   "height": 2.75,
+   "sill": 2.55,
+   "status": "verified",
+   "note": "Top at +5.29 above FFL1 per detail",
+   "sources": [
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13
+    }
+   ]
+  },
+  {
+   "code": "W5",
+   "kind": "window",
+   "description": "หน้าต่างบานกระทุ้ง (awning)",
+   "location": "ห้องน้ำ ห้องเก็บของ ห้องพระ",
+   "qty": 4,
+   "tableSize": "0.60 x 0.40",
+   "width": 0.6,
+   "height": 0.4,
+   "sill": 1.65,
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13
+    }
+   ]
+  },
+  {
+   "code": "W6",
+   "kind": "window",
+   "description": "หน้าต่างบานเปิดคู่",
+   "location": "ครัวไทย",
+   "qty": 1,
+   "tableSize": "0.95 x 1.05",
+   "width": 1.15,
+   "height": 0.95,
+   "sill": 1.0,
+   "sillDatum": "ระดับพื้นครัวไทย",
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13
+    }
+   ]
+  },
+  {
+   "code": "W7",
+   "kind": "window",
+   "description": "หน้าต่างบานกระทุ้ง (awning)",
+   "location": "ห้องน้ำ",
+   "qty": 4,
+   "tableSize": "0.95 x 0.40",
+   "width": 0.95,
+   "height": 0.4,
+   "sill": 1.65,
+   "sillDatum": "ระดับพื้นห้องน้ำ",
+   "status": "conflict",
+   "issues": [
+    "ISS-27"
+   ],
+   "sources": [
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13
+    }
+   ]
+  },
+  {
+   "code": "W8",
+   "kind": "window",
+   "description": "ช่องเซอร์วิสครัว (louvred service hatch)",
+   "location": "ช่องเซอร์วิสครัว",
+   "qty": 1,
+   "tableSize": null,
+   "width": 0.35,
+   "height": 1.2,
+   "sill": 0.75,
+   "status": "unverified",
+   "issues": [
+    "ISS-13"
+   ],
+   "sources": [
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13
+    }
+   ]
+  },
+  {
+   "code": "W9",
+   "kind": "window",
+   "description": "หน้าต่างบานเปิดเดี่ยว พร้อมบานเกล็ดทึบ (service hatch)",
+   "location": "ช่องเซอร์วิสห้องน้ำ",
+   "qty": 1,
+   "tableSize": "0.35 x 1.30",
+   "width": 0.35,
+   "height": 1.2,
+   "sill": 0.15,
+   "status": "conflict",
+   "issues": [
+    "ISS-12",
+    "ISS-13"
+   ],
+   "sources": [
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13
+    }
+   ]
+  }
+ ],
+ "issues": [
+  {
+   "id": "ISS-01",
+   "type": "info",
+   "title": "AR-02 is a symbol legend, not a Room Finish & Level Schedule",
+   "detail": "PDF page 1 (AR-02) only shows drafting symbols and the room-tag format (F=floor finish+level, C=ceiling finish+level). Room levels are therefore taken from the room tags on AR-08/AR-09 and the sections. Finish codes F1, F2, F3, FA1, C1, C2, C3 are undefined in this 20-page set -> material names Unverified (Phase 4).",
+   "sources": [
+    {
+     "sheet": "AR-02",
+     "pdfPage": 1
+    }
+   ]
+  },
+  {
+   "id": "ISS-02",
+   "type": "conflict",
+   "title": "Ridge level (ระดับหลังอกไก่)",
+   "values": [
+    {
+     "value": "+11.07",
+     "sheet": "AR-11",
+     "pdfPage": 6
+    },
+    {
+     "value": "+10.79",
+     "sheet": "AR-12",
+     "pdfPage": 7
+    }
+   ],
+   "detail": "Both labelled ระดับหลังอกไก่. Not resolved; roof (Phase 4) must show both."
+  },
+  {
+   "id": "ISS-03",
+   "type": "conflict",
+   "title": "First-floor ceiling height",
+   "values": [
+    {
+     "value": "C +2.80 (room tags)",
+     "sheet": "AR-08",
+     "pdfPage": 3
+    },
+    {
+     "value": "ระดับฝ้า +2.90 / dim 2.900",
+     "sheet": "AR-11",
+     "pdfPage": 6
+    },
+    {
+     "value": "ระดับฝ้า +2.90 (tag รับแขก still C +2.80)",
+     "sheet": "AR-12",
+     "pdfPage": 7
+    }
+   ],
+   "detail": "C values are heights above the room floor (confirmed by AR-11 2.900 dimension from FFL1). Applies to all first-floor rooms tagged C +2.80."
+  },
+  {
+   "id": "ISS-04",
+   "type": "conflict",
+   "title": "Bathroom floor level",
+   "values": [
+    {
+     "value": "F2 +0.55",
+     "sheet": "AR-08",
+     "pdfPage": 3
+    },
+    {
+     "value": "F2 +0.50 (tags placed inside the L2 bathroom area)",
+     "sheet": "AR-09",
+     "pdfPage": 4
+    }
+   ],
+   "detail": "Brief states a detail sheet gives +0.50. The only +0.50 found in this 20-page set are two stray tags 'F2 +0.50 C2 +2.40' on AR-09. The bathroom detail sheet itself is not part of the extract."
+  },
+  {
+   "id": "ISS-05",
+   "type": "conflict",
+   "title": "Foyer (โถงต้อนรับ) ceiling",
+   "values": [
+    {
+     "value": "C1 +6.60",
+     "sheet": "AR-08",
+     "pdfPage": 3
+    },
+    {
+     "value": "C1 +6.60",
+     "sheet": "AR-11",
+     "pdfPage": 6
+    },
+    {
+     "value": "room tag C1 +5.80 (ระดับฝ้า label +6.60 on same sheet)",
+     "sheet": "AR-12",
+     "pdfPage": 7
+    }
+   ]
+  },
+  {
+   "id": "ISS-06",
+   "type": "conflict",
+   "title": "Grid names at garage",
+   "values": [
+    {
+     "value": "top bubbles 4 / 5\" at x=11.00 / 17.00",
+     "sheet": "AR-08",
+     "pdfPage": 3
+    },
+    {
+     "value": "bottom bubbles 3 / 4' at the same x",
+     "sheet": "AR-08",
+     "pdfPage": 3
+    }
+   ],
+   "detail": "Same on AR-09 and ST-04. Positions agree (6.00 m), names do not. Model keeps 4 and 5\" with alias 4'."
+  },
+  {
+   "id": "ISS-07",
+   "type": "conflict",
+   "title": "Stair landing level",
+   "values": [
+    {
+     "value": "ชานพักบันได F2 +1.80",
+     "sheet": "AR-28",
+     "pdfPage": 14
+    },
+    {
+     "value": "ชานพักบันได +1.80",
+     "sheet": "AR-11",
+     "pdfPage": 6
+    },
+    {
+     "value": "10 risers x 0.18 = 1.80 above FFL1 -> absolute +2.45",
+     "sheet": "AR-29",
+     "pdfPage": 15
+    }
+   ],
+   "detail": "Other F tags are absolute levels; +1.80 matches a height relative to FFL1. Datum of this tag is ambiguous."
+  },
+  {
+   "id": "ISS-08",
+   "type": "conflict",
+   "title": "Door D3 size",
+   "values": [
+    {
+     "value": "ขนาดบาน 2.00 x 0.10 (table)",
+     "sheet": "AR-26",
+     "pdfPage": 12
+    },
+    {
+     "value": "leaf 1.00 / frame 1.10 (elevation dims)",
+     "sheet": "AR-26",
+     "pdfPage": 12
+    }
+   ]
+  },
+  {
+   "id": "ISS-09",
+   "type": "conflict",
+   "title": "Window W2 height",
+   "values": [
+    {
+     "value": "ขนาดบาน 2.05 x 0.60 (table)",
+     "sheet": "AR-26",
+     "pdfPage": 12
+    },
+    {
+     "value": "elevation 2.50 (1.85 + 0.50 fixed) on 0.30 sill",
+     "sheet": "AR-26",
+     "pdfPage": 12
+    }
+   ]
+  },
+  {
+   "id": "ISS-10",
+   "type": "conflict",
+   "title": "Window W2B height and datum",
+   "values": [
+    {
+     "value": "ขนาดบาน 2.05 x 0.60 (table)",
+     "sheet": "AR-27",
+     "pdfPage": 13
+    },
+    {
+     "value": "elevation 1.60 on 1.10 sill, 2.80 total, datum ระดับคานชั้น 2",
+     "sheet": "AR-27",
+     "pdfPage": 13
+    }
+   ]
+  },
+  {
+   "id": "ISS-11",
+   "type": "conflict",
+   "title": "Window W2C height",
+   "values": [
+    {
+     "value": "ขนาดบาน 2.05 x 0.60 (table)",
+     "sheet": "AR-27",
+     "pdfPage": 13
+    },
+    {
+     "value": "elevation 1.70 / 1.60 on 0.30 sill",
+     "sheet": "AR-27",
+     "pdfPage": 13
+    }
+   ]
+  },
+  {
+   "id": "ISS-12",
+   "type": "conflict",
+   "title": "Window W9 height",
+   "values": [
+    {
+     "value": "ขนาดบาน 0.35 x 1.30 (table)",
+     "sheet": "AR-27",
+     "pdfPage": 13
+    },
+    {
+     "value": "elevation 1.20 (1.45 overall) on 0.15",
+     "sheet": "AR-27",
+     "pdfPage": 13
+    }
+   ]
+  },
+  {
+   "id": "ISS-13",
+   "type": "unverified",
+   "title": "W8 / W9 service hatches not located",
+   "detail": "Types are in AR-27 but their tags could not be identified with certainty on AR-08/AR-09 (numbered squares near the bathroom/kitchen shafts are sanitary fixture tags). W8 table size not legible. Not placed in the model.",
+   "sources": [
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13
+    },
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3
+    }
+   ]
+  },
+  {
+   "id": "ISS-14",
+   "type": "unverified",
+   "title": "Tag 'B2' on AR-09 (Master bathroom / WIC wall, grid A)",
+   "detail": "No type 'B2' exists in AR-26/AR-27. If it is W2B, the W2B count (3) matches the schedule qty 3. Modelled as W2B with status unverified.",
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4
+    }
+   ]
+  },
+  {
+   "id": "ISS-15",
+   "type": "unverified",
+   "title": "D2 count",
+   "detail": "10 openings carry a D2 circle tag on AR-08 + AR-09 as read, schedule says 8 sets. Each D2 is kept as drawn, but the count needs a check.",
+   "sources": [
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12
+    },
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3
+    },
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4
+    }
+   ]
+  },
+  {
+   "id": "ISS-16",
+   "type": "unverified",
+   "title": "W2 tag beside the ramp (AR-08, x~17.0 y~11.5)",
+   "detail": "A hexagon '2' is drawn east of the ramp but the hatched wall x=16.05 is continuous there - no opening found. Not modelled. Schedule W2 general qty 7 implies it exists.",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3
+    }
+   ]
+  },
+  {
+   "id": "ISS-17",
+   "type": "conflict",
+   "title": "Second-floor bathroom tags",
+   "values": [
+    {
+     "value": "ห้องน้ำ 2 / 3 / M: F2 +4.15, C1 +2.60",
+     "sheet": "AR-09",
+     "pdfPage": 4
+    },
+    {
+     "value": "stray tags F2 +0.50, C2 +2.40 inside the same bathrooms",
+     "sheet": "AR-09",
+     "pdfPage": 4
+    }
+   ]
+  },
+  {
+   "id": "ISS-18",
+   "type": "unverified",
+   "title": "Porch (เฉลียง) ceiling",
+   "values": [
+    {
+     "value": "C1 '-' (none)",
+     "sheet": "AR-08",
+     "pdfPage": 3
+    },
+    {
+     "value": "ระดับฝ้า +6.30 over porch",
+     "sheet": "AR-12",
+     "pdfPage": 7
+    }
+   ]
+  },
+  {
+   "id": "ISS-19",
+   "type": "info",
+   "title": "Section C-C missing",
+   "detail": "AR-08/AR-09 carry C-C callouts but no C-C section exists in the set (AR-13 is a duplicate site plan and is not in the extract). Nothing in the model is derived from C-C; the kitchen block (north of grid A) is therefore not covered by any section."
+  },
+  {
+   "id": "ISS-20",
+   "type": "info",
+   "title": "Two 'Elevation C' sheets, no Elevation D",
+   "detail": "AR-15 (1:75) and AR-17 (1:100) are both titled รูปด้าน C. Direction to be resolved against the key plan in Phase 4."
+  },
+  {
+   "id": "ISS-21",
+   "type": "conflict",
+   "title": "Column positions differ between AR-08, AR-09 and ST-04",
+   "values": [
+    {
+     "value": "2/A: AR-08 yes, AR-09 yes, ST-04 NO",
+     "sheet": "AR-08/AR-09/ST-04",
+     "pdfPage": 3
+    },
+    {
+     "value": "2a/A: AR-08 NO, AR-09 yes, ST-04 yes",
+     "sheet": "AR-08/AR-09/ST-04",
+     "pdfPage": 3
+    },
+    {
+     "value": "3/A: AR-08 yes, AR-09 NO, ST-04 NO",
+     "sheet": "AR-08/AR-09/ST-04",
+     "pdfPage": 3
+    },
+    {
+     "value": "2/B: AR-08 yes, AR-09 yes, ST-04 NO",
+     "sheet": "AR-08/AR-09/ST-04",
+     "pdfPage": 3
+    },
+    {
+     "value": "3/B: AR-08 yes, AR-09 NO, ST-04 NO",
+     "sheet": "AR-08/AR-09/ST-04",
+     "pdfPage": 3
+    },
+    {
+     "value": "2a/B: AR-08 NO, AR-09 yes, ST-04 yes",
+     "sheet": "AR-08/AR-09/ST-04",
+     "pdfPage": 3
+    },
+    {
+     "value": "(4.00, 12.29): AR-08 yes, AR-09 NO, ST-04 NO",
+     "sheet": "AR-08/AR-09/ST-04",
+     "pdfPage": 3
+    },
+    {
+     "value": "(7.00, 12.29): AR-08 yes, AR-09 NO, ST-04 NO",
+     "sheet": "AR-08/AR-09/ST-04",
+     "pdfPage": 3
+    },
+    {
+     "value": "4/E: AR-08 yes, AR-09 NO, ST-04 yes",
+     "sheet": "AR-08/AR-09/ST-04",
+     "pdfPage": 3
+    },
+    {
+     "value": "5\"/E: AR-08 yes, AR-09 NO, ST-04 yes",
+     "sheet": "AR-08/AR-09/ST-04",
+     "pdfPage": 3
+    },
+    {
+     "value": "(11.00, 22.20): AR-08 NO, AR-09 NO, ST-04 yes",
+     "sheet": "AR-08/AR-09/ST-04",
+     "pdfPage": 3
+    },
+    {
+     "value": "(17.00, 22.20): AR-08 NO, AR-09 NO, ST-04 yes",
+     "sheet": "AR-08/AR-09/ST-04",
+     "pdfPage": 3
+    }
+   ],
+   "detail": "Columns are 0.20 m quads extracted from the vectors. A column missing on a sheet that covers its position is flagged. ST-04 is a level-2 beam plan, so some differences may be by design (e.g. columns that stop at L2) - needs structural confirmation."
+  },
+  {
+   "id": "ISS-22",
+   "type": "unverified",
+   "title": "W1 opening width on plan",
+   "detail": "Living-room south wall (y=13.545) is not hatched; the two W1 openings appear ~1.5 m wide on AR-08 versus W1 frame 1.00 m on AR-26. Positions taken from tag centres.",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3
+    },
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12
+    }
+   ]
+  },
+  {
+   "id": "ISS-23",
+   "type": "info",
+   "title": "Wall thickness derivation",
+   "detail": "Walls are drawn as 0.24pt grey 45deg hatch over the brick core (measured 0.06-0.08 m) with black plaster face lines 0.01-0.02 m outside. Finished thickness = hatch core + 0.03 m (≈0.10 m single wall). Two adjacent hatch bands < 0.06 m apart are merged into one thick wall (e.g. grid 1 at living room ≈0.19 m, stair west wall ≈0.20 m)."
+  },
+  {
+   "id": "ISS-24",
+   "type": "unverified",
+   "title": "Open-plan room boundaries",
+   "detail": "รับแขก / โถงรับประทานอาหาร / ครัวฝรั่ง / โถงต้อนรับ share one space without walls; ครัวไทย / ซักล้าง likewise. Dividing lines (grid 4 x=10.955, x=13.455, grid B y=8.545, y=3.05) are drawn only to hold the room tags and are NOT walls. โถง (L2) is open to the stair and void."
+  },
+  {
+   "id": "ISS-25",
+   "type": "unverified",
+   "title": "Non-standard wall heights",
+   "detail": "Default wall heights are verified from sections (L1 3.60 = +0.65 to +4.25; L2 3.10 = +4.25 to +7.35). Kitchen block, double-height foyer/stair front wall, porch piers and garage-store walls have no section - heights shown are placeholders flagged Unverified."
+  },
+  {
+   "id": "ISS-27",
+   "type": "conflict",
+   "title": "Window W7 height",
+   "values": [
+    {
+     "value": "ขนาดบาน 0.95 x 0.40 (table)",
+     "sheet": "AR-27",
+     "pdfPage": 13
+    },
+    {
+     "value": "elevation dim 0.30",
+     "sheet": "AR-27",
+     "pdfPage": 13
+    }
+   ]
+  },
+  {
+   "id": "ISS-28",
+   "type": "unverified",
+   "title": "Folding door D7 / D7.1 width",
+   "detail": "AR-26 gives width as '2.40/2.50' and size '2.00 x 2.40-2.50' for both. Exact per-door width not stated."
+  },
+  {
+   "id": "ISS-29",
+   "type": "unverified",
+   "title": "North direction",
+   "detail": "Derived from AR-07 north arrow and building orientation; plan +Y (A->F) points ~NE. Needs user confirmation."
+  },
+  {
+   "id": "ISS-30",
+   "type": "info",
+   "title": "AR-11 dimension chain 2.40 / 2.60 / 1.20 between grid 4 and 5\"",
+   "detail": "Measured on AR-11 the grid bubbles 4, 4\", 5, 5\" sit at 2.00 / 3.00 / 1.00 spacing (same as AR-08). The 2.40/2.60/1.20 chain references wall/edge lines, not grid 4\". Not treated as a grid conflict - please confirm."
+  },
+  {
+   "id": "ISS-31",
+   "type": "info",
+   "title": "ST-04 chain 1.90 / 2.10 between grid 3 and 4",
+   "detail": "References the beam line at x=8.90 (also on AR-09 as 0.20+1.70), not grid 3\" (x=10.00). Consistent."
+  },
+  {
+   "id": "ISS-32",
+   "type": "unverified",
+   "title": "Plan opening gaps are systematically wider than scheduled widths",
+   "detail": "Measured clear gaps between hatched jambs on AR-08/AR-09: D2 1.12-1.33 m vs 0.90; D5 1.02-1.04 vs 0.80; W2/W2A/W5 0.84-0.93 vs 0.60. The offset (+0.22-0.27 m) is consistent, which suggests the plan shows the rough masonry opening while AR-26/AR-27 give frame (วงกบ) sizes. Opening positions (centres) are reliable; the width used in the model is always the scheduled one. Needs a decision before Phase 2 (keep schedule size, or model the rough opening).",
+   "sources": [
+    {
+     "sheet": "AR-08",
+     "pdfPage": 3
+    },
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4
+    },
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12
+    },
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13
+    }
+   ]
+  }
+ ],
+ "sheets": {
+  "pdfFile": "House-Phrae_Core+Infra_20p.pdf",
+  "note": "PDF is a 20-page extract of a 64/65-sheet set; always cite the sheet number (AR-xx / ST-xx / EE-xx), pdfPage is the page inside the 20-page extract.",
+  "pageSizePt": [
+   1191.0,
+   842.0
+  ],
+  "ptPerMetre1to125": 22.677165354330707,
+  "sheets": [
+   {
+    "sheet": "AR-02",
+    "pdfPage": 1,
+    "title": "สัญลักษณ์ประกอบแบบ (Symbol legend)",
+    "scale": null,
+    "phase": 1,
+    "note": "NOT a Room Finish & Level Schedule. Only defines the room-tag format (F = floor finish + floor level, C = ceiling finish + ceiling level). Finish codes F1/F2/F3/FA1/C1/C2/C3 are not defined anywhere in this 20-page set."
+   },
+   {
+    "sheet": "AR-07",
+    "pdfPage": 2,
+    "title": "แนวร่นระยะผังบริเวณ (Site plan / setbacks)",
+    "scale": "1:150",
+    "phase": 1,
+    "note": "North arrow source."
+   },
+   {
+    "sheet": "AR-08",
+    "pdfPage": 3,
+    "title": "แปลนพื้น ชั้น 1 (First floor plan)",
+    "scale": "1:125",
+    "phase": 1,
+    "calibration": {
+     "originPt": [
+      330.12,
+      147.3346
+     ],
+     "ptPerMetre": 22.677165354330707,
+     "method": "grid 1 line x=330.12pt; grid A line y=260.72pt; A' = A - 5.00 m (A'-A dimension). 1-5 = 16.00 m measured 362.88pt = 16.002 m."
+    }
+   },
+   {
+    "sheet": "AR-09",
+    "pdfPage": 4,
+    "title": "แปลนพื้น ชั้น 2 (Second floor plan)",
+    "scale": "1:125",
+    "phase": 1,
+    "calibration": {
+     "originPt": [
+      345.6,
+      161.8546
+     ],
+     "ptPerMetre": 22.677165354330707,
+     "method": "grid 1 line x=345.60pt; grid A line y=275.24pt; A' = A - 5.00 m."
+    }
+   },
+   {
+    "sheet": "AR-10",
+    "pdfPage": 5,
+    "title": "ผังหลังคา (Roof plan)",
+    "scale": "1:125",
+    "phase": 4
+   },
+   {
+    "sheet": "AR-11",
+    "pdfPage": 6,
+    "title": "รูปตัด A-A (Section A-A)",
+    "scale": "1:75",
+    "phase": 1
+   },
+   {
+    "sheet": "AR-12",
+    "pdfPage": 7,
+    "title": "รูปตัด B-B (Section B-B)",
+    "scale": "1:75",
+    "phase": 1
+   },
+   {
+    "sheet": "AR-14",
+    "pdfPage": 8,
+    "title": "รูปด้าน A (Elevation A)",
+    "scale": "1:75",
+    "phase": 4
+   },
+   {
+    "sheet": "AR-15",
+    "pdfPage": 9,
+    "title": "รูปด้าน C (Elevation C)",
+    "scale": "1:75",
+    "phase": 4,
+    "note": "Second sheet titled Elevation C (see AR-17). Direction to be checked against key plan in Phase 4."
+   },
+   {
+    "sheet": "AR-16",
+    "pdfPage": 10,
+    "title": "รูปด้าน B (Elevation B)",
+    "scale": "1:100",
+    "phase": 4
+   },
+   {
+    "sheet": "AR-17",
+    "pdfPage": 11,
+    "title": "รูปด้าน C (Elevation C)",
+    "scale": "1:100",
+    "phase": 4,
+    "note": "Duplicate 'C' title; no separate Elevation D in the set."
+   },
+   {
+    "sheet": "AR-26",
+    "pdfPage": 12,
+    "title": "ขยายประตู (Door details / schedule)",
+    "scale": "1:50",
+    "phase": 1
+   },
+   {
+    "sheet": "AR-27",
+    "pdfPage": 13,
+    "title": "ขยายหน้าต่าง (Window details / schedule)",
+    "scale": "1:50",
+    "phase": 1
+   },
+   {
+    "sheet": "AR-28",
+    "pdfPage": 14,
+    "title": "แปลนขยายบันได (Stair plan)",
+    "scale": "1:25",
+    "phase": 1
+   },
+   {
+    "sheet": "AR-29",
+    "pdfPage": 15,
+    "title": "รูปตัดขยายบันได A-A (Stair section)",
+    "scale": "1:25",
+    "phase": 1
+   },
+   {
+    "sheet": "ST-04",
+    "pdfPage": 16,
+    "title": "แปลนโครงสร้างคาน ชั้น 2 (Level-2 beam plan)",
+    "scale": "1:125",
+    "phase": 1,
+    "note": "This is a BEAM plan (with columns), not a dedicated column/grid plan. Used for grid + column cross-check.",
+    "calibration": {
+     "originPt": [
+      345.6,
+      101.0146
+     ],
+     "ptPerMetre": 22.677165354330707,
+     "method": "grid 1 line x=345.60pt; grid A line y=214.40pt; A' = A - 5.00 m (A' not drawn on ST-04)."
+    }
+   },
+   {
+    "sheet": "EE-02",
+    "pdfPage": 17,
+    "title": "แปลนไฟฟ้าแสงสว่าง ชั้น 1 (Lighting L1)",
+    "scale": "1:125",
+    "phase": 5
+   },
+   {
+    "sheet": "EE-03",
+    "pdfPage": 18,
+    "title": "แปลนไฟฟ้าแสงสว่าง ชั้น 2 (Lighting L2)",
+    "scale": "1:125",
+    "phase": 5
+   },
+   {
+    "sheet": "EE-04",
+    "pdfPage": 19,
+    "title": "แปลนไฟฟ้ากำลัง ชั้น 1 (Power L1)",
+    "scale": "1:125",
+    "phase": 5
+   },
+   {
+    "sheet": "EE-05",
+    "pdfPage": 20,
+    "title": "แปลนไฟฟ้ากำลัง ชั้น 2 (Power L2)",
+    "scale": "1:125",
+    "phase": 5
+   }
+  ]
+ }
+}

@@ -1,0 +1,33 @@
+{
+  "pdfFile": "House-Phrae_Core+Infra_20p.pdf",
+  "note": "PDF is a 20-page extract of a 64/65-sheet set; always cite the sheet number (AR-xx / ST-xx / EE-xx), pdfPage is the page inside the 20-page extract.",
+  "pageSizePt": [1191.0, 842.0],
+  "ptPerMetre1to125": 22.677165354330707,
+  "sheets": [
+    { "sheet": "AR-02", "pdfPage": 1, "title": "สัญลักษณ์ประกอบแบบ (Symbol legend)", "scale": null, "phase": 1,
+      "note": "NOT a Room Finish & Level Schedule. Only defines the room-tag format (F = floor finish + floor level, C = ceiling finish + ceiling level). Finish codes F1/F2/F3/FA1/C1/C2/C3 are not defined anywhere in this 20-page set." },
+    { "sheet": "AR-07", "pdfPage": 2, "title": "แนวร่นระยะผังบริเวณ (Site plan / setbacks)", "scale": "1:150", "phase": 1, "note": "North arrow source." },
+    { "sheet": "AR-08", "pdfPage": 3, "title": "แปลนพื้น ชั้น 1 (First floor plan)", "scale": "1:125", "phase": 1,
+      "calibration": { "originPt": [330.12, 147.3346], "ptPerMetre": 22.677165354330707, "method": "grid 1 line x=330.12pt; grid A line y=260.72pt; A' = A - 5.00 m (A'-A dimension). 1-5 = 16.00 m measured 362.88pt = 16.002 m." } },
+    { "sheet": "AR-09", "pdfPage": 4, "title": "แปลนพื้น ชั้น 2 (Second floor plan)", "scale": "1:125", "phase": 1,
+      "calibration": { "originPt": [345.6, 161.8546], "ptPerMetre": 22.677165354330707, "method": "grid 1 line x=345.60pt; grid A line y=275.24pt; A' = A - 5.00 m." } },
+    { "sheet": "AR-10", "pdfPage": 5, "title": "ผังหลังคา (Roof plan)", "scale": "1:125", "phase": 4 },
+    { "sheet": "AR-11", "pdfPage": 6, "title": "รูปตัด A-A (Section A-A)", "scale": "1:75", "phase": 1 },
+    { "sheet": "AR-12", "pdfPage": 7, "title": "รูปตัด B-B (Section B-B)", "scale": "1:75", "phase": 1 },
+    { "sheet": "AR-14", "pdfPage": 8, "title": "รูปด้าน A (Elevation A)", "scale": "1:75", "phase": 4 },
+    { "sheet": "AR-15", "pdfPage": 9, "title": "รูปด้าน C (Elevation C)", "scale": "1:75", "phase": 4, "note": "Second sheet titled Elevation C (see AR-17). Direction to be checked against key plan in Phase 4." },
+    { "sheet": "AR-16", "pdfPage": 10, "title": "รูปด้าน B (Elevation B)", "scale": "1:100", "phase": 4 },
+    { "sheet": "AR-17", "pdfPage": 11, "title": "รูปด้าน C (Elevation C)", "scale": "1:100", "phase": 4, "note": "Duplicate 'C' title; no separate Elevation D in the set." },
+    { "sheet": "AR-26", "pdfPage": 12, "title": "ขยายประตู (Door details / schedule)", "scale": "1:50", "phase": 1 },
+    { "sheet": "AR-27", "pdfPage": 13, "title": "ขยายหน้าต่าง (Window details / schedule)", "scale": "1:50", "phase": 1 },
+    { "sheet": "AR-28", "pdfPage": 14, "title": "แปลนขยายบันได (Stair plan)", "scale": "1:25", "phase": 1 },
+    { "sheet": "AR-29", "pdfPage": 15, "title": "รูปตัดขยายบันได A-A (Stair section)", "scale": "1:25", "phase": 1 },
+    { "sheet": "ST-04", "pdfPage": 16, "title": "แปลนโครงสร้างคาน ชั้น 2 (Level-2 beam plan)", "scale": "1:125", "phase": 1,
+      "note": "This is a BEAM plan (with columns), not a dedicated column/grid plan. Used for grid + column cross-check.",
+      "calibration": { "originPt": [345.6, 101.0146], "ptPerMetre": 22.677165354330707, "method": "grid 1 line x=345.60pt; grid A line y=214.40pt; A' = A - 5.00 m (A' not drawn on ST-04)." } },
+    { "sheet": "EE-02", "pdfPage": 17, "title": "แปลนไฟฟ้าแสงสว่าง ชั้น 1 (Lighting L1)", "scale": "1:125", "phase": 5 },
+    { "sheet": "EE-03", "pdfPage": 18, "title": "แปลนไฟฟ้าแสงสว่าง ชั้น 2 (Lighting L2)", "scale": "1:125", "phase": 5 },
+    { "sheet": "EE-04", "pdfPage": 19, "title": "แปลนไฟฟ้ากำลัง ชั้น 1 (Power L1)", "scale": "1:125", "phase": 5 },
+    { "sheet": "EE-05", "pdfPage": 20, "title": "แปลนไฟฟ้ากำลัง ชั้น 2 (Power L2)", "scale": "1:125", "phase": 5 }
+  ]
+}

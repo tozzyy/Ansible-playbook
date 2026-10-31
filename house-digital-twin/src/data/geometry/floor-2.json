@@ -1,0 +1,3866 @@
+{
+ "floorId": "F2",
+ "name": "ชั้น 2 (Second floor)",
+ "level": 4.25,
+ "sheet": "AR-09",
+ "pdfPage": 4,
+ "walls": [
+  {
+   "id": "F2-W001",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    7.07,
+    4.95
+   ],
+   "end": [
+    10.901,
+    4.95
+   ],
+   "thickness": 0.09,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     7.07,
+     7.662
+    ],
+    [
+     8.504,
+     10.901
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W002",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    11.101,
+    4.95
+   ],
+   "end": [
+    15.859,
+    4.95
+   ],
+   "thickness": 0.09,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     11.101,
+     15.859
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W003",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    0.455,
+    4.955
+   ],
+   "end": [
+    5.249,
+    4.955
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     0.455,
+     0.841
+    ],
+    [
+     2.064,
+     3.175
+    ],
+    [
+     4.016,
+     5.249
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W004",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    5.625,
+    4.955
+   ],
+   "end": [
+    7.091,
+    4.955
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     5.625,
+     5.874
+    ],
+    [
+     6.8,
+     7.091
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W005",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    0.053,
+    5.505
+   ],
+   "end": [
+    0.259,
+    5.505
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     0.053,
+     0.259
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W006",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    0.487,
+    6.05
+   ],
+   "end": [
+    2.495,
+    6.05
+   ],
+   "thickness": 0.09,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     0.487,
+     2.495
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W007",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    13.118,
+    6.745
+   ],
+   "end": [
+    15.97,
+    6.745
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     13.118,
+     15.97
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W008",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    5.651,
+    8.545
+   ],
+   "end": [
+    7.205,
+    8.545
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     5.651,
+     7.205
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W009",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    7.305,
+    8.545
+   ],
+   "end": [
+    10.144,
+    8.545
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     7.305,
+     10.144
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W010",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    10.144,
+    8.545
+   ],
+   "end": [
+    10.885,
+    8.545
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     10.144,
+     10.885
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W011",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    13.144,
+    8.545
+   ],
+   "end": [
+    15.899,
+    8.545
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     13.144,
+     15.899
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W012",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    0.122,
+    8.555
+   ],
+   "end": [
+    2.387,
+    8.555
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     0.122,
+     2.387
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W013",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    2.598,
+    8.555
+   ],
+   "end": [
+    5.376,
+    8.555
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     2.598,
+     5.376
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W014",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    11.139,
+    8.555
+   ],
+   "end": [
+    11.345,
+    8.555
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     11.139,
+     11.345
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W015",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    11.319,
+    8.55
+   ],
+   "end": [
+    12.959,
+    8.55
+   ],
+   "thickness": 0.11,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     11.319,
+     12.959
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W016",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    0.238,
+    13.55
+   ],
+   "end": [
+    3.762,
+    13.55
+   ],
+   "thickness": 0.11,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     0.238,
+     0.529
+    ],
+    [
+     3.466,
+     3.762
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W017",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    7.133,
+    13.55
+   ],
+   "end": [
+    7.472,
+    13.55
+   ],
+   "thickness": 0.11,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     7.133,
+     7.472
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W018",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    10.546,
+    13.55
+   ],
+   "end": [
+    10.885,
+    13.55
+   ],
+   "thickness": 0.11,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     10.546,
+     10.885
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W019",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    11.25,
+    13.55
+   ],
+   "end": [
+    15.764,
+    13.55
+   ],
+   "thickness": 0.11,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     11.25,
+     11.769
+    ],
+    [
+     12.647,
+     13.033
+    ],
+    [
+     13.885,
+     14.266
+    ],
+    [
+     15.155,
+     15.764
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W020",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    7.123,
+    16.05
+   ],
+   "end": [
+    7.329,
+    16.05
+   ],
+   "thickness": 0.11,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "unverified"
+   },
+   "hatchSpans": [
+    [
+     7.123,
+     7.329
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    }
+   ],
+   "issues": [
+    "ISS-23",
+    "ISS-25"
+   ],
+   "note": "Porch-void piers (grid 3/4 x C/D) re-drawn on L2; top not given."
+  },
+  {
+   "id": "F2-W021",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    7.302,
+    16.055
+   ],
+   "end": [
+    7.551,
+    16.055
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "unverified"
+   },
+   "hatchSpans": [
+    [
+     7.302,
+     7.551
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    }
+   ],
+   "issues": [
+    "ISS-23",
+    "ISS-25"
+   ],
+   "note": "Porch-void piers (grid 3/4 x C/D) re-drawn on L2; top not given."
+  },
+  {
+   "id": "F2-W022",
+   "floorId": "F2",
+   "axis": "h",
+   "start": [
+    10.446,
+    16.055
+   ],
+   "end": [
+    10.784,
+    16.055
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "unverified"
+   },
+   "hatchSpans": [
+    [
+     10.446,
+     10.784
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    }
+   ],
+   "issues": [
+    "ISS-23",
+    "ISS-25"
+   ],
+   "note": "Porch-void piers (grid 3/4 x C/D) re-drawn on L2; top not given."
+  },
+  {
+   "id": "F2-W023",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    -0.05,
+    5.127
+   ],
+   "end": [
+    -0.05,
+    5.963
+   ],
+   "thickness": 0.09,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     5.127,
+     5.963
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W024",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    -0.05,
+    6.138
+   ],
+   "end": [
+    -0.05,
+    8.365
+   ],
+   "thickness": 0.09,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     6.138,
+     8.365
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W025",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    -0.05,
+    9.514
+   ],
+   "end": [
+    -0.05,
+    13.356
+   ],
+   "thickness": 0.09,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     9.514,
+     13.356
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W026",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    0.105,
+    13.631
+   ],
+   "end": [
+    0.105,
+    13.885
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "unverified"
+   },
+   "hatchSpans": [
+    [
+     13.631,
+     13.885
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    }
+   ],
+   "issues": [
+    "ISS-23",
+    "ISS-25"
+   ],
+   "note": "Porch-void piers (grid 3/4 x C/D) re-drawn on L2; top not given."
+  },
+  {
+   "id": "F2-W027",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    0.295,
+    13.615
+   ],
+   "end": [
+    0.295,
+    13.864
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "unverified"
+   },
+   "hatchSpans": [
+    [
+     13.615,
+     13.864
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    }
+   ],
+   "issues": [
+    "ISS-23",
+    "ISS-25"
+   ],
+   "note": "Porch-void piers (grid 3/4 x C/D) re-drawn on L2; top not given."
+  },
+  {
+   "id": "F2-W028",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    0.355,
+    5.037
+   ],
+   "end": [
+    0.355,
+    5.963
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     5.037,
+     5.963
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W029",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    2.55,
+    4.921
+   ],
+   "end": [
+    2.55,
+    8.403
+   ],
+   "thickness": 0.11,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     4.921,
+     8.403
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W030",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    3.705,
+    13.636
+   ],
+   "end": [
+    3.705,
+    13.885
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "unverified"
+   },
+   "hatchSpans": [
+    [
+     13.636,
+     13.885
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    }
+   ],
+   "issues": [
+    "ISS-23",
+    "ISS-25"
+   ],
+   "note": "Porch-void piers (grid 3/4 x C/D) re-drawn on L2; top not given."
+  },
+  {
+   "id": "F2-W031",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    3.9,
+    13.657
+   ],
+   "end": [
+    3.9,
+    13.864
+   ],
+   "thickness": 0.11,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "unverified"
+   },
+   "hatchSpans": [
+    [
+     13.657,
+     13.864
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    }
+   ],
+   "issues": [
+    "ISS-23",
+    "ISS-25"
+   ],
+   "note": "Porch-void piers (grid 3/4 x C/D) re-drawn on L2; top not given."
+  },
+  {
+   "id": "F2-W032",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    3.95,
+    8.605
+   ],
+   "end": [
+    3.95,
+    13.387
+   ],
+   "thickness": 0.09,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     8.605,
+     13.387
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W033",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    5.55,
+    5.148
+   ],
+   "end": [
+    5.55,
+    8.36
+   ],
+   "thickness": 0.11,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     5.148,
+     8.36
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W034",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    6.85,
+    13.615
+   ],
+   "end": [
+    6.85,
+    13.953
+   ],
+   "thickness": 0.09,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "unverified"
+   },
+   "hatchSpans": [
+    [
+     13.615,
+     13.953
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    }
+   ],
+   "issues": [
+    "ISS-23",
+    "ISS-25"
+   ],
+   "note": "Porch-void piers (grid 3/4 x C/D) re-drawn on L2; top not given."
+  },
+  {
+   "id": "F2-W035",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    6.85,
+    15.626
+   ],
+   "end": [
+    6.85,
+    15.964
+   ],
+   "thickness": 0.09,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "unverified"
+   },
+   "hatchSpans": [
+    [
+     15.626,
+     15.964
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    }
+   ],
+   "issues": [
+    "ISS-23",
+    "ISS-25"
+   ],
+   "note": "Porch-void piers (grid 3/4 x C/D) re-drawn on L2; top not given."
+  },
+  {
+   "id": "F2-W036",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    7.055,
+    9.937
+   ],
+   "end": [
+    7.055,
+    13.377
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     9.937,
+     13.377
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W037",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    7.055,
+    13.615
+   ],
+   "end": [
+    7.055,
+    13.953
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "unverified"
+   },
+   "hatchSpans": [
+    [
+     13.615,
+     13.953
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    }
+   ],
+   "issues": [
+    "ISS-23",
+    "ISS-25"
+   ],
+   "note": "Porch-void piers (grid 3/4 x C/D) re-drawn on L2; top not given."
+  },
+  {
+   "id": "F2-W038",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    7.055,
+    15.626
+   ],
+   "end": [
+    7.055,
+    15.874
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "unverified"
+   },
+   "hatchSpans": [
+    [
+     15.626,
+     15.874
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    }
+   ],
+   "issues": [
+    "ISS-23",
+    "ISS-25"
+   ],
+   "note": "Porch-void piers (grid 3/4 x C/D) re-drawn on L2; top not given."
+  },
+  {
+   "id": "F2-W039",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    7.255,
+    5.048
+   ],
+   "end": [
+    7.255,
+    8.487
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     5.048,
+     8.487
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W040",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    8.955,
+    5.016
+   ],
+   "end": [
+    8.955,
+    8.455
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     5.016,
+     8.455
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W041",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    10.955,
+    8.605
+   ],
+   "end": [
+    10.955,
+    13.371
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     8.605,
+     13.371
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W042",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    10.955,
+    13.62
+   ],
+   "end": [
+    10.955,
+    13.959
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "unverified"
+   },
+   "hatchSpans": [
+    [
+     13.62,
+     13.959
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    }
+   ],
+   "issues": [
+    "ISS-23",
+    "ISS-25"
+   ],
+   "note": "Porch-void piers (grid 3/4 x C/D) re-drawn on L2; top not given."
+  },
+  {
+   "id": "F2-W043",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    10.955,
+    15.626
+   ],
+   "end": [
+    10.955,
+    15.874
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "unverified"
+   },
+   "hatchSpans": [
+    [
+     15.626,
+     15.874
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    }
+   ],
+   "issues": [
+    "ISS-23",
+    "ISS-25"
+   ],
+   "note": "Porch-void piers (grid 3/4 x C/D) re-drawn on L2; top not given."
+  },
+  {
+   "id": "F2-W044",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    11.155,
+    13.625
+   ],
+   "end": [
+    11.155,
+    13.964
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "unverified"
+   },
+   "hatchSpans": [
+    [
+     13.625,
+     13.964
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    }
+   ],
+   "issues": [
+    "ISS-23",
+    "ISS-25"
+   ],
+   "note": "Porch-void piers (grid 3/4 x C/D) re-drawn on L2; top not given."
+  },
+  {
+   "id": "F2-W045",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    11.155,
+    15.626
+   ],
+   "end": [
+    11.155,
+    15.964
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "unverified"
+   },
+   "hatchSpans": [
+    [
+     15.626,
+     15.964
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    }
+   ],
+   "issues": [
+    "ISS-23",
+    "ISS-25"
+   ],
+   "note": "Porch-void piers (grid 3/4 x C/D) re-drawn on L2; top not given."
+  },
+  {
+   "id": "F2-W046",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    13.045,
+    6.847
+   ],
+   "end": [
+    13.045,
+    8.487
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     6.847,
+     8.487
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W047",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    13.055,
+    4.995
+   ],
+   "end": [
+    13.055,
+    6.667
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     4.995,
+     6.667
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W048",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    14.145,
+    6.714
+   ],
+   "end": [
+    14.145,
+    8.495
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     6.714,
+     8.495
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W049",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    14.955,
+    4.995
+   ],
+   "end": [
+    14.955,
+    6.783
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     4.995,
+     6.783
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W050",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    15.7,
+    13.631
+   ],
+   "end": [
+    15.7,
+    13.885
+   ],
+   "thickness": 0.11,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "unverified"
+   },
+   "hatchSpans": [
+    [
+     13.631,
+     13.885
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    }
+   ],
+   "issues": [
+    "ISS-23",
+    "ISS-25"
+   ],
+   "note": "Porch-void piers (grid 3/4 x C/D) re-drawn on L2; top not given."
+  },
+  {
+   "id": "F2-W051",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    15.895,
+    13.615
+   ],
+   "end": [
+    15.895,
+    13.864
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "unverified"
+   },
+   "hatchSpans": [
+    [
+     13.615,
+     13.864
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    }
+   ],
+   "issues": [
+    "ISS-23",
+    "ISS-25"
+   ],
+   "note": "Porch-void piers (grid 3/4 x C/D) re-drawn on L2; top not given."
+  },
+  {
+   "id": "F2-W052",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    16.055,
+    5.1
+   ],
+   "end": [
+    16.055,
+    8.403
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     5.1,
+     8.403
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  },
+  {
+   "id": "F2-W053",
+   "floorId": "F2",
+   "axis": "v",
+   "start": [
+    16.055,
+    8.614
+   ],
+   "end": [
+    16.055,
+    13.345
+   ],
+   "thickness": 0.1,
+   "baseElevation": 4.25,
+   "height": 3.1,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "thickness": "verified",
+    "height": "verified"
+   },
+   "hatchSpans": [
+    [
+     8.614,
+     13.345
+    ]
+   ],
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "wall hatch (vector) - position & core thickness"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "3.10 from ±4.25 to ±7.35 (หลังคาน ชั้นหลังคา)"
+    }
+   ],
+   "issues": [
+    "ISS-23"
+   ],
+   "note": "Default: FFL2 +4.25 to roof beam +7.35."
+  }
+ ],
+ "openings": [
+  {
+   "id": "F2-O001",
+   "floorId": "F2",
+   "wallId": "F2-W013",
+   "kind": "door",
+   "typeCode": "D2",
+   "offset": 0.107,
+   "center": 3.155,
+   "width": 0.9,
+   "height": 2.05,
+   "sillHeight": 0,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "unverified",
+    "tag": "unverified"
+   },
+   "measuredGap": 1.318,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12,
+     "note": "type D2 size"
+    }
+   ],
+   "issues": [
+    "ISS-15"
+   ],
+   "note": "tag: circle 2 near (3.6, 9.6) - WALK IN CLOSET / MASTER; gap 2.60-3.92 between column and wall; measured clear gap 1.32 m vs scheduled width 0.90 m; plan gap != schedule width (>0.15 m)"
+  },
+  {
+   "id": "F2-O002",
+   "floorId": "F2",
+   "wallId": "F2-W032",
+   "kind": "door",
+   "typeCode": "D2",
+   "offset": 0.095,
+   "center": 9.15,
+   "width": 0.9,
+   "height": 2.05,
+   "sillHeight": 0,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "unverified",
+    "tag": "unverified"
+   },
+   "measuredGap": 1.12,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12,
+     "note": "type D2 size"
+    }
+   ],
+   "issues": [
+    "ISS-15"
+   ],
+   "note": "tag: circle 2 near (3.6, 9.6) - MASTER from โถง; gap 8.61-9.72 between cross-wall and wall; measured clear gap 1.12 m vs scheduled width 0.90 m; plan gap != schedule width (>0.15 m)"
+  },
+  {
+   "id": "F2-O003",
+   "floorId": "F2",
+   "wallId": "F2-W008",
+   "kind": "door",
+   "typeCode": "D2",
+   "offset": 0.484,
+   "center": 6.585,
+   "width": 0.9,
+   "height": 2.05,
+   "sillHeight": 0,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "unverified",
+    "tag": "verified"
+   },
+   "measuredGap": 1.257,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12,
+     "note": "type D2 size"
+    }
+   ],
+   "issues": [
+    "ISS-15"
+   ],
+   "note": "tag: circle 2 at (6.7, 8.2) - ห้องพระ; gap 5.95-7.21 between wall and cross-wall; measured clear gap 1.26 m vs scheduled width 0.90 m; plan gap != schedule width (>0.15 m)"
+  },
+  {
+   "id": "F2-O004",
+   "floorId": "F2",
+   "wallId": "F2-W009",
+   "kind": "door",
+   "typeCode": "D2",
+   "offset": 0.13,
+   "center": 7.885,
+   "width": 0.9,
+   "height": 2.05,
+   "sillHeight": 0,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "unverified",
+    "tag": "verified"
+   },
+   "measuredGap": 1.178,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12,
+     "note": "type D2 size"
+    }
+   ],
+   "issues": [
+    "ISS-15"
+   ],
+   "note": "tag: circle 2 at (7.95, 8.3) - ห้องเก็บของ; gap 7.30-8.48 between cross-wall and wall; measured clear gap 1.18 m vs scheduled width 0.90 m; plan gap != schedule width (>0.15 m)"
+  },
+  {
+   "id": "F2-O005",
+   "floorId": "F2",
+   "wallId": "F2-W009",
+   "kind": "door",
+   "typeCode": "D2",
+   "offset": 1.75,
+   "center": 9.505,
+   "width": 0.9,
+   "height": 2.05,
+   "sillHeight": 0,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "unverified",
+    "tag": "verified"
+   },
+   "measuredGap": 1.139,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12,
+     "note": "type D2 size"
+    }
+   ],
+   "issues": [
+    "ISS-15"
+   ],
+   "note": "tag: circle 2 at (9.95, 8.3) - ห้องนอน 3; gap 9.01-10.14 between cross-wall and wall; measured clear gap 1.14 m vs scheduled width 0.90 m; plan gap != schedule width (>0.15 m)"
+  },
+  {
+   "id": "F2-O006",
+   "floorId": "F2",
+   "wallId": "F2-W041",
+   "kind": "door",
+   "typeCode": "D2",
+   "offset": 0.215,
+   "center": 9.27,
+   "width": 0.9,
+   "height": 2.05,
+   "sillHeight": 0,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "unverified",
+    "tag": "verified"
+   },
+   "measuredGap": 1.327,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12,
+     "note": "type D2 size"
+    }
+   ],
+   "issues": [
+    "ISS-15"
+   ],
+   "note": "tag: circle 2 at (11.2, 9.15) - ห้องนอน 2; gap 8.61-9.93 between cross-wall and wall; measured clear gap 1.33 m vs scheduled width 0.90 m; plan gap != schedule width (>0.15 m)"
+  },
+  {
+   "id": "F2-O007",
+   "floorId": "F2",
+   "wallId": "F2-W029",
+   "kind": "door",
+   "typeCode": "D5",
+   "offset": 2.579,
+   "center": 7.9,
+   "width": 0.8,
+   "height": 2.05,
+   "sillHeight": 0,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "unverified",
+    "tag": "verified"
+   },
+   "measuredGap": 1.038,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12,
+     "note": "type D5 size"
+    }
+   ],
+   "issues": [],
+   "note": "tag: circle 5 at (2.25, 7.85) - ห้องน้ำ M; gap 7.37-8.40 between wall and column; measured clear gap 1.04 m vs scheduled width 0.80 m; plan gap != schedule width (>0.15 m)"
+  },
+  {
+   "id": "F2-O008",
+   "floorId": "F2",
+   "wallId": "F2-W047",
+   "kind": "door",
+   "typeCode": "D5",
+   "offset": 0.165,
+   "center": 5.56,
+   "width": 0.8,
+   "height": 2.05,
+   "sillHeight": 0,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "unverified",
+    "tag": "verified"
+   },
+   "measuredGap": 1.021,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12,
+     "note": "type D5 size"
+    }
+   ],
+   "issues": [],
+   "note": "tag: circle 5 at (13.25, 5.5) - ห้องน้ำ 3; gap 5.00-6.02 between cross-wall and wall; measured clear gap 1.02 m vs scheduled width 0.80 m; plan gap != schedule width (>0.15 m)"
+  },
+  {
+   "id": "F2-O009",
+   "floorId": "F2",
+   "wallId": "F2-W011",
+   "kind": "door",
+   "typeCode": "D5",
+   "offset": 1.866,
+   "center": 15.41,
+   "width": 0.8,
+   "height": 2.05,
+   "sillHeight": 0,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "unverified",
+    "tag": "verified"
+   },
+   "measuredGap": 1.024,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12,
+     "note": "type D5 size"
+    }
+   ],
+   "issues": [],
+   "note": "tag: circle 5 at (15.5, 8.25) - ห้องน้ำ 2; gap 14.88-15.90 between wall and column; measured clear gap 1.02 m vs scheduled width 0.80 m; plan gap != schedule width (>0.15 m)"
+  },
+  {
+   "id": "F2-O010",
+   "floorId": "F2",
+   "wallId": "F2-W006",
+   "kind": "door",
+   "typeCode": "GL1",
+   "offset": 1.263,
+   "center": 2.1,
+   "width": 0.7,
+   "height": 1.8,
+   "sillHeight": 0,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "verified",
+    "tag": "verified"
+   },
+   "measuredGap": 0.818,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13,
+     "note": "type GL1 size"
+    }
+   ],
+   "issues": [],
+   "note": "tag: GL1 text at (2.19, 5.69) - ห้องน้ำ M; gap 1.68-2.49 between wall and cross-wall; measured clear gap 0.82 m vs scheduled width 0.70 m"
+  },
+  {
+   "id": "F2-O011",
+   "floorId": "F2",
+   "wallId": "F2-W049",
+   "kind": "door",
+   "typeCode": "GL1",
+   "offset": 0.085,
+   "center": 5.43,
+   "width": 0.7,
+   "height": 1.8,
+   "sillHeight": 0,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "verified",
+    "tag": "verified"
+   },
+   "measuredGap": 0.82,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13,
+     "note": "type GL1 size"
+    }
+   ],
+   "issues": [],
+   "note": "tag: GL1 text at (15.25, 5.38) - ห้องน้ำ 3; gap 5.00-5.82 between cross-wall and wall; measured clear gap 0.82 m vs scheduled width 0.70 m"
+  },
+  {
+   "id": "F2-O012",
+   "floorId": "F2",
+   "wallId": "F2-W048",
+   "kind": "door",
+   "typeCode": "GL1",
+   "offset": 1.036,
+   "center": 8.1,
+   "width": 0.7,
+   "height": 1.8,
+   "sillHeight": 0,
+   "status": "verified",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "verified",
+    "tag": "verified"
+   },
+   "measuredGap": 0.807,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13,
+     "note": "type GL1 size"
+    }
+   ],
+   "issues": [],
+   "note": "tag: GL1 text at (13.84, 8.19) - ห้องน้ำ 2; gap 7.69-8.49 between wall and cross-wall; measured clear gap 0.81 m vs scheduled width 0.70 m"
+  },
+  {
+   "id": "F2-O013",
+   "floorId": "F2",
+   "wallId": "F2-W016",
+   "kind": "window",
+   "typeCode": "W2",
+   "offset": 0.392,
+   "center": 0.93,
+   "width": 0.6,
+   "height": 2.5,
+   "sillHeight": 0.3,
+   "status": "conflict",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "conflict",
+    "tag": "conflict"
+   },
+   "measuredGap": null,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12,
+     "note": "type W2 size"
+    }
+   ],
+   "issues": [
+    "ISS-09"
+   ],
+   "note": "tag: hexagon 2 at (0.93, 13.9) - MASTER; gap 0.53-3.47 between wall and wall; gap shared by 3 openings"
+  },
+  {
+   "id": "F2-O014",
+   "floorId": "F2",
+   "wallId": "F2-W016",
+   "kind": "window",
+   "typeCode": "W2",
+   "offset": 1.462,
+   "center": 2.0,
+   "width": 0.6,
+   "height": 2.5,
+   "sillHeight": 0.3,
+   "status": "conflict",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "conflict",
+    "tag": "conflict"
+   },
+   "measuredGap": null,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12,
+     "note": "type W2 size"
+    }
+   ],
+   "issues": [
+    "ISS-09"
+   ],
+   "note": "tag: hexagon 2 at (2.0, 13.9) - MASTER; gap 0.53-3.47 between wall and wall; gap shared by 3 openings"
+  },
+  {
+   "id": "F2-O015",
+   "floorId": "F2",
+   "wallId": "F2-W016",
+   "kind": "window",
+   "typeCode": "W2",
+   "offset": 2.532,
+   "center": 3.07,
+   "width": 0.6,
+   "height": 2.5,
+   "sillHeight": 0.3,
+   "status": "conflict",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "conflict",
+    "tag": "conflict"
+   },
+   "measuredGap": null,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12,
+     "note": "type W2 size"
+    }
+   ],
+   "issues": [
+    "ISS-09"
+   ],
+   "note": "tag: hexagon 2 at (3.07, 13.9) - MASTER; gap 0.53-3.47 between wall and wall; gap shared by 3 openings"
+  },
+  {
+   "id": "F2-O016",
+   "floorId": "F2",
+   "wallId": "F2-W019",
+   "kind": "window",
+   "typeCode": "W2",
+   "offset": 0.66,
+   "center": 12.21,
+   "width": 0.6,
+   "height": 2.5,
+   "sillHeight": 0.3,
+   "status": "conflict",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "conflict",
+    "tag": "conflict"
+   },
+   "measuredGap": 0.878,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12,
+     "note": "type W2 size"
+    }
+   ],
+   "issues": [
+    "ISS-09"
+   ],
+   "note": "tag: hexagon 2 at (12.2, 13.9) - ห้องนอน 2; gap 11.77-12.65 between wall and wall; measured clear gap 0.88 m vs scheduled width 0.60 m"
+  },
+  {
+   "id": "F2-O017",
+   "floorId": "F2",
+   "wallId": "F2-W019",
+   "kind": "window",
+   "typeCode": "W2",
+   "offset": 1.91,
+   "center": 13.46,
+   "width": 0.6,
+   "height": 2.5,
+   "sillHeight": 0.3,
+   "status": "conflict",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "conflict",
+    "tag": "conflict"
+   },
+   "measuredGap": 0.852,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12,
+     "note": "type W2 size"
+    }
+   ],
+   "issues": [
+    "ISS-09"
+   ],
+   "note": "tag: hexagon 2 at (13.45, 13.9) - ห้องนอน 2; gap 13.03-13.88 between wall and wall; measured clear gap 0.85 m vs scheduled width 0.60 m"
+  },
+  {
+   "id": "F2-O018",
+   "floorId": "F2",
+   "wallId": "F2-W019",
+   "kind": "window",
+   "typeCode": "W2",
+   "offset": 3.165,
+   "center": 14.715,
+   "width": 0.6,
+   "height": 2.5,
+   "sillHeight": 0.3,
+   "status": "conflict",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "conflict",
+    "tag": "conflict"
+   },
+   "measuredGap": 0.889,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-26",
+     "pdfPage": 12,
+     "note": "type W2 size"
+    }
+   ],
+   "issues": [
+    "ISS-09"
+   ],
+   "note": "tag: hexagon 2 at (14.7, 13.9) - ห้องนอน 2; gap 14.27-15.15 between wall and wall; measured clear gap 0.89 m vs scheduled width 0.60 m"
+  },
+  {
+   "id": "F2-O019",
+   "floorId": "F2",
+   "wallId": "F2-W003",
+   "kind": "window",
+   "typeCode": "W2B",
+   "offset": 2.84,
+   "center": 3.595,
+   "width": 0.6,
+   "height": 1.6,
+   "sillHeight": 1.1,
+   "status": "conflict",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "conflict",
+    "tag": "unverified"
+   },
+   "measuredGap": 0.841,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13,
+     "note": "type W2B size"
+    }
+   ],
+   "issues": [
+    "ISS-10",
+    "ISS-14"
+   ],
+   "note": "tag: text 'B2' at (3.62, 4.70); gap 3.17-4.02 between wall and wall; measured clear gap 0.84 m vs scheduled width 0.60 m"
+  },
+  {
+   "id": "F2-O020",
+   "floorId": "F2",
+   "wallId": "F2-W001",
+   "kind": "window",
+   "typeCode": "W2B",
+   "offset": 3.13,
+   "center": 10.5,
+   "width": 0.6,
+   "height": 1.6,
+   "sillHeight": 1.1,
+   "status": "conflict",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "conflict",
+    "tag": "conflict"
+   },
+   "measuredGap": 0.815,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13,
+     "note": "type W2B size"
+    }
+   ],
+   "issues": [
+    "ISS-10"
+   ],
+   "note": "tag: 2B text at (10.52, 4.70) - ห้องนอน 3; gap 10.09-10.90 between wall and column; measured clear gap 0.81 m vs scheduled width 0.60 m"
+  },
+  {
+   "id": "F2-O021",
+   "floorId": "F2",
+   "wallId": "F2-W002",
+   "kind": "window",
+   "typeCode": "W2B",
+   "offset": 0.114,
+   "center": 11.515,
+   "width": 0.6,
+   "height": 1.6,
+   "sillHeight": 1.1,
+   "status": "conflict",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "conflict",
+    "tag": "conflict"
+   },
+   "measuredGap": 0.826,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13,
+     "note": "type W2B size"
+    }
+   ],
+   "issues": [
+    "ISS-10"
+   ],
+   "note": "tag: 2B text at (11.52, 4.70) - ห้องนอน 3; gap 11.10-11.93 between column and wall; measured clear gap 0.83 m vs scheduled width 0.60 m"
+  },
+  {
+   "id": "F2-O022",
+   "floorId": "F2",
+   "wallId": "F2-W004",
+   "kind": "window",
+   "typeCode": "W5",
+   "offset": 0.41,
+   "center": 6.335,
+   "width": 0.6,
+   "height": 0.4,
+   "sillHeight": 1.65,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "unverified",
+    "tag": "verified"
+   },
+   "measuredGap": 0.926,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13,
+     "note": "type W5 size"
+    }
+   ],
+   "issues": [],
+   "note": "tag: hexagon 5 at (6.34, 4.5) - ห้องพระ; gap 5.87-6.80 between wall and wall; measured clear gap 0.93 m vs scheduled width 0.60 m; plan gap != schedule width (>0.15 m)"
+  },
+  {
+   "id": "F2-O023",
+   "floorId": "F2",
+   "wallId": "F2-W001",
+   "kind": "window",
+   "typeCode": "W5",
+   "offset": 0.71,
+   "center": 8.08,
+   "width": 0.6,
+   "height": 0.4,
+   "sillHeight": 1.65,
+   "status": "unverified",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "unverified",
+    "tag": "verified"
+   },
+   "measuredGap": 0.842,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13,
+     "note": "type W5 size"
+    }
+   ],
+   "issues": [],
+   "note": "tag: hexagon 5 at (8.07, 4.5) - ห้องเก็บของ; gap 7.66-8.50 between wall and wall; measured clear gap 0.84 m vs scheduled width 0.60 m; plan gap != schedule width (>0.15 m)"
+  },
+  {
+   "id": "F2-O024",
+   "floorId": "F2",
+   "wallId": "F2-W003",
+   "kind": "window",
+   "typeCode": "W7",
+   "offset": 0.52,
+   "center": 1.45,
+   "width": 0.95,
+   "height": 0.4,
+   "sillHeight": 1.65,
+   "status": "conflict",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "conflict",
+    "tag": "conflict"
+   },
+   "measuredGap": 1.223,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13,
+     "note": "type W7 size"
+    }
+   ],
+   "issues": [
+    "ISS-27"
+   ],
+   "note": "tag: hexagon 7 at (1.45, 4.6) - ห้องน้ำ M; gap 0.84-2.06 between wall and wall; measured clear gap 1.22 m vs scheduled width 0.95 m"
+  },
+  {
+   "id": "F2-O025",
+   "floorId": "F2",
+   "wallId": "F2-W052",
+   "kind": "window",
+   "typeCode": "W7",
+   "offset": 0.225,
+   "center": 5.8,
+   "width": 0.95,
+   "height": 0.4,
+   "sillHeight": 1.65,
+   "status": "conflict",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "conflict",
+    "tag": "conflict"
+   },
+   "measuredGap": 1.366,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13,
+     "note": "type W7 size"
+    }
+   ],
+   "issues": [
+    "ISS-27"
+   ],
+   "note": "tag: hexagon 7 at (16.65, 6.0) - ห้องน้ำ 3; gap 5.10-6.47 between column and wall; measured clear gap 1.37 m vs scheduled width 0.95 m"
+  },
+  {
+   "id": "F2-O026",
+   "floorId": "F2",
+   "wallId": "F2-W052",
+   "kind": "window",
+   "typeCode": "W7",
+   "offset": 2.145,
+   "center": 7.72,
+   "width": 0.95,
+   "height": 0.4,
+   "sillHeight": 1.65,
+   "status": "conflict",
+   "fieldStatus": {
+    "position": "verified",
+    "size": "conflict",
+    "tag": "conflict"
+   },
+   "measuredGap": 1.376,
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "tag + position"
+    },
+    {
+     "sheet": "AR-27",
+     "pdfPage": 13,
+     "note": "type W7 size"
+    }
+   ],
+   "issues": [
+    "ISS-27"
+   ],
+   "note": "tag: hexagon 7 at (16.65, 7.6) - ห้องน้ำ 2; gap 7.03-8.40 between wall and column; measured clear gap 1.38 m vs scheduled width 0.95 m"
+  }
+ ],
+ "rooms": [
+  {
+   "id": "F2-R01",
+   "floorId": "F2",
+   "name": "ห้องน้ำ M",
+   "nameEn": "Master bathroom",
+   "polygon": [
+    [
+     -0.05,
+     4.955
+    ],
+    [
+     2.555,
+     4.955
+    ],
+    [
+     2.555,
+     8.555
+    ],
+    [
+     -0.05,
+     8.555
+    ]
+   ],
+   "floorElevation": 4.15,
+   "ceilingHeight": 2.6,
+   "ceilingLevel": 6.75,
+   "finish": {
+    "floor": "F2",
+    "ceiling": "C1",
+    "status": "unverified",
+    "issues": [
+     "ISS-01"
+    ]
+   },
+   "area": 9.378,
+   "bbox": {
+    "x": 2.605,
+    "y": 3.6
+   },
+   "areaBasis": "wall centre-lines",
+   "status": "verified",
+   "fieldStatus": {
+    "polygon": "verified",
+    "floor": "verified",
+    "ceiling": "verified"
+   },
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "room tag F2 +4.15 / C1 +2.60; polygon from wall centre-lines"
+    }
+   ],
+   "issues": [],
+   "note": "Tag placed outside the building with a leader."
+  },
+  {
+   "id": "F2-R02",
+   "floorId": "F2",
+   "name": "WALK IN CLOSET",
+   "nameEn": "Walk-in closet",
+   "polygon": [
+    [
+     2.555,
+     4.955
+    ],
+    [
+     5.55,
+     4.955
+    ],
+    [
+     5.55,
+     8.555
+    ],
+    [
+     2.555,
+     8.555
+    ]
+   ],
+   "floorElevation": 4.25,
+   "ceilingHeight": 3.0,
+   "ceilingLevel": 7.25,
+   "finish": {
+    "floor": "F1",
+    "ceiling": "C1",
+    "status": "unverified",
+    "issues": [
+     "ISS-01"
+    ]
+   },
+   "area": 10.782,
+   "bbox": {
+    "x": 2.995,
+    "y": 3.6
+   },
+   "areaBasis": "wall centre-lines",
+   "status": "verified",
+   "fieldStatus": {
+    "polygon": "verified",
+    "floor": "verified",
+    "ceiling": "verified"
+   },
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "room tag F1 +4.25 / C1 +3.00; polygon from wall centre-lines"
+    }
+   ],
+   "issues": [],
+   "note": ""
+  },
+  {
+   "id": "F2-R03",
+   "floorId": "F2",
+   "name": "ห้องพระ",
+   "nameEn": "Shrine room",
+   "polygon": [
+    [
+     5.55,
+     4.955
+    ],
+    [
+     7.255,
+     4.955
+    ],
+    [
+     7.255,
+     8.555
+    ],
+    [
+     5.55,
+     8.555
+    ]
+   ],
+   "floorElevation": 4.25,
+   "ceilingHeight": 3.0,
+   "ceilingLevel": 7.25,
+   "finish": {
+    "floor": "F1",
+    "ceiling": "C1",
+    "status": "unverified",
+    "issues": [
+     "ISS-01"
+    ]
+   },
+   "area": 6.138,
+   "bbox": {
+    "x": 1.705,
+    "y": 3.6
+   },
+   "areaBasis": "wall centre-lines",
+   "status": "verified",
+   "fieldStatus": {
+    "polygon": "verified",
+    "floor": "verified",
+    "ceiling": "verified"
+   },
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "room tag F1 +4.25 / C1 +3.00; polygon from wall centre-lines"
+    }
+   ],
+   "issues": [],
+   "note": ""
+  },
+  {
+   "id": "F2-R04",
+   "floorId": "F2",
+   "name": "ห้องเก็บของ",
+   "nameEn": "Store",
+   "polygon": [
+    [
+     7.255,
+     4.955
+    ],
+    [
+     8.955,
+     4.955
+    ],
+    [
+     8.955,
+     8.555
+    ],
+    [
+     7.255,
+     8.555
+    ]
+   ],
+   "floorElevation": 4.25,
+   "ceilingHeight": 3.0,
+   "ceilingLevel": 7.25,
+   "finish": {
+    "floor": "F1",
+    "ceiling": "C1",
+    "status": "unverified",
+    "issues": [
+     "ISS-01"
+    ]
+   },
+   "area": 6.12,
+   "bbox": {
+    "x": 1.7,
+    "y": 3.6
+   },
+   "areaBasis": "wall centre-lines",
+   "status": "verified",
+   "fieldStatus": {
+    "polygon": "verified",
+    "floor": "verified",
+    "ceiling": "verified"
+   },
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "room tag F1 +4.25 / C1 +3.00; polygon from wall centre-lines"
+    }
+   ],
+   "issues": [],
+   "note": ""
+  },
+  {
+   "id": "F2-R05",
+   "floorId": "F2",
+   "name": "ห้องนอน 3",
+   "nameEn": "Bedroom 3",
+   "polygon": [
+    [
+     8.955,
+     4.955
+    ],
+    [
+     13.05,
+     4.955
+    ],
+    [
+     13.05,
+     8.555
+    ],
+    [
+     8.955,
+     8.555
+    ]
+   ],
+   "floorElevation": 4.25,
+   "ceilingHeight": 3.0,
+   "ceilingLevel": 7.25,
+   "finish": {
+    "floor": "F1",
+    "ceiling": "C1",
+    "status": "unverified",
+    "issues": [
+     "ISS-01"
+    ]
+   },
+   "area": 14.742,
+   "bbox": {
+    "x": 4.095,
+    "y": 3.6
+   },
+   "areaBasis": "wall centre-lines",
+   "status": "verified",
+   "fieldStatus": {
+    "polygon": "verified",
+    "floor": "verified",
+    "ceiling": "verified"
+   },
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "room tag F1 +4.25 / C1 +3.00; polygon from wall centre-lines"
+    }
+   ],
+   "issues": [],
+   "note": ""
+  },
+  {
+   "id": "F2-R06",
+   "floorId": "F2",
+   "name": "ห้องน้ำ 3",
+   "nameEn": "Bathroom 3",
+   "polygon": [
+    [
+     13.05,
+     4.955
+    ],
+    [
+     16.055,
+     4.955
+    ],
+    [
+     16.055,
+     6.745
+    ],
+    [
+     13.05,
+     6.745
+    ]
+   ],
+   "floorElevation": 4.15,
+   "ceilingHeight": 2.6,
+   "ceilingLevel": 6.75,
+   "finish": {
+    "floor": "F2",
+    "ceiling": "C1",
+    "status": "unverified",
+    "issues": [
+     "ISS-01"
+    ]
+   },
+   "area": 5.379,
+   "bbox": {
+    "x": 3.005,
+    "y": 1.79
+   },
+   "areaBasis": "wall centre-lines",
+   "status": "conflict",
+   "fieldStatus": {
+    "polygon": "verified",
+    "floor": "conflict",
+    "ceiling": "conflict"
+   },
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "room tag F2 +4.15 / C1 +2.60; polygon from wall centre-lines"
+    }
+   ],
+   "issues": [
+    "ISS-17"
+   ],
+   "note": ""
+  },
+  {
+   "id": "F2-R07",
+   "floorId": "F2",
+   "name": "ห้องน้ำ 2",
+   "nameEn": "Bathroom 2",
+   "polygon": [
+    [
+     13.05,
+     6.745
+    ],
+    [
+     16.055,
+     6.745
+    ],
+    [
+     16.055,
+     8.555
+    ],
+    [
+     13.05,
+     8.555
+    ]
+   ],
+   "floorElevation": 4.15,
+   "ceilingHeight": 2.6,
+   "ceilingLevel": 6.75,
+   "finish": {
+    "floor": "F2",
+    "ceiling": "C1",
+    "status": "unverified",
+    "issues": [
+     "ISS-01"
+    ]
+   },
+   "area": 5.439,
+   "bbox": {
+    "x": 3.005,
+    "y": 1.81
+   },
+   "areaBasis": "wall centre-lines",
+   "status": "conflict",
+   "fieldStatus": {
+    "polygon": "verified",
+    "floor": "conflict",
+    "ceiling": "conflict"
+   },
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "room tag F2 +4.15 / C1 +2.60; polygon from wall centre-lines"
+    }
+   ],
+   "issues": [
+    "ISS-17"
+   ],
+   "note": "Tag placed outside the building (east) with a leader."
+  },
+  {
+   "id": "F2-R08",
+   "floorId": "F2",
+   "name": "MASTER BEDROOM",
+   "nameEn": "Master bedroom",
+   "polygon": [
+    [
+     -0.05,
+     8.555
+    ],
+    [
+     3.95,
+     8.555
+    ],
+    [
+     3.95,
+     13.55
+    ],
+    [
+     -0.05,
+     13.55
+    ]
+   ],
+   "floorElevation": 4.25,
+   "ceilingHeight": 3.0,
+   "ceilingLevel": 7.25,
+   "finish": {
+    "floor": "F1",
+    "ceiling": "C1",
+    "status": "unverified",
+    "issues": [
+     "ISS-01"
+    ]
+   },
+   "area": 19.98,
+   "bbox": {
+    "x": 4.0,
+    "y": 4.995
+   },
+   "areaBasis": "wall centre-lines",
+   "status": "verified",
+   "fieldStatus": {
+    "polygon": "verified",
+    "floor": "verified",
+    "ceiling": "verified"
+   },
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "room tag F1 +4.25 / C1 +3.00; polygon from wall centre-lines"
+    }
+   ],
+   "issues": [],
+   "note": ""
+  },
+  {
+   "id": "F2-R09",
+   "floorId": "F2",
+   "name": "โถง",
+   "nameEn": "Upper hall",
+   "polygon": [
+    [
+     3.95,
+     8.555
+    ],
+    [
+     10.955,
+     8.555
+    ],
+    [
+     10.955,
+     9.95
+    ],
+    [
+     3.95,
+     9.95
+    ]
+   ],
+   "floorElevation": 4.25,
+   "ceilingHeight": 3.0,
+   "ceilingLevel": 7.25,
+   "finish": {
+    "floor": "F1",
+    "ceiling": "C1",
+    "status": "unverified",
+    "issues": [
+     "ISS-01"
+    ]
+   },
+   "area": 9.772,
+   "bbox": {
+    "x": 7.005,
+    "y": 1.395
+   },
+   "areaBasis": "wall centre-lines",
+   "status": "unverified",
+   "fieldStatus": {
+    "polygon": "unverified",
+    "floor": "verified",
+    "ceiling": "verified"
+   },
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "room tag F1 +4.25 / C1 +3.00; polygon from wall centre-lines"
+    }
+   ],
+   "issues": [
+    "ISS-24"
+   ],
+   "note": "Open to stair head and void; south edge taken at the stair head line y=9.95."
+  },
+  {
+   "id": "F2-R10",
+   "floorId": "F2",
+   "name": "ห้องนอน 2",
+   "nameEn": "Bedroom 2",
+   "polygon": [
+    [
+     10.955,
+     8.555
+    ],
+    [
+     16.055,
+     8.555
+    ],
+    [
+     16.055,
+     13.55
+    ],
+    [
+     10.955,
+     13.55
+    ]
+   ],
+   "floorElevation": 4.25,
+   "ceilingHeight": 3.0,
+   "ceilingLevel": 7.25,
+   "finish": {
+    "floor": "F1",
+    "ceiling": "C1",
+    "status": "unverified",
+    "issues": [
+     "ISS-01"
+    ]
+   },
+   "area": 25.474,
+   "bbox": {
+    "x": 5.1,
+    "y": 4.995
+   },
+   "areaBasis": "wall centre-lines",
+   "status": "verified",
+   "fieldStatus": {
+    "polygon": "verified",
+    "floor": "verified",
+    "ceiling": "verified"
+   },
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "room tag F1 +4.25 / C1 +3.00; polygon from wall centre-lines"
+    }
+   ],
+   "issues": [],
+   "note": ""
+  }
+ ],
+ "stairs": [],
+ "voids": [
+  {
+   "id": "F2-V01",
+   "name": "โล่ง (void over โถงต้อนรับ)",
+   "rect": [
+    7.055,
+    9.95,
+    10.955,
+    13.55
+   ],
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "โล่ง label + cross"
+    },
+    {
+     "sheet": "AR-11",
+     "pdfPage": 6
+    }
+   ]
+  },
+  {
+   "id": "F2-V02",
+   "name": "โล่ง (void over เฉลียง)",
+   "rect": [
+    7.055,
+    13.55,
+    10.955,
+    16.05
+   ],
+   "status": "verified",
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "โล่ง label"
+    },
+    {
+     "sheet": "AR-12",
+     "pdfPage": 7,
+     "note": "porch void, ระดับฝ้า +6.30"
+    }
+   ]
+  }
+ ],
+ "slabs": [
+  {
+   "id": "F2-S01",
+   "name": "พื้นหลังคาคอนกรีตทำผิวขัดมัน (F3) - carport roof slab",
+   "polygon": [
+    [
+     11.0,
+     13.55
+    ],
+    [
+     16.055,
+     13.55
+    ],
+    [
+     16.055,
+     8.6
+    ],
+    [
+     17.1,
+     8.6
+    ],
+    [
+     17.1,
+     26.7
+    ],
+    [
+     11.0,
+     26.7
+    ]
+   ],
+   "z": 3.7,
+   "status": "unverified",
+   "sources": [
+    {
+     "sheet": "AR-09",
+     "pdfPage": 4,
+     "note": "F3 label x2"
+    },
+    {
+     "sheet": "ST-04",
+     "pdfPage": 16,
+     "note": "S2 slabs, beams +3.70"
+    }
+   ],
+   "note": "Extent read from AR-09 outline; strip east of grid 5 (x 16.05-17.1, y 8.6-13.5) also tagged F3."
+  }
+ ],
+ "unassigned": []
+}
