@@ -2048,5 +2048,65 @@
     0.201
    ]
   ]
+ },
+ "sectionLines": {
+  "AR-08": {
+   "A-A": {
+    "axis": "y",
+    "pos": 11.9,
+    "dashLength": 12.93,
+    "label": [
+     -2.12,
+     10.95
+    ]
+   },
+   "B-B": {
+    "axis": "x",
+    "pos": 7.83,
+    "dashLength": 8.76,
+    "label": [
+     7.01,
+     17.65
+    ]
+   },
+   "C-C": {
+    "axis": "x",
+    "pos": 14.59,
+    "dashLength": 19.21,
+    "label": [
+     13.76,
+     28.85
+    ]
+   }
+  },
+  "AR-09": {
+   "A-A": {
+    "axis": "y",
+    "pos": 11.25,
+    "dashLength": 12.93,
+    "label": [
+     -2.12,
+     10.31
+    ]
+   },
+   "B-B": {
+    "axis": "x",
+    "pos": 7.83,
+    "dashLength": 8.76,
+    "label": [
+     7.01,
+     17.01
+    ]
+   },
+   "C-C": {
+    "axis": "x",
+    "pos": 14.59,
+    "dashLength": 19.21,
+    "label": [
+     13.76,
+     28.21
+    ]
+   }
+  }
  }
 }

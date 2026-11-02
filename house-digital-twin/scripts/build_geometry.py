@@ -349,6 +349,25 @@ def levels():
     return out
 
 
+def sections():
+    out = []
+    for name in ("A-A", "B-B", "C-C"):
+        vals = {sh: RAW["sectionLines"][sh][name] for sh in ("AR-08", "AR-09") if name in RAW["sectionLines"][sh]}
+        p08 = vals.get("AR-08")
+        axis = p08["axis"]
+        agree = all(abs(v["pos"] - p08["pos"]) <= 0.05 for v in vals.values())
+        status, dec = ("verified", []) if agree else resolve("conflict", ["ISS-34"])
+        target = BUILDING["sectionSheets"].get(name)
+        out.append({
+            "id": name, "axis": axis, "pos": p08["pos"],
+            "positions": {sh: v["pos"] for sh, v in vals.items()},
+            "sectionSheet": target, "status": status if target else "unverified", "decisions": dec,
+            "issues": ([] if agree else ["ISS-34"]) + ([] if target else ["ISS-19"]),
+            "sources": [src(sh, f"{name} cut line, dash line nearest to the callout label") for sh in vals],
+        })
+    return out
+
+
 def grids():
     out = {}
     for axis in ("x", "y"):
@@ -481,6 +500,12 @@ def report(floors, bld):
           "✔ = dash-dot grid line found in the vector data within ±3 cm of the dimensioned position; – = bubble only / not drawn on that sheet.", "",
           md_table(rows, ["Axis", "Grid", "Pos (m)", "Line detected", "Status", "Issues"]), ""]
     L += ["Dimension chains read:", ""] + [f'- **{d["sheet"]}**: {d["chain"]}' for d in BUILDING["grids"]["dimensionChecks"]] + [""]
+    # sections
+    L += ["## 5b. Section cut lines", "", md_table([[x["id"], "along X (y = const)" if x["axis"] == "y" else "along Y (x = const)",
+             ", ".join(f"{k}: {v:.2f}" for k, v in x["positions"].items()), f'{x["pos"]:.2f}',
+             (f'{x["sectionSheet"]["sheet"]} (p.{x["sectionSheet"]["pdfPage"]})' if x["sectionSheet"] else "none in set"),
+             BADGE[x["status"]], ", ".join(x["issues"] + x["decisions"])] for x in bld["sections"]],
+             ["Cut", "Plane", "Measured", "Used", "Section sheet", "Status", "Issues / decisions"]), ""]
     # columns
     L += ["## 6. Columns cross-check (0.20 × 0.20 quads)", "",
           md_table([[c["id"], c["grid"] or "-", f'{c["x"]:.2f}', f'{c["y"]:.2f}',
@@ -551,7 +576,7 @@ def main():
             i["resolution"] = {"decision": d["id"], "date": d["date"], "by": d["by"], "text": d["decision"]}
     bld = {
         "project": BUILDING["project"], "units": BUILDING["units"], "coordinateSystem": BUILDING["coordinateSystem"],
-        "north": north(), "levels": levels(), "grids": grids(), "columns": cols,
+        "north": north(), "levels": levels(), "sections": sections(), "grids": grids(), "columns": cols,
         "doorTypes": BUILDING["doorTypes"], "windowTypes": BUILDING["windowTypes"],
         "issues": issues, "decisions": DECISIONS, "sheets": SHEETS,
     }

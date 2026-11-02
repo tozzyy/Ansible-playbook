@@ -131,6 +131,40 @@ def columns(doc, sheet):
     return sorted(uniq, key=lambda c: (c[1], c[0]))
 
 
+def section_lines(doc, sheet):
+    """Section callout lines (A-A along X, B-B along Y): heavy 0.36pt black dash lines across the building."""
+    page = doc[SHEETS[sheet]["page"] - 1]
+    H, V = collections.defaultdict(float), collections.defaultdict(float)
+    for dr in page.get_drawings():
+        if style(dr) != (0.36, 0.0):
+            continue
+        for a, b in iter_segments(dr):
+            x1, y1 = to_m(sheet, a.x, a.y)
+            x2, y2 = to_m(sheet, b.x, b.y)
+            # only dash pieces (0.3 - 2.0 m); solid outlines are ignored
+            if abs(y1 - y2) < 0.003 and 0.3 < abs(x1 - x2) < 2.0 and 0 < y1 < 26.7:
+                H[round(y1, 2)] += abs(x1 - x2)
+            if abs(x1 - x2) < 0.003 and 0.3 < abs(y1 - y2) < 2.0 and 0 < x1 < 17:
+                V[round(x1, 2)] += abs(y1 - y2)
+    H = {k: v for k, v in H.items() if v > 6}
+    V = {k: v for k, v in V.items() if v > 6}
+    # each callout bubble carries a text label ("A-A", "B-B", "C-C"); the cut line is the dash line
+    # nearest to the label on the perpendicular axis. Labels sit at both ends of the line.
+    out = {}
+    for w in page.get_text("words"):
+        name = w[4]
+        if name not in ("A-A", "B-B", "C-C") or name in out:
+            continue
+        lx, ly = to_m(sheet, (w[0] + w[2]) / 2, (w[1] + w[3]) / 2)
+        outside_x = lx < -0.5 or lx > 17.5          # label left/right of the building -> horizontal cut
+        cands = H if outside_x else V
+        coord = ly if outside_x else lx
+        pos = min(cands, key=lambda k: abs(k - coord))
+        out[name] = {"axis": "y" if outside_x else "x", "pos": pos, "dashLength": round(cands[pos], 2),
+                     "label": [round(lx, 2), round(ly, 2)]}
+    return out
+
+
 def main(pdf):
     doc = pymupdf.open(pdf)
     OUT.mkdir(parents=True, exist_ok=True)
@@ -141,6 +175,7 @@ def main(pdf):
         "hatch": {"F1": hatch_runs(doc, "AR-08"), "F2": hatch_runs(doc, "AR-09")},
         "gridLines": {s: grid_lines(doc, s) for s in SHEETS},
         "columns": {s: columns(doc, s) for s in SHEETS},
+        "sectionLines": {s: section_lines(doc, s) for s in ("AR-08", "AR-09")},
     }
     (OUT / "pdf-extract.json").write_text(json.dumps(raw, indent=1, ensure_ascii=False))
     print("wrote", OUT / "pdf-extract.json")
@@ -148,6 +183,8 @@ def main(pdf):
         print(f, "hatch runs h/v:", len(raw["hatch"][f]["h"]), len(raw["hatch"][f]["v"]))
     for s, c in raw["columns"].items():
         print(s, "columns:", len(c))
+    for s, l in raw["sectionLines"].items():
+        print(s, "section lines:", {k: (v["axis"], v["pos"]) for k, v in l.items()})
 
 
 if __name__ == "__main__":

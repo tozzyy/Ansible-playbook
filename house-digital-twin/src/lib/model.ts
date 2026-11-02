@@ -112,3 +112,83 @@ export function roomPreset(r: Room): CamPreset {
 }
 
 export const northPlan = building.north.planVector; // unit vector in plan coords
+
+// ------------------------------------------------------------------ measurement snapping
+export type SnapResult = { p: [number, number, number]; label: string | null };
+type Cand = { p: [number, number, number]; label: string };
+let _cands: Cand[] | null = null;
+
+/** Snap targets built from the verified data, in world coords (x, level, plan y). */
+export function snapCandidates(): Cand[] {
+  if (_cands) return _cands;
+  const c: Cand[] = [];
+  const W = (x: number, z: number, y: number, label: string) => c.push({ p: [x, z, y], label });
+  for (const f of floors) {
+    for (const w of f.walls) {
+      const t = w.thickness / 2;
+      const z0 = w.baseElevation, z1 = w.baseElevation + w.height;
+      for (const [x, y] of [w.start, w.end]) {
+        for (const z of [z0, z1]) {
+          W(x, z, y, `ปลายผนัง ${w.id} (แนวศูนย์กลาง)`);
+          if (w.axis === "h") { W(x, z, y - t, `มุมผิวผนัง ${w.id}`); W(x, z, y + t, `มุมผิวผนัง ${w.id}`); }
+          else { W(x - t, z, y, `มุมผิวผนัง ${w.id}`); W(x + t, z, y, `มุมผิวผนัง ${w.id}`); }
+        }
+      }
+    }
+    const wallById = new Map(f.walls.map((w) => [w.id, w]));
+    for (const o of f.openings) {
+      const w = wallById.get(o.wallId)!;
+      for (const u of [o.offset, o.offset + o.width]) {
+        for (const z of [o.sillZ, o.sillZ + o.height]) {
+          const [x, y] = w.axis === "h" ? [w.start[0] + u, w.start[1]] : [w.start[0], w.start[1] + u];
+          W(x, z, y, `ขอบช่อง ${o.typeCode} ${o.id}`);
+        }
+      }
+    }
+    for (const r of f.rooms) for (const [x, y] of r.polygon) W(x, r.floorElevation, y, `มุมห้อง ${r.name}`);
+  }
+  for (const col of building.columns) {
+    for (const z of [0, 0.65, 4.25]) {
+      W(col.x, z, col.y, `ศูนย์กลางเสา ${col.id}`);
+      for (const [dx, dy] of [[-0.1, -0.1], [0.1, -0.1], [0.1, 0.1], [-0.1, 0.1]]) W(col.x + dx, z, col.y + dy, `มุมเสา ${col.id}`);
+    }
+  }
+  for (const gx of building.grids.x) for (const gy of building.grids.y) for (const z of [0, 0.65, 4.25]) W(gx.pos, z, gy.pos, `Grid ${gx.name}/${gy.name}`);
+  _cands = c;
+  return c;
+}
+
+export const SNAP_RADIUS = 0.2;
+
+export type Ray = { origin: [number, number, number]; dir: [number, number, number] };
+/** max angle between the click ray and a snap target (radians, ~0.7 deg) */
+export const SNAP_ANGLE = 0.012;
+
+/**
+ * Snap a clicked point to verified geometry: first within SNAP_RADIUS of the surface hit,
+ * otherwise the target closest to the click ray (screen-space style), so edge clicks still snap.
+ */
+export function snapPoint(p: [number, number, number], ray?: Ray): SnapResult {
+  let best: Cand | null = null, bd = SNAP_RADIUS;
+  for (const c of snapCandidates()) {
+    const d = Math.hypot(c.p[0] - p[0], c.p[1] - p[1], c.p[2] - p[2]);
+    if (d < bd) { bd = d; best = c; }
+  }
+  if (!best && ray) {
+    const [ox, oy, oz] = ray.origin, [dx, dy, dz] = ray.dir;
+    let ba = SNAP_ANGLE;
+    for (const c of snapCandidates()) {
+      const vx = c.p[0] - ox, vy = c.p[1] - oy, vz = c.p[2] - oz;
+      const t = vx * dx + vy * dy + vz * dz;
+      if (t <= 0) continue;
+      const px = vx - t * dx, py = vy - t * dy, pz = vz - t * dz;
+      const a = Math.hypot(px, py, pz) / t;
+      if (a < ba) { ba = a; best = c; }
+    }
+  }
+  return best ? { p: best.p, label: best.label } : { p, label: null };
+}
+
+/** Plane helpers for the section tool (world coords). */
+export const sectionLine = (id: "A-A" | "B-B" | "C-C") => building.sections.find((s) => s.id === id)!;
+export const floorLevel = (floorId: "F1" | "F2") => (floorId === "F2" ? 4.25 : 0.65);

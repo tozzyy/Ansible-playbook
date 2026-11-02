@@ -29,24 +29,50 @@ const MAT = {
   unassigned: "#d4d4d8",
 };
 const cache = new Map<string, THREE.MeshStandardMaterial>();
+let doubleSided = false;
 function mat(color: string, opacity = 1, extra: Partial<THREE.MeshStandardMaterialParameters> = {}) {
   const key = `${color}|${opacity.toFixed(2)}|${JSON.stringify(extra)}`;
   let m = cache.get(key);
   if (!m) {
     m = new THREE.MeshStandardMaterial({ color, roughness: 0.85, transparent: opacity < 1, opacity, depthWrite: opacity >= 1, ...extra });
+    m.side = doubleSided ? THREE.DoubleSide : THREE.FrontSide;
     cache.set(key, m);
   }
   return m;
 }
+/** While a section is active, show back faces so cut walls/slabs read as solid. */
+export function setDoubleSided(on: boolean) {
+  doubleSided = on;
+  cache.forEach((m) => { m.side = on ? THREE.DoubleSide : THREE.FrontSide; m.needsUpdate = true; });
+}
 const isSel = (sel: Selection, kind: string, id: string) => !!sel && sel.kind === kind && sel.id === id;
 
+/** Click on any model part: select it, or add a measurement point when the measure tool is on. */
+export function pick(e: ThreeEvent<MouseEvent>, sel: Selection) {
+  if (e.delta > 4) return; // it was a drag (orbit), not a click
+  e.stopPropagation();
+  const st = useViewerStore.getState();
+  if (st.tool === "measure") {
+    const r = e.ray;
+    st.addMeasurePoint([e.point.x, e.point.y, e.point.z],
+      { origin: [r.origin.x, r.origin.y, r.origin.z], dir: [r.direction.x, r.direction.y, r.direction.z] });
+  }
+  else st.select(sel);
+}
+
 function useClick(kind: string, id: string) {
-  const select = useViewerStore((s) => s.select);
-  return (e: ThreeEvent<MouseEvent>) => {
-    if (e.delta > 4) return; // it was a drag (orbit), not a click
-    e.stopPropagation();
-    select({ kind, id } as Selection);
-  };
+  return (e: ThreeEvent<MouseEvent>) => pick(e, { kind, id } as Selection);
+}
+
+/** Is a plan point on the kept side of a vertical section? */
+function keptBySection(x: number, y: number) {
+  const { mode, pos, flip } = useViewerStore.getState().section;
+  if (mode === "off" || mode === "plan") return true;
+  const line = mode === "A-A" || mode === "B-B" ? building.sections.find((s) => s.id === mode)! : null;
+  const axis = line ? line.axis : mode;
+  const at = line ? line.pos : pos;
+  const v = axis === "x" ? x : y;
+  return flip ? v >= at : v <= at;
 }
 
 // ------------------------------------------------------------------ walls & openings
@@ -135,6 +161,7 @@ function RoomLabel({ r, lift, show }: { r: Room; lift: number; show: boolean }) 
 // ------------------------------------------------------------------ floor group
 function FloorGroup({ floor, lift, visible, labels }: { floor: Floor; lift: number; visible: boolean; labels: boolean }) {
   const { layers, focusRoomId } = useViewerStore();
+  useViewerStore((s) => s.section); // re-render labels when the section moves
   const focusRoom = floors.flatMap((f) => f.rooms).find((r) => r.id === focusRoomId);
   const focusB = focusRoom ? roomBounds(focusRoom) : null;
   const inFocus = (x: number, y: number) =>
@@ -162,7 +189,7 @@ function FloorGroup({ floor, lift, visible, labels }: { floor: Floor; lift: numb
         return <OpeningMesh key={o.id} o={o} w={w} ghost={ghostWall(w)} />;
       })}
       {floor.rooms.map((r) => (
-        <RoomLabel key={r.id} r={r} lift={0} show={layers.labels && visible && labels && (!focusRoom || r.id === focusRoom.id)} />
+        <RoomLabel key={r.id} r={r} lift={0} show={layers.labels && visible && labels && (!focusRoom || r.id === focusRoom.id) && keptBySection(...centroid(r.polygon))} />
       ))}
       {layers.slabs && floor.voids.map((v) => {
         const [a, b, c, d] = v.rect!;
@@ -207,7 +234,6 @@ function Stairs({ lift }: { lift: number }) {
 
 function Columns({ lift, show1, show2 }: { lift: number; show1: boolean; show2: boolean }) {
   const { colorMode, selection } = useViewerStore();
-  const select = useViewerStore((s) => s.select);
   const items: { id: string; x: number; y: number; z0: number; z1: number; status: VerificationStatus }[] = [];
   for (const c of building.columns) {
     // DEC-15: union of sheets; ST-04 columns support level 2 so they stand on level 1 too
@@ -220,7 +246,7 @@ function Columns({ lift, show1, show2 }: { lift: number; show1: boolean; show2: 
         const color = isSel(selection, "column", c.id) ? SEL : colorMode === "status" ? STATUS_3D[c.status] : MAT.column;
         return (
           <mesh key={i} position={[c.x, (c.z0 + c.z1) / 2, c.y]} material={mat(color)} castShadow
-            onClick={(e) => { if (e.delta > 4) return; e.stopPropagation(); select({ kind: "column", id: c.id }); }}>
+            onClick={(e) => pick(e, { kind: "column", id: c.id })}>
             <boxGeometry args={[0.2, c.z1 - c.z0, 0.2]} />
           </mesh>
         );
@@ -237,7 +263,7 @@ function StructureSlabs() {
       {slabs.map((s) => (
         <mesh key={s.id} geometry={slabGeometry(s.polygon as [number, number][])} position={[0, (s.z ?? 0) - 0.12, 0]}
           material={mat(colorMode === "status" ? STATUS_3D[s.status] : MAT.slab, 0.9)} castShadow receiveShadow
-          onClick={(e) => { if (e.delta > 4) return; e.stopPropagation(); useViewerStore.getState().select({ kind: "area", id: s.id }); }} />
+          onClick={(e) => pick(e, { kind: "area", id: s.id })} />
       ))}
     </group>
   );
@@ -318,10 +344,13 @@ export function HouseScene({ topView }: { topView: boolean }) {
   const show1 = floorMode !== "F2";
   const show2 = floorMode !== "F1" && !(focusRoom && focusRoom.floorId === "F1");
   const lift = explode;
+  const section = useViewerStore((s) => s.section);
+  // plan cut at floor 1 (cut level below FFL2): the upper floor is cut away, so label floor 1 instead
+  const planCutBelowF2 = section.mode === "plan" && floorMode !== "F2";
   return (
     <group>
-      <FloorGroup floor={floors[0]} lift={0} visible={show1} labels={!show2 || lift >= 2.5} />
-      <FloorGroup floor={floors[1]} lift={lift} visible={show2} labels />
+      <FloorGroup floor={floors[0]} lift={0} visible={show1} labels={!show2 || lift >= 2.5 || planCutBelowF2} />
+      <FloorGroup floor={floors[1]} lift={lift} visible={show2} labels={!planCutBelowF2} />
       {layers.stairs && (show1 || show2) && <Stairs lift={show2 ? lift : 0} />}
       {layers.columns && <Columns lift={lift} show1={show1} show2={show2} />}
       {layers.slabs && show1 && <StructureSlabs />}
@@ -347,7 +376,8 @@ export function Environment() {
       <directionalLight ref={ref} position={sunPos.toArray()} intensity={1.6} castShadow
         shadow-mapSize={[2048, 2048]} shadow-camera-left={-25} shadow-camera-right={25} shadow-camera-top={25} shadow-camera-bottom={-25} shadow-camera-far={120} shadow-bias={-0.0004} />
       <primitive object={target} />
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[8.5, -0.03, 13]} receiveShadow>
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[8.5, -0.03, 13]} receiveShadow
+        onClick={(e) => { if (useViewerStore.getState().tool === "measure") pick(e, null); }}>
         <planeGeometry args={[140, 140]} />
         <meshStandardMaterial color="#cfd8c6" roughness={1} />
       </mesh>

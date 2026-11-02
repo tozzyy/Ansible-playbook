@@ -191,6 +191,19 @@ export type Issue = {
   resolution?: { decision: string; date: string; by: string; text: string };
 };
 
+export type SectionLine = {
+  id: "A-A" | "B-B" | "C-C";
+  /** "y": plane y = pos (cut runs along X); "x": plane x = pos (cut runs along Y) */
+  axis: "x" | "y";
+  pos: number;
+  positions: Record<string, number>;
+  sectionSheet: { sheet: string; pdfPage: number } | null;
+  status: VerificationStatus;
+  decisions: string[];
+  issues: string[];
+  sources: SourceRef[];
+};
+
 export type Decision = { id: string; date: string; by: string; resolves: string[]; decision: string; effect: string };
 
 export type SheetInfo = {
@@ -216,6 +229,7 @@ export type Building = {
     sources: SourceRef[];
   };
   levels: Level[];
+  sections: SectionLine[];
   grids: { x: GridLine[]; y: GridLine[] };
   columns: Column[];
   doorTypes: OpeningType[];

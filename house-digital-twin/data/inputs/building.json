@@ -1238,6 +1238,24 @@
         }
       ],
       "detail": "Raised in the owner's review list. Elevation values not yet measured in this project (elevations are Phase 4)."
+    },
+    {
+      "id": "ISS-34",
+      "type": "conflict",
+      "title": "Section A-A cut line position",
+      "values": [
+        {
+          "value": "y = 11.90 (A-A dash line, vector-measured)",
+          "sheet": "AR-08",
+          "pdfPage": 3
+        },
+        {
+          "value": "y = 11.25 (A-A dash line, vector-measured)",
+          "sheet": "AR-09",
+          "pdfPage": 4
+        }
+      ],
+      "detail": "B-B agrees on both plans (x = 7.83). C-C is drawn at x = 14.59 but has no section sheet (ISS-19)."
     }
   ],
   "decisions": [
@@ -1434,6 +1452,27 @@
       ],
       "decision": "Entrance porch openings follow the plan: front 2.80, side 1.70.",
       "effect": "Reason: vector-measured gaps between the hatched piers are 2.85 (x 7.57-10.42) and 1.68 (y 13.95-15.63), which match the plan values within 0.05 m. Elevations at 1:75/1:100 are graphic and are used for heights only (Phase 4)."
+    },
+    {
+      "id": "DEC-20",
+      "date": "2026-11-02",
+      "by": "engineering judgement (delegated by owner 2026-11-02)",
+      "resolves": [
+        "ISS-34"
+      ],
+      "decision": "Section A-A plane at y = 11.90 (AR-08).",
+      "effect": "Reason: both lines lie between the stair head (y 9.95) and grid C (13.50), so they cut the same rooms on both floors (living / stair / foyer / reading / treadmill; master / stair / void / bedroom 2). AR-08 carries the primary callout for the section; the 0.65 m shift does not change what AR-11 shows."
     }
-  ]
+  ],
+  "sectionSheets": {
+    "A-A": {
+      "sheet": "AR-11",
+      "pdfPage": 6
+    },
+    "B-B": {
+      "sheet": "AR-12",
+      "pdfPage": 7
+    },
+    "C-C": null
+  }
 }

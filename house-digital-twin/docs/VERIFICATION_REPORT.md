@@ -105,6 +105,14 @@ Dimension chains read:
 - **AR-11**: 1-5 16.00; 4.00/3.00/4.00/5.00; 2.50/1.50/1.50/1.50; 2.40/2.60/1.20 (see ISS-30)
 - **AR-12**: D-A 11.00; D-C 2.50, C-B 5.00, B-A 3.50; C-(3.70)-(1.30)-B
 
+## 5b. Section cut lines
+
+| Cut | Plane | Measured | Used | Section sheet | Status | Issues / decisions |
+|---|---|---|---|---|---|---|
+| A-A | along X (y = const) | AR-08: 11.90, AR-09: 11.25 | 11.90 | AR-11 (p.6) | ✅ Verified | ISS-34, DEC-20 |
+| B-B | along Y (x = const) | AR-08: 7.83, AR-09: 7.83 | 7.83 | AR-12 (p.7) | ✅ Verified |  |
+| C-C | along Y (x = const) | AR-08: 14.59, AR-09: 14.59 | 14.59 | none in set | ⚠️ Unverified | ISS-19 |
+
 ## 6. Columns cross-check (0.20 × 0.20 quads)
 
 | ID | Grid | X | Y | Shown on | Status |
@@ -403,6 +411,7 @@ Dimension chains read:
 | DEC-17 | 2026-11-02 | engineering judgement (delegated by owner 2026-11-02) | ISS-28 | D7 = 2.40 m, D7.1 = 2.50 m. | Reason: computed from the bays — D7 bay 10.955-13.455 (2.50 between wall centres, ≈2.40 clear), D7.1 bay 13.455-16.055 (2.60, ≈2.50 clear). This matches the '2.40/2.50' pair on AR-26. |
 | DEC-18 | 2026-11-02 | engineering judgement (delegated by owner 2026-11-02) | ISS-30 | Grid 5→5" = 1.00 m. | Reason: measured from the vectors on AR-08, AR-09 and ST-04 (16.00 → 17.00). The 1.20 on AR-11 runs to the eave/ramp edge line beyond 5", not to grid 5". |
 | DEC-19 | 2026-11-02 | engineering judgement (delegated by owner 2026-11-02) | ISS-33 | Entrance porch openings follow the plan: front 2.80, side 1.70. | Reason: vector-measured gaps between the hatched piers are 2.85 (x 7.57-10.42) and 1.68 (y 13.95-15.63), which match the plan values within 0.05 m. Elevations at 1:75/1:100 are graphic and are used for heights only (Phase 4). |
+| DEC-20 | 2026-11-02 | engineering judgement (delegated by owner 2026-11-02) | ISS-34 | Section A-A plane at y = 11.90 (AR-08). | Reason: both lines lie between the stair head (y 9.95) and grid C (13.50), so they cut the same rooms on both floors (living / stair / foyer / reading / treadmill; master / stair / void / bedroom 2). AR-08 carries the primary callout for the section; the 0.65 m shift does not change what AR-11 shows. |
 
 ## 9. Issues — Conflicts, Unverified items, Notes
 
@@ -550,6 +559,15 @@ Measured on AR-11 the grid bubbles 4, 4", 5, 5" sit at 2.00 / 3.00 / 1.00 spacin
 - `side ≈1.30 (as reported in review list)` — AR-16 (p.10)
 
 Raised in the owner's review list. Elevation values not yet measured in this project (elevations are Phase 4).
+
+### ISS-34 · CONFLICT · RESOLVED by DEC-20 · Section A-A cut line position
+
+> **DEC-20 (2026-11-02, engineering judgement (delegated by owner 2026-11-02)):** Section A-A plane at y = 11.90 (AR-08).
+
+- `y = 11.90 (A-A dash line, vector-measured)` — AR-08 (p.3)
+- `y = 11.25 (A-A dash line, vector-measured)` — AR-09 (p.4)
+
+B-B agrees on both plans (x = 7.83). C-C is drawn at x = 14.59 but has no section sheet (ISS-19).
 
 ### ISS-13 · UNVERIFIED · W8 / W9 service hatches not located
 
