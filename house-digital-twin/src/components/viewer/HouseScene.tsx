@@ -210,7 +210,8 @@ function Columns({ lift, show1, show2 }: { lift: number; show1: boolean; show2: 
   const select = useViewerStore((s) => s.select);
   const items: { id: string; x: number; y: number; z0: number; z1: number; status: VerificationStatus }[] = [];
   for (const c of building.columns) {
-    if (show1 && c.shownOn["AR-08"]) items.push({ id: c.id, x: c.x, y: c.y, z0: 0, z1: c.y > 16.05 ? 3.7 : 4.25, status: c.status });
+    // DEC-15: union of sheets; ST-04 columns support level 2 so they stand on level 1 too
+    if (show1 && (c.shownOn["AR-08"] || c.shownOn["ST-04"])) items.push({ id: c.id, x: c.x, y: c.y, z0: 0, z1: c.y > 16.05 ? 3.7 : 4.25, status: c.status });
     if (show2 && (c.shownOn["AR-09"] || c.shownOn["ST-04"]) && c.y < 13.6) items.push({ id: c.id, x: c.x, y: c.y, z0: 4.25 + lift, z1: 7.35 + lift, status: c.status });
   }
   return (

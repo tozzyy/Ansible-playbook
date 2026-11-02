@@ -146,6 +146,8 @@ export type Column = {
   size: Vec2;
   grid: string | null;
   shownOn: Record<string, boolean>;
+  role?: string;
+  decisions?: string[];
   status: VerificationStatus;
   sources: SourceRef[];
   issues: string[];

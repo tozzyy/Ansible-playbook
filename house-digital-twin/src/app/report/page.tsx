@@ -59,10 +59,15 @@ export default function ReportPage() {
               </div>
               {i.values?.map((v, k) => <div key={k}><code>{v.value}</code> — {v.sheet} (PDF p.{v.pdfPage})</div>)}
               {i.detail && <p className="mt-1 text-muted-foreground">{i.detail}</p>}
+              {i.resolution && <p className="mt-1 rounded bg-verified/10 px-1.5 py-1 text-verified">Resolved {i.resolution.decision}: {i.resolution.text}</p>}
             </div>
           );
         })}
       </div>
+
+      <H>2b. Decisions</H>
+      <T head={["ID", "Date", "By", "Resolves", "Decision", "Rationale / effect"]}
+        rows={building.decisions.map((d) => [d.id, d.date, d.by, d.resolves.join(", "), d.decision, <span key="e" className="text-muted-foreground">{d.effect}</span>])} />
 
       <H>3. Source drawing mapping</H>
       <T head={["Sheet", "PDF page", "Title", "Scale", "Phase", "Note"]}

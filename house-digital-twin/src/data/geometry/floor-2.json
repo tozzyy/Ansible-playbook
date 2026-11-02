@@ -2337,6 +2337,7 @@
    "issues": [
     "ISS-15"
    ],
+   "decisions": [],
    "note": "tag: circle 2 near (3.6, 9.6) - WALK IN CLOSET / MASTER; gap 2.60-3.92 between column and wall; measured clear gap 1.32 m vs scheduled width 0.90 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
@@ -2373,6 +2374,7 @@
    "issues": [
     "ISS-15"
    ],
+   "decisions": [],
    "note": "tag: circle 2 near (3.6, 9.6) - MASTER from โถง; gap 8.61-9.72 between cross-wall and wall; measured clear gap 1.12 m vs scheduled width 0.90 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
@@ -2409,6 +2411,7 @@
    "issues": [
     "ISS-15"
    ],
+   "decisions": [],
    "note": "tag: circle 2 at (6.7, 8.2) - ห้องพระ; gap 5.95-7.21 between wall and cross-wall; measured clear gap 1.26 m vs scheduled width 0.90 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
@@ -2445,6 +2448,7 @@
    "issues": [
     "ISS-15"
    ],
+   "decisions": [],
    "note": "tag: circle 2 at (7.95, 8.3) - ห้องเก็บของ; gap 7.30-8.48 between cross-wall and wall; measured clear gap 1.18 m vs scheduled width 0.90 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
@@ -2481,6 +2485,7 @@
    "issues": [
     "ISS-15"
    ],
+   "decisions": [],
    "note": "tag: circle 2 at (9.95, 8.3) - ห้องนอน 3; gap 9.01-10.14 between cross-wall and wall; measured clear gap 1.14 m vs scheduled width 0.90 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
@@ -2517,6 +2522,7 @@
    "issues": [
     "ISS-15"
    ],
+   "decisions": [],
    "note": "tag: circle 2 at (11.2, 9.15) - ห้องนอน 2; gap 8.61-9.93 between cross-wall and wall; measured clear gap 1.33 m vs scheduled width 0.90 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
@@ -2551,6 +2557,7 @@
     }
    ],
    "issues": [],
+   "decisions": [],
    "note": "tag: circle 5 at (2.25, 7.85) - ห้องน้ำ M; gap 7.37-8.40 between wall and column; measured clear gap 1.04 m vs scheduled width 0.80 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
@@ -2585,6 +2592,7 @@
     }
    ],
    "issues": [],
+   "decisions": [],
    "note": "tag: circle 5 at (13.25, 5.5) - ห้องน้ำ 3; gap 5.00-6.02 between cross-wall and wall; measured clear gap 1.02 m vs scheduled width 0.80 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
@@ -2619,6 +2627,7 @@
     }
    ],
    "issues": [],
+   "decisions": [],
    "note": "tag: circle 5 at (15.5, 8.25) - ห้องน้ำ 2; gap 14.88-15.90 between wall and column; measured clear gap 1.02 m vs scheduled width 0.80 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
@@ -2653,6 +2662,7 @@
     }
    ],
    "issues": [],
+   "decisions": [],
    "note": "tag: GL1 text at (2.19, 5.69) - ห้องน้ำ M; gap 1.68-2.49 between wall and cross-wall; measured clear gap 0.82 m vs scheduled width 0.70 m"
   },
   {
@@ -2687,6 +2697,7 @@
     }
    ],
    "issues": [],
+   "decisions": [],
    "note": "tag: GL1 text at (15.25, 5.38) - ห้องน้ำ 3; gap 5.00-5.82 between cross-wall and wall; measured clear gap 0.82 m vs scheduled width 0.70 m"
   },
   {
@@ -2721,6 +2732,7 @@
     }
    ],
    "issues": [],
+   "decisions": [],
    "note": "tag: GL1 text at (13.84, 8.19) - ห้องน้ำ 2; gap 7.69-8.49 between wall and cross-wall; measured clear gap 0.81 m vs scheduled width 0.70 m"
   },
   {
@@ -2735,11 +2747,11 @@
    "height": 2.5,
    "sillHeight": 0.3,
    "sillZ": 4.55,
-   "status": "conflict",
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "conflict",
-    "tag": "conflict"
+    "size": "verified",
+    "tag": "verified"
    },
    "measuredGap": null,
    "sources": [
@@ -2756,6 +2768,9 @@
    ],
    "issues": [
     "ISS-09"
+   ],
+   "decisions": [
+    "DEC-10"
    ],
    "note": "tag: hexagon 2 at (0.93, 13.9) - MASTER; gap 0.53-3.47 between wall and wall; gap shared by 3 openings"
   },
@@ -2771,11 +2786,11 @@
    "height": 2.5,
    "sillHeight": 0.3,
    "sillZ": 4.55,
-   "status": "conflict",
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "conflict",
-    "tag": "conflict"
+    "size": "verified",
+    "tag": "verified"
    },
    "measuredGap": null,
    "sources": [
@@ -2792,6 +2807,9 @@
    ],
    "issues": [
     "ISS-09"
+   ],
+   "decisions": [
+    "DEC-10"
    ],
    "note": "tag: hexagon 2 at (2.0, 13.9) - MASTER; gap 0.53-3.47 between wall and wall; gap shared by 3 openings"
   },
@@ -2807,11 +2825,11 @@
    "height": 2.5,
    "sillHeight": 0.3,
    "sillZ": 4.55,
-   "status": "conflict",
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "conflict",
-    "tag": "conflict"
+    "size": "verified",
+    "tag": "verified"
    },
    "measuredGap": null,
    "sources": [
@@ -2829,6 +2847,9 @@
    "issues": [
     "ISS-09"
    ],
+   "decisions": [
+    "DEC-10"
+   ],
    "note": "tag: hexagon 2 at (3.07, 13.9) - MASTER; gap 0.53-3.47 between wall and wall; gap shared by 3 openings"
   },
   {
@@ -2843,11 +2864,11 @@
    "height": 2.5,
    "sillHeight": 0.3,
    "sillZ": 4.55,
-   "status": "conflict",
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "conflict",
-    "tag": "conflict"
+    "size": "verified",
+    "tag": "verified"
    },
    "measuredGap": 0.878,
    "sources": [
@@ -2865,7 +2886,10 @@
    "issues": [
     "ISS-09"
    ],
-   "note": "tag: hexagon 2 at (12.2, 13.9) - ห้องนอน 2; gap 11.77-12.65 between wall and wall; measured clear gap 0.88 m vs scheduled width 0.60 m"
+   "decisions": [
+    "DEC-10"
+   ],
+   "note": "tag: hexagon 2 at (12.2, 13.9) - ห้องนอน 2; gap 11.77-12.65 between wall and wall; measured clear gap 0.88 m vs scheduled width 0.60 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
    "id": "F2-O017",
@@ -2879,11 +2903,11 @@
    "height": 2.5,
    "sillHeight": 0.3,
    "sillZ": 4.55,
-   "status": "conflict",
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "conflict",
-    "tag": "conflict"
+    "size": "verified",
+    "tag": "verified"
    },
    "measuredGap": 0.852,
    "sources": [
@@ -2901,7 +2925,10 @@
    "issues": [
     "ISS-09"
    ],
-   "note": "tag: hexagon 2 at (13.45, 13.9) - ห้องนอน 2; gap 13.03-13.88 between wall and wall; measured clear gap 0.85 m vs scheduled width 0.60 m"
+   "decisions": [
+    "DEC-10"
+   ],
+   "note": "tag: hexagon 2 at (13.45, 13.9) - ห้องนอน 2; gap 13.03-13.88 between wall and wall; measured clear gap 0.85 m vs scheduled width 0.60 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
    "id": "F2-O018",
@@ -2915,11 +2942,11 @@
    "height": 2.5,
    "sillHeight": 0.3,
    "sillZ": 4.55,
-   "status": "conflict",
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "conflict",
-    "tag": "conflict"
+    "size": "verified",
+    "tag": "verified"
    },
    "measuredGap": 0.889,
    "sources": [
@@ -2937,7 +2964,10 @@
    "issues": [
     "ISS-09"
    ],
-   "note": "tag: hexagon 2 at (14.7, 13.9) - ห้องนอน 2; gap 14.27-15.15 between wall and wall; measured clear gap 0.89 m vs scheduled width 0.60 m"
+   "decisions": [
+    "DEC-10"
+   ],
+   "note": "tag: hexagon 2 at (14.7, 13.9) - ห้องนอน 2; gap 14.27-15.15 between wall and wall; measured clear gap 0.89 m vs scheduled width 0.60 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
    "id": "F2-O019",
@@ -2951,11 +2981,11 @@
    "height": 1.6,
    "sillHeight": 1.1,
    "sillZ": 5.2,
-   "status": "conflict",
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "conflict",
-    "tag": "unverified"
+    "size": "verified",
+    "tag": "verified"
    },
    "measuredGap": 0.841,
    "sources": [
@@ -2974,7 +3004,11 @@
     "ISS-10",
     "ISS-14"
    ],
-   "note": "tag: text 'B2' at (3.62, 4.70); gap 3.17-4.02 between wall and wall; measured clear gap 0.84 m vs scheduled width 0.60 m"
+   "decisions": [
+    "DEC-10",
+    "DEC-12"
+   ],
+   "note": "tag: text 'B2' at (3.62, 4.70); gap 3.17-4.02 between wall and wall; measured clear gap 0.84 m vs scheduled width 0.60 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
    "id": "F2-O020",
@@ -2988,11 +3022,11 @@
    "height": 1.6,
    "sillHeight": 1.1,
    "sillZ": 5.2,
-   "status": "conflict",
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "conflict",
-    "tag": "conflict"
+    "size": "verified",
+    "tag": "verified"
    },
    "measuredGap": 0.815,
    "sources": [
@@ -3010,7 +3044,10 @@
    "issues": [
     "ISS-10"
    ],
-   "note": "tag: 2B text at (10.52, 4.70) - ห้องนอน 3; gap 10.09-10.90 between wall and column; measured clear gap 0.81 m vs scheduled width 0.60 m"
+   "decisions": [
+    "DEC-10"
+   ],
+   "note": "tag: 2B text at (10.52, 4.70) - ห้องนอน 3; gap 10.09-10.90 between wall and column; measured clear gap 0.81 m vs scheduled width 0.60 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
    "id": "F2-O021",
@@ -3024,11 +3061,11 @@
    "height": 1.6,
    "sillHeight": 1.1,
    "sillZ": 5.2,
-   "status": "conflict",
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "conflict",
-    "tag": "conflict"
+    "size": "verified",
+    "tag": "verified"
    },
    "measuredGap": 0.826,
    "sources": [
@@ -3046,7 +3083,10 @@
    "issues": [
     "ISS-10"
    ],
-   "note": "tag: 2B text at (11.52, 4.70) - ห้องนอน 3; gap 11.10-11.93 between column and wall; measured clear gap 0.83 m vs scheduled width 0.60 m"
+   "decisions": [
+    "DEC-10"
+   ],
+   "note": "tag: 2B text at (11.52, 4.70) - ห้องนอน 3; gap 11.10-11.93 between column and wall; measured clear gap 0.83 m vs scheduled width 0.60 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
    "id": "F2-O022",
@@ -3080,6 +3120,7 @@
     }
    ],
    "issues": [],
+   "decisions": [],
    "note": "tag: hexagon 5 at (6.34, 4.5) - ห้องพระ; gap 5.87-6.80 between wall and wall; measured clear gap 0.93 m vs scheduled width 0.60 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
@@ -3114,6 +3155,7 @@
     }
    ],
    "issues": [],
+   "decisions": [],
    "note": "tag: hexagon 5 at (8.07, 4.5) - ห้องเก็บของ; gap 7.66-8.50 between wall and wall; measured clear gap 0.84 m vs scheduled width 0.60 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
@@ -3128,11 +3170,11 @@
    "height": 0.4,
    "sillHeight": 1.65,
    "sillZ": 5.9,
-   "status": "conflict",
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "conflict",
-    "tag": "conflict"
+    "size": "verified",
+    "tag": "verified"
    },
    "measuredGap": 1.223,
    "sources": [
@@ -3150,7 +3192,10 @@
    "issues": [
     "ISS-27"
    ],
-   "note": "tag: hexagon 7 at (1.45, 4.6) - ห้องน้ำ M; gap 0.84-2.06 between wall and wall; measured clear gap 1.22 m vs scheduled width 0.95 m"
+   "decisions": [
+    "DEC-11"
+   ],
+   "note": "tag: hexagon 7 at (1.45, 4.6) - ห้องน้ำ M; gap 0.84-2.06 between wall and wall; measured clear gap 1.22 m vs scheduled width 0.95 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
    "id": "F2-O025",
@@ -3164,11 +3209,11 @@
    "height": 0.4,
    "sillHeight": 1.65,
    "sillZ": 5.9,
-   "status": "conflict",
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "conflict",
-    "tag": "conflict"
+    "size": "verified",
+    "tag": "verified"
    },
    "measuredGap": 1.366,
    "sources": [
@@ -3186,7 +3231,10 @@
    "issues": [
     "ISS-27"
    ],
-   "note": "tag: hexagon 7 at (16.65, 6.0) - ห้องน้ำ 3; gap 5.10-6.47 between column and wall; measured clear gap 1.37 m vs scheduled width 0.95 m"
+   "decisions": [
+    "DEC-11"
+   ],
+   "note": "tag: hexagon 7 at (16.65, 6.0) - ห้องน้ำ 3; gap 5.10-6.47 between column and wall; measured clear gap 1.37 m vs scheduled width 0.95 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
    "id": "F2-O026",
@@ -3200,11 +3248,11 @@
    "height": 0.4,
    "sillHeight": 1.65,
    "sillZ": 5.9,
-   "status": "conflict",
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "conflict",
-    "tag": "conflict"
+    "size": "verified",
+    "tag": "verified"
    },
    "measuredGap": 1.376,
    "sources": [
@@ -3222,7 +3270,10 @@
    "issues": [
     "ISS-27"
    ],
-   "note": "tag: hexagon 7 at (16.65, 7.6) - ห้องน้ำ 2; gap 7.03-8.40 between wall and column; measured clear gap 1.38 m vs scheduled width 0.95 m"
+   "decisions": [
+    "DEC-11"
+   ],
+   "note": "tag: hexagon 7 at (16.65, 7.6) - ห้องน้ำ 2; gap 7.03-8.40 between wall and column; measured clear gap 1.38 m vs scheduled width 0.95 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   }
  ],
  "rooms": [
@@ -3551,11 +3602,11 @@
     "y": 1.79
    },
    "areaBasis": "wall centre-lines",
-   "status": "conflict",
+   "status": "verified",
    "fieldStatus": {
     "polygon": "verified",
-    "floor": "conflict",
-    "ceiling": "conflict"
+    "floor": "verified",
+    "ceiling": "verified"
    },
    "sources": [
     {
@@ -3567,7 +3618,9 @@
    "issues": [
     "ISS-17"
    ],
-   "decisions": [],
+   "decisions": [
+    "DEC-05"
+   ],
    "note": ""
   },
   {
@@ -3610,11 +3663,11 @@
     "y": 1.81
    },
    "areaBasis": "wall centre-lines",
-   "status": "conflict",
+   "status": "verified",
    "fieldStatus": {
     "polygon": "verified",
-    "floor": "conflict",
-    "ceiling": "conflict"
+    "floor": "verified",
+    "ceiling": "verified"
    },
    "sources": [
     {
@@ -3626,7 +3679,9 @@
    "issues": [
     "ISS-17"
    ],
-   "decisions": [],
+   "decisions": [
+    "DEC-05"
+   ],
    "note": "Tag placed outside the building (east) with a leader."
   },
   {

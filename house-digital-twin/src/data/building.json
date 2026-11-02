@@ -87,7 +87,7 @@
    "id": "WET1",
    "name": "พื้นห้องน้ำ/ครัวไทย/ซักล้าง/เฉลียง ชั้น 1 (+0.55)",
    "z": 0.55,
-   "status": "conflict",
+   "status": "verified",
    "issues": [
     "ISS-04"
    ],
@@ -97,6 +97,9 @@
      "pdfPage": 3,
      "note": "F2 +0.55"
     }
+   ],
+   "decisions": [
+    "DEC-05"
    ]
   },
   {
@@ -129,7 +132,7 @@
    "id": "WET2",
    "name": "พื้นห้องน้ำ ชั้น 2 (+4.15)",
    "z": 4.15,
-   "status": "conflict",
+   "status": "verified",
    "issues": [
     "ISS-17"
    ],
@@ -139,6 +142,9 @@
      "pdfPage": 4,
      "note": "F2 +4.15"
     }
+   ],
+   "decisions": [
+    "DEC-05"
    ]
   },
   {
@@ -236,6 +242,7 @@
      "ST-04": true
     },
     "status": "verified",
+    "decisions": [],
     "sources": [
      {
       "sheet": "AR-08",
@@ -263,6 +270,7 @@
      "ST-04": true
     },
     "status": "verified",
+    "decisions": [],
     "sources": [
      {
       "sheet": "AR-08",
@@ -290,6 +298,7 @@
      "ST-04": true
     },
     "status": "verified",
+    "decisions": [],
     "sources": [
      {
       "sheet": "AR-08",
@@ -317,6 +326,7 @@
      "ST-04": true
     },
     "status": "verified",
+    "decisions": [],
     "sources": [
      {
       "sheet": "AR-09",
@@ -339,6 +349,7 @@
      "ST-04": true
     },
     "status": "verified",
+    "decisions": [],
     "sources": [
      {
       "sheet": "AR-08",
@@ -366,6 +377,7 @@
      "ST-04": false
     },
     "status": "verified",
+    "decisions": [],
     "sources": [
      {
       "sheet": "AR-08",
@@ -383,6 +395,7 @@
      "ST-04": true
     },
     "status": "verified",
+    "decisions": [],
     "sources": [
      {
       "sheet": "AR-08",
@@ -410,6 +423,7 @@
      "ST-04": false
     },
     "status": "verified",
+    "decisions": [],
     "sources": [
      {
       "sheet": "AR-08",
@@ -432,6 +446,7 @@
      "ST-04": true
     },
     "status": "verified",
+    "decisions": [],
     "sources": [
      {
       "sheet": "AR-08",
@@ -464,7 +479,10 @@
      "AR-09": true,
      "ST-04": false
     },
-    "status": "conflict",
+    "status": "verified",
+    "decisions": [
+     "DEC-07"
+    ],
     "sources": [
      {
       "sheet": "AR-08",
@@ -489,6 +507,7 @@
      "ST-04": false
     },
     "status": "verified",
+    "decisions": [],
     "sources": [
      {
       "sheet": "AR-08",
@@ -506,6 +525,7 @@
      "ST-04": true
     },
     "status": "verified",
+    "decisions": [],
     "sources": [
      {
       "sheet": "AR-08",
@@ -533,6 +553,7 @@
      "ST-04": true
     },
     "status": "verified",
+    "decisions": [],
     "sources": [
      {
       "sheet": "AR-08",
@@ -560,6 +581,7 @@
      "ST-04": true
     },
     "status": "verified",
+    "decisions": [],
     "sources": [
      {
       "sheet": "AR-08",
@@ -587,6 +609,7 @@
      "ST-04": true
     },
     "status": "verified",
+    "decisions": [],
     "sources": [
      {
       "sheet": "AR-08",
@@ -614,6 +637,7 @@
      "ST-04": true
     },
     "status": "verified",
+    "decisions": [],
     "sources": [
      {
       "sheet": "AR-08",
@@ -636,6 +660,7 @@
      "ST-04": true
     },
     "status": "verified",
+    "decisions": [],
     "sources": [
      {
       "sheet": "AR-08",
@@ -671,7 +696,11 @@
     "AR-09": false,
     "ST-04": false
    },
-   "status": "unverified",
+   "role": "architectural plan only",
+   "status": "verified",
+   "decisions": [
+    "DEC-15"
+   ],
    "sources": [
     {
      "sheet": "AR-08",
@@ -697,7 +726,11 @@
     "AR-09": false,
     "ST-04": false
    },
-   "status": "unverified",
+   "role": "architectural plan only",
+   "status": "verified",
+   "decisions": [
+    "DEC-15"
+   ],
    "sources": [
     {
      "sheet": "AR-08",
@@ -723,7 +756,11 @@
     "AR-09": false,
     "ST-04": false
    },
-   "status": "unverified",
+   "role": "architectural plan only",
+   "status": "verified",
+   "decisions": [
+    "DEC-15"
+   ],
    "sources": [
     {
      "sheet": "AR-08",
@@ -749,7 +786,9 @@
     "AR-09": true,
     "ST-04": true
    },
+   "role": "structural (ST-04)",
    "status": "verified",
+   "decisions": [],
    "sources": [
     {
      "sheet": "AR-08",
@@ -783,7 +822,11 @@
     "AR-09": true,
     "ST-04": false
    },
-   "status": "conflict",
+   "role": "architectural plan only",
+   "status": "verified",
+   "decisions": [
+    "DEC-15"
+   ],
    "sources": [
     {
      "sheet": "AR-08",
@@ -814,7 +857,11 @@
     "AR-09": true,
     "ST-04": true
    },
-   "status": "conflict",
+   "role": "structural (ST-04)",
+   "status": "verified",
+   "decisions": [
+    "DEC-15"
+   ],
    "sources": [
     {
      "sheet": "AR-09",
@@ -845,7 +892,11 @@
     "AR-09": false,
     "ST-04": false
    },
-   "status": "conflict",
+   "role": "architectural plan only",
+   "status": "verified",
+   "decisions": [
+    "DEC-15"
+   ],
    "sources": [
     {
      "sheet": "AR-08",
@@ -871,7 +922,9 @@
     "AR-09": true,
     "ST-04": true
    },
+   "role": "structural (ST-04)",
    "status": "verified",
+   "decisions": [],
    "sources": [
     {
      "sheet": "AR-08",
@@ -905,7 +958,9 @@
     "AR-09": true,
     "ST-04": true
    },
+   "role": "structural (ST-04)",
    "status": "verified",
+   "decisions": [],
    "sources": [
     {
      "sheet": "AR-08",
@@ -939,7 +994,9 @@
     "AR-09": true,
     "ST-04": true
    },
+   "role": "structural (ST-04)",
    "status": "verified",
+   "decisions": [],
    "sources": [
     {
      "sheet": "AR-08",
@@ -973,7 +1030,11 @@
     "AR-09": true,
     "ST-04": false
    },
-   "status": "conflict",
+   "role": "architectural plan only",
+   "status": "verified",
+   "decisions": [
+    "DEC-15"
+   ],
    "sources": [
     {
      "sheet": "AR-08",
@@ -1004,7 +1065,11 @@
     "AR-09": false,
     "ST-04": false
    },
-   "status": "conflict",
+   "role": "architectural plan only",
+   "status": "verified",
+   "decisions": [
+    "DEC-15"
+   ],
    "sources": [
     {
      "sheet": "AR-08",
@@ -1030,7 +1095,9 @@
     "AR-09": true,
     "ST-04": true
    },
+   "role": "structural (ST-04)",
    "status": "verified",
+   "decisions": [],
    "sources": [
     {
      "sheet": "AR-08",
@@ -1064,7 +1131,9 @@
     "AR-09": true,
     "ST-04": true
    },
+   "role": "structural (ST-04)",
    "status": "verified",
+   "decisions": [],
    "sources": [
     {
      "sheet": "AR-08",
@@ -1098,7 +1167,11 @@
     "AR-09": true,
     "ST-04": true
    },
-   "status": "conflict",
+   "role": "structural (ST-04)",
+   "status": "verified",
+   "decisions": [
+    "DEC-15"
+   ],
    "sources": [
     {
      "sheet": "AR-09",
@@ -1129,7 +1202,11 @@
     "AR-09": false,
     "ST-04": false
    },
-   "status": "conflict",
+   "role": "architectural plan only",
+   "status": "verified",
+   "decisions": [
+    "DEC-15"
+   ],
    "sources": [
     {
      "sheet": "AR-08",
@@ -1155,7 +1232,11 @@
     "AR-09": false,
     "ST-04": false
    },
-   "status": "conflict",
+   "role": "architectural plan only",
+   "status": "verified",
+   "decisions": [
+    "DEC-15"
+   ],
    "sources": [
     {
      "sheet": "AR-08",
@@ -1181,7 +1262,9 @@
     "AR-09": true,
     "ST-04": true
    },
+   "role": "structural (ST-04)",
    "status": "verified",
+   "decisions": [],
    "sources": [
     {
      "sheet": "AR-08",
@@ -1215,7 +1298,9 @@
     "AR-09": true,
     "ST-04": true
    },
+   "role": "structural (ST-04)",
    "status": "verified",
+   "decisions": [],
    "sources": [
     {
      "sheet": "AR-08",
@@ -1249,7 +1334,9 @@
     "AR-09": true,
     "ST-04": true
    },
+   "role": "structural (ST-04)",
    "status": "verified",
+   "decisions": [],
    "sources": [
     {
      "sheet": "AR-08",
@@ -1283,7 +1370,9 @@
     "AR-09": true,
     "ST-04": true
    },
+   "role": "structural (ST-04)",
    "status": "verified",
+   "decisions": [],
    "sources": [
     {
      "sheet": "AR-08",
@@ -1317,7 +1406,9 @@
     "AR-09": true,
     "ST-04": true
    },
+   "role": "structural (ST-04)",
    "status": "verified",
+   "decisions": [],
    "sources": [
     {
      "sheet": "AR-08",
@@ -1351,7 +1442,9 @@
     "AR-09": true,
     "ST-04": true
    },
+   "role": "structural (ST-04)",
    "status": "verified",
+   "decisions": [],
    "sources": [
     {
      "sheet": "AR-08",
@@ -1385,7 +1478,9 @@
     "AR-09": true,
     "ST-04": true
    },
+   "role": "structural (ST-04)",
    "status": "verified",
+   "decisions": [],
    "sources": [
     {
      "sheet": "AR-08",
@@ -1419,7 +1514,11 @@
     "AR-09": false,
     "ST-04": true
    },
-   "status": "conflict",
+   "role": "structural (ST-04)",
+   "status": "verified",
+   "decisions": [
+    "DEC-15"
+   ],
    "sources": [
     {
      "sheet": "AR-08",
@@ -1450,7 +1549,11 @@
     "AR-09": false,
     "ST-04": true
    },
-   "status": "conflict",
+   "role": "structural (ST-04)",
+   "status": "verified",
+   "decisions": [
+    "DEC-15"
+   ],
    "sources": [
     {
      "sheet": "AR-08",
@@ -1481,7 +1584,11 @@
     "AR-09": false,
     "ST-04": true
    },
-   "status": "conflict",
+   "role": "structural (ST-04)",
+   "status": "verified",
+   "decisions": [
+    "DEC-15"
+   ],
    "sources": [
     {
      "sheet": "ST-04",
@@ -1507,7 +1614,11 @@
     "AR-09": false,
     "ST-04": true
    },
-   "status": "conflict",
+   "role": "structural (ST-04)",
+   "status": "verified",
+   "decisions": [
+    "DEC-15"
+   ],
    "sources": [
     {
      "sheet": "ST-04",
@@ -1533,7 +1644,9 @@
     "AR-09": true,
     "ST-04": true
    },
+   "role": "structural (ST-04)",
    "status": "verified",
+   "decisions": [],
    "sources": [
     {
      "sheet": "AR-08",
@@ -1567,7 +1680,9 @@
     "AR-09": true,
     "ST-04": true
    },
+   "role": "structural (ST-04)",
    "status": "verified",
+   "decisions": [],
    "sources": [
     {
      "sheet": "AR-08",
@@ -1607,7 +1722,8 @@
      "sheet": "AR-26",
      "pdfPage": 12
     }
-   ]
+   ],
+   "decisions": []
   },
   {
    "code": "D2",
@@ -1629,7 +1745,8 @@
      "sheet": "AR-26",
      "pdfPage": 12
     }
-   ]
+   ],
+   "decisions": []
   },
   {
    "code": "D3",
@@ -1642,7 +1759,7 @@
    "leafWidth": 1.0,
    "height": 2.05,
    "sill": 0,
-   "status": "conflict",
+   "status": "verified",
    "issues": [
     "ISS-08"
    ],
@@ -1651,6 +1768,10 @@
      "sheet": "AR-26",
      "pdfPage": 12
     }
+   ],
+   "note": "DEC-09: table 2.00 x 0.10 is a typo for 2.00 x 1.00",
+   "decisions": [
+    "DEC-09"
    ]
   },
   {
@@ -1670,7 +1791,8 @@
      "sheet": "AR-26",
      "pdfPage": 12
     }
-   ]
+   ],
+   "decisions": []
   },
   {
    "code": "D5",
@@ -1689,7 +1811,8 @@
      "sheet": "AR-26",
      "pdfPage": 12
     }
-   ]
+   ],
+   "decisions": []
   },
   {
    "code": "D6",
@@ -1708,7 +1831,8 @@
      "sheet": "AR-26",
      "pdfPage": 12
     }
-   ]
+   ],
+   "decisions": []
   },
   {
    "code": "D7",
@@ -1717,19 +1841,22 @@
    "location": "ห้องอ่านหนังสือ/ห้องฟิตเนส",
    "qty": 2,
    "tableSize": "2.00 x 2.40-2.50",
-   "width": 2.45,
+   "width": 2.4,
    "height": 2.05,
    "sill": 0,
-   "status": "unverified",
+   "status": "verified",
    "issues": [
     "ISS-28"
    ],
-   "note": "Shared detail '7 / 7.1'. Width given as range 2.40/2.50; 2.45 used only as a placeholder for drawing.",
+   "note": "DEC-17: 2.40 (bay 10.955-13.455)",
    "sources": [
     {
      "sheet": "AR-26",
      "pdfPage": 12
     }
+   ],
+   "decisions": [
+    "DEC-17"
    ]
   },
   {
@@ -1739,10 +1866,10 @@
    "location": "ห้องอ่านหนังสือ/ห้องฟิตเนส",
    "qty": null,
    "tableSize": "2.00 x 2.40-2.50",
-   "width": 2.45,
+   "width": 2.5,
    "height": 2.05,
    "sill": 0,
-   "status": "unverified",
+   "status": "verified",
    "issues": [
     "ISS-28"
    ],
@@ -1751,6 +1878,10 @@
      "sheet": "AR-26",
      "pdfPage": 12
     }
+   ],
+   "note": "DEC-17: 2.50 (bay 13.455-16.055)",
+   "decisions": [
+    "DEC-17"
    ]
   },
   {
@@ -1769,7 +1900,8 @@
      "sheet": "AR-27",
      "pdfPage": 13
     }
-   ]
+   ],
+   "decisions": []
   }
  ],
  "windowTypes": [
@@ -1792,7 +1924,8 @@
      "sheet": "AR-26",
      "pdfPage": 12
     }
-   ]
+   ],
+   "decisions": []
   },
   {
    "code": "W2",
@@ -1804,7 +1937,7 @@
    "width": 0.6,
    "height": 2.5,
    "sill": 0.3,
-   "status": "conflict",
+   "status": "verified",
    "issues": [
     "ISS-09"
    ],
@@ -1814,6 +1947,9 @@
      "sheet": "AR-26",
      "pdfPage": 12
     }
+   ],
+   "decisions": [
+    "DEC-10"
    ]
   },
   {
@@ -1832,7 +1968,8 @@
      "sheet": "AR-26",
      "pdfPage": 12
     }
-   ]
+   ],
+   "decisions": []
   },
   {
    "code": "W2B",
@@ -1845,7 +1982,7 @@
    "height": 1.6,
    "sill": 1.1,
    "sillDatum": "ระดับคานชั้น 2 (beam level, not FFL)",
-   "status": "conflict",
+   "status": "verified",
    "issues": [
     "ISS-10"
    ],
@@ -1854,6 +1991,9 @@
      "sheet": "AR-27",
      "pdfPage": 13
     }
+   ],
+   "decisions": [
+    "DEC-10"
    ]
   },
   {
@@ -1866,7 +2006,7 @@
    "width": 0.6,
    "height": 1.7,
    "sill": 0.3,
-   "status": "conflict",
+   "status": "verified",
    "issues": [
     "ISS-11"
    ],
@@ -1875,6 +2015,9 @@
      "sheet": "AR-27",
      "pdfPage": 13
     }
+   ],
+   "decisions": [
+    "DEC-10"
    ]
   },
   {
@@ -1901,7 +2044,8 @@
      "sheet": "AR-28",
      "pdfPage": 14
     }
-   ]
+   ],
+   "decisions": []
   },
   {
    "code": "W4",
@@ -1920,7 +2064,8 @@
      "sheet": "AR-27",
      "pdfPage": 13
     }
-   ]
+   ],
+   "decisions": []
   },
   {
    "code": "W5",
@@ -1938,7 +2083,8 @@
      "sheet": "AR-27",
      "pdfPage": 13
     }
-   ]
+   ],
+   "decisions": []
   },
   {
    "code": "W6",
@@ -1957,7 +2103,8 @@
      "sheet": "AR-27",
      "pdfPage": 13
     }
-   ]
+   ],
+   "decisions": []
   },
   {
    "code": "W7",
@@ -1970,7 +2117,7 @@
    "height": 0.4,
    "sill": 1.65,
    "sillDatum": "ระดับพื้นห้องน้ำ",
-   "status": "conflict",
+   "status": "verified",
    "issues": [
     "ISS-27"
    ],
@@ -1979,6 +2126,9 @@
      "sheet": "AR-27",
      "pdfPage": 13
     }
+   ],
+   "decisions": [
+    "DEC-11"
    ]
   },
   {
@@ -2000,7 +2150,8 @@
      "sheet": "AR-27",
      "pdfPage": 13
     }
-   ]
+   ],
+   "decisions": []
   },
   {
    "code": "W9",
@@ -2022,7 +2173,8 @@
      "sheet": "AR-27",
      "pdfPage": 13
     }
-   ]
+   ],
+   "decisions": []
   }
  ],
  "issues": [
@@ -2107,7 +2259,13 @@
      "pdfPage": 4
     }
    ],
-   "detail": "Brief states a detail sheet gives +0.50. The only +0.50 found in this 20-page set are two stray tags 'F2 +0.50 C2 +2.40' on AR-09. The bathroom detail sheet itself is not part of the extract."
+   "detail": "Brief states a detail sheet gives +0.50. The only +0.50 found in this 20-page set are two stray tags 'F2 +0.50 C2 +2.40' on AR-09. The bathroom detail sheet itself is not part of the extract.",
+   "resolution": {
+    "decision": "DEC-05",
+    "date": "2026-11-02",
+    "by": "engineering judgement (delegated by owner 2026-11-02)",
+    "text": "Bathroom floors: L1 +0.55, L2 +4.15 (room tags on AR-08/AR-09); L2 bathroom ceiling C1 +2.60. The 'F2 +0.50 / C2 +2.40' tags on AR-09 are stray copies from an L1 bathroom detail."
+   }
   },
   {
    "id": "ISS-05",
@@ -2129,7 +2287,13 @@
      "sheet": "AR-12",
      "pdfPage": 7
     }
-   ]
+   ],
+   "resolution": {
+    "decision": "DEC-06",
+    "date": "2026-11-02",
+    "by": "engineering judgement (delegated by owner 2026-11-02)",
+    "text": "Foyer (โถงต้อนรับ) ceiling = 6.60 m above floor."
+   }
   },
   {
    "id": "ISS-06",
@@ -2147,7 +2311,13 @@
      "pdfPage": 3
     }
    ],
-   "detail": "Same on AR-09 and ST-04. Positions agree (6.00 m), names do not. Model keeps 4 and 5\" with alias 4'."
+   "detail": "Same on AR-09 and ST-04. Positions agree (6.00 m), names do not. Model keeps 4 and 5\" with alias 4'.",
+   "resolution": {
+    "decision": "DEC-07",
+    "date": "2026-11-02",
+    "by": "engineering judgement (delegated by owner 2026-11-02)",
+    "text": "Garage grids are named 4 (x=11.00) and 5\" (x=17.00); the bottom bubbles '3' and \"4'\" are aliases."
+   }
   },
   {
    "id": "ISS-07",
@@ -2170,7 +2340,13 @@
      "pdfPage": 15
     }
    ],
-   "detail": "Other F tags are absolute levels; +1.80 matches a height relative to FFL1. Datum of this tag is ambiguous."
+   "detail": "Other F tags are absolute levels; +1.80 matches a height relative to FFL1. Datum of this tag is ambiguous.",
+   "resolution": {
+    "decision": "DEC-08",
+    "date": "2026-11-02",
+    "by": "engineering judgement (delegated by owner 2026-11-02)",
+    "text": "Stair landing absolute level +2.45; the '+1.80' label means 1.80 m above FFL1."
+   }
   },
   {
    "id": "ISS-08",
@@ -2187,7 +2363,13 @@
      "sheet": "AR-26",
      "pdfPage": 12
     }
-   ]
+   ],
+   "resolution": {
+    "decision": "DEC-09",
+    "date": "2026-11-02",
+    "by": "engineering judgement (delegated by owner 2026-11-02)",
+    "text": "Door D3 = 2.00 x 1.00 (leaf), frame 1.10."
+   }
   },
   {
    "id": "ISS-09",
@@ -2204,7 +2386,13 @@
      "sheet": "AR-26",
      "pdfPage": 12
     }
-   ]
+   ],
+   "resolution": {
+    "decision": "DEC-10",
+    "date": "2026-11-02",
+    "by": "engineering judgement (delegated by owner 2026-11-02)",
+    "text": "Window heights from the dimensioned elevations: W2 2.50 (sill 0.30), W2B 1.60 (sill 1.10 above L2 beam level +4.10), W2C 1.70 (sill 0.30), W9 1.20."
+   }
   },
   {
    "id": "ISS-10",
@@ -2221,7 +2409,13 @@
      "sheet": "AR-27",
      "pdfPage": 13
     }
-   ]
+   ],
+   "resolution": {
+    "decision": "DEC-10",
+    "date": "2026-11-02",
+    "by": "engineering judgement (delegated by owner 2026-11-02)",
+    "text": "Window heights from the dimensioned elevations: W2 2.50 (sill 0.30), W2B 1.60 (sill 1.10 above L2 beam level +4.10), W2C 1.70 (sill 0.30), W9 1.20."
+   }
   },
   {
    "id": "ISS-11",
@@ -2238,7 +2432,13 @@
      "sheet": "AR-27",
      "pdfPage": 13
     }
-   ]
+   ],
+   "resolution": {
+    "decision": "DEC-10",
+    "date": "2026-11-02",
+    "by": "engineering judgement (delegated by owner 2026-11-02)",
+    "text": "Window heights from the dimensioned elevations: W2 2.50 (sill 0.30), W2B 1.60 (sill 1.10 above L2 beam level +4.10), W2C 1.70 (sill 0.30), W9 1.20."
+   }
   },
   {
    "id": "ISS-12",
@@ -2255,7 +2455,13 @@
      "sheet": "AR-27",
      "pdfPage": 13
     }
-   ]
+   ],
+   "resolution": {
+    "decision": "DEC-10",
+    "date": "2026-11-02",
+    "by": "engineering judgement (delegated by owner 2026-11-02)",
+    "text": "Window heights from the dimensioned elevations: W2 2.50 (sill 0.30), W2B 1.60 (sill 1.10 above L2 beam level +4.10), W2C 1.70 (sill 0.30), W9 1.20."
+   }
   },
   {
    "id": "ISS-13",
@@ -2283,7 +2489,13 @@
      "sheet": "AR-09",
      "pdfPage": 4
     }
-   ]
+   ],
+   "resolution": {
+    "decision": "DEC-12",
+    "date": "2026-11-02",
+    "by": "engineering judgement (delegated by owner 2026-11-02)",
+    "text": "Tag 'B2' on AR-09 = W2B."
+   }
   },
   {
    "id": "ISS-15",
@@ -2303,7 +2515,13 @@
      "sheet": "AR-09",
      "pdfPage": 4
     }
-   ]
+   ],
+   "resolution": {
+    "decision": "DEC-13",
+    "date": "2026-11-02",
+    "by": "engineering judgement (delegated by owner 2026-11-02)",
+    "text": "Model all 10 D2 openings drawn on the plans; schedule qty 8 treated as out of date."
+   }
   },
   {
    "id": "ISS-16",
@@ -2332,7 +2550,13 @@
      "sheet": "AR-09",
      "pdfPage": 4
     }
-   ]
+   ],
+   "resolution": {
+    "decision": "DEC-05",
+    "date": "2026-11-02",
+    "by": "engineering judgement (delegated by owner 2026-11-02)",
+    "text": "Bathroom floors: L1 +0.55, L2 +4.15 (room tags on AR-08/AR-09); L2 bathroom ceiling C1 +2.60. The 'F2 +0.50 / C2 +2.40' tags on AR-09 are stray copies from an L1 bathroom detail."
+   }
   },
   {
    "id": "ISS-18",
@@ -2349,7 +2573,13 @@
      "sheet": "AR-12",
      "pdfPage": 7
     }
-   ]
+   ],
+   "resolution": {
+    "decision": "DEC-14",
+    "date": "2026-11-02",
+    "by": "engineering judgement (delegated by owner 2026-11-02)",
+    "text": "Porch (เฉลียง) ceiling = 6.30 m above porch floor (AR-12 ระดับฝ้า over the double-height porch void)."
+   }
   },
   {
    "id": "ISS-19",
@@ -2429,7 +2659,13 @@
      "pdfPage": 3
     }
    ],
-   "detail": "Columns are 0.20 m quads extracted from the vectors. A column missing on a sheet that covers its position is flagged. ST-04 is a level-2 beam plan, so some differences may be by design (e.g. columns that stop at L2) - needs structural confirmation."
+   "detail": "Columns are 0.20 m quads extracted from the vectors. A column missing on a sheet that covers its position is flagged. ST-04 is a level-2 beam plan, so some differences may be by design (e.g. columns that stop at L2) - needs structural confirmation.",
+   "resolution": {
+    "decision": "DEC-15",
+    "date": "2026-11-02",
+    "by": "engineering judgement (delegated by owner 2026-11-02)",
+    "text": "Columns: the union of all sheets is modelled. ST-04 governs structural columns, so the ST-04-only columns at 2a/A, 2a/B and the carport mid-span y=22.20 are added. Columns on AR-08/AR-09 only are kept as drawn (stair, grid 2/3 posts)."
+   }
   },
   {
    "id": "ISS-22",
@@ -2445,7 +2681,13 @@
      "sheet": "AR-26",
      "pdfPage": 12
     }
-   ]
+   ],
+   "resolution": {
+    "decision": "DEC-16",
+    "date": "2026-11-02",
+    "by": "engineering judgement (delegated by owner 2026-11-02)",
+    "text": "W1 = frame 1.00 x 2.50 per AR-26 (DEC-01 rule)."
+   }
   },
   {
    "id": "ISS-23",
@@ -2480,13 +2722,25 @@
      "sheet": "AR-27",
      "pdfPage": 13
     }
-   ]
+   ],
+   "resolution": {
+    "decision": "DEC-11",
+    "date": "2026-11-02",
+    "by": "engineering judgement (delegated by owner 2026-11-02)",
+    "text": "Window W7 = 0.95 x 0.40 (table)."
+   }
   },
   {
    "id": "ISS-28",
    "type": "unverified",
    "title": "Folding door D7 / D7.1 width",
-   "detail": "AR-26 gives width as '2.40/2.50' and size '2.00 x 2.40-2.50' for both. Exact per-door width not stated."
+   "detail": "AR-26 gives width as '2.40/2.50' and size '2.00 x 2.40-2.50' for both. Exact per-door width not stated.",
+   "resolution": {
+    "decision": "DEC-17",
+    "date": "2026-11-02",
+    "by": "engineering judgement (delegated by owner 2026-11-02)",
+    "text": "D7 = 2.40 m, D7.1 = 2.50 m."
+   }
   },
   {
    "id": "ISS-29",
@@ -2502,9 +2756,37 @@
   },
   {
    "id": "ISS-30",
-   "type": "info",
-   "title": "AR-11 dimension chain 2.40 / 2.60 / 1.20 between grid 4 and 5\"",
-   "detail": "Measured on AR-11 the grid bubbles 4, 4\", 5, 5\" sit at 2.00 / 3.00 / 1.00 spacing (same as AR-08). The 2.40/2.60/1.20 chain references wall/edge lines, not grid 4\". Not treated as a grid conflict - please confirm."
+   "type": "conflict",
+   "title": "Grid 5 → 5\" spacing",
+   "detail": "Measured on AR-11 the grid bubbles 4, 4\", 5, 5\" sit at 2.00 / 3.00 / 1.00 spacing (same as AR-08). The 2.40/2.60/1.20 chain references wall/edge lines, not grid 4\". Not treated as a grid conflict - please confirm.",
+   "values": [
+    {
+     "value": "5-5\" = 1.00 (vector-measured)",
+     "sheet": "AR-08",
+     "pdfPage": 3
+    },
+    {
+     "value": "1.00",
+     "sheet": "AR-09",
+     "pdfPage": 4
+    },
+    {
+     "value": "1.00",
+     "sheet": "ST-04",
+     "pdfPage": 16
+    },
+    {
+     "value": "1.20 (chain 2.40/2.60/1.20)",
+     "sheet": "AR-11",
+     "pdfPage": 6
+    }
+   ],
+   "resolution": {
+    "decision": "DEC-18",
+    "date": "2026-11-02",
+    "by": "engineering judgement (delegated by owner 2026-11-02)",
+    "text": "Grid 5→5\" = 1.00 m."
+   }
   },
   {
    "id": "ISS-31",
@@ -2540,6 +2822,40 @@
     "date": "2026-11-02",
     "by": "owner",
     "text": "Door/window sizes = frame (วงกบ) sizes from AR-26 / AR-27. The wider plan gap is the masonry opening and is not modelled."
+   }
+  },
+  {
+   "id": "ISS-33",
+   "type": "conflict",
+   "title": "Entrance porch (ซุ้มทางเข้า) opening widths",
+   "values": [
+    {
+     "value": "front 2.80 (x 7.60-10.40) / side 1.70",
+     "sheet": "AR-08",
+     "pdfPage": 3
+    },
+    {
+     "value": "front 2.80 / side 1.70",
+     "sheet": "AR-09",
+     "pdfPage": 4
+    },
+    {
+     "value": "front ≈3.45 (x 7.28-10.73) / side ≈1.30 (as reported in review list)",
+     "sheet": "AR-14",
+     "pdfPage": 8
+    },
+    {
+     "value": "side ≈1.30 (as reported in review list)",
+     "sheet": "AR-16",
+     "pdfPage": 10
+    }
+   ],
+   "detail": "Raised in the owner's review list. Elevation values not yet measured in this project (elevations are Phase 4).",
+   "resolution": {
+    "decision": "DEC-19",
+    "date": "2026-11-02",
+    "by": "engineering judgement (delegated by owner 2026-11-02)",
+    "text": "Entrance porch openings follow the plan: front 2.80, side 1.70."
    }
   }
  ],
@@ -2583,6 +2899,160 @@
    ],
    "decision": "North direction derived from AR-07 confirmed: 130.8 deg clockwise from sheet-up on AR-08 (plan +Y bears ~49 deg, NE).",
    "effect": "North status Verified."
+  },
+  {
+   "id": "DEC-05",
+   "date": "2026-11-02",
+   "by": "engineering judgement (delegated by owner 2026-11-02)",
+   "resolves": [
+    "ISS-04",
+    "ISS-17"
+   ],
+   "decision": "Bathroom floors: L1 +0.55, L2 +4.15 (room tags on AR-08/AR-09); L2 bathroom ceiling C1 +2.60. The 'F2 +0.50 / C2 +2.40' tags on AR-09 are stray copies from an L1 bathroom detail.",
+   "effect": "Reason: +0.55 and +4.15 are both exactly 0.10 m below their floor level (FFL1 +0.65, FFL2 +4.25), the usual wet-room drop. +0.50 on L2 would sit 3.75 m below the L2 floor, which is physically impossible."
+  },
+  {
+   "id": "DEC-06",
+   "date": "2026-11-02",
+   "by": "engineering judgement (delegated by owner 2026-11-02)",
+   "resolves": [
+    "ISS-05"
+   ],
+   "decision": "Foyer (โถงต้อนรับ) ceiling = 6.60 m above floor.",
+   "effect": "Reason: AR-08 and AR-11 room tags plus the AR-12 ระดับฝ้า label all read +6.60; only the AR-12 room tag reads +5.80. Check: +0.65 + 6.60 = +7.25, just under the roof beam at +7.35."
+  },
+  {
+   "id": "DEC-07",
+   "date": "2026-11-02",
+   "by": "engineering judgement (delegated by owner 2026-11-02)",
+   "resolves": [
+    "ISS-06"
+   ],
+   "decision": "Garage grids are named 4 (x=11.00) and 5\" (x=17.00); the bottom bubbles '3' and \"4'\" are aliases.",
+   "effect": "Reason: the positions agree on all sheets. The top labels match the full dimension chain 1…5\"; '3' already exists at x=7.00."
+  },
+  {
+   "id": "DEC-08",
+   "date": "2026-11-02",
+   "by": "engineering judgement (delegated by owner 2026-11-02)",
+   "resolves": [
+    "ISS-07"
+   ],
+   "decision": "Stair landing absolute level +2.45; the '+1.80' label means 1.80 m above FFL1.",
+   "effect": "Reason: 10 risers x 0.18 = 1.80 from FFL1 +0.65, and AR-29 dimensions 1.80 from floor 1. Absolute +1.80 would need 6.4 risers."
+  },
+  {
+   "id": "DEC-09",
+   "date": "2026-11-02",
+   "by": "engineering judgement (delegated by owner 2026-11-02)",
+   "resolves": [
+    "ISS-08"
+   ],
+   "decision": "Door D3 = 2.00 x 1.00 (leaf), frame 1.10.",
+   "effect": "Reason: the table's '0.10' is a typo. The elevation dims read 1.00/1.10, and the plan gap measures 1.22 m (fits a 1.10 frame)."
+  },
+  {
+   "id": "DEC-10",
+   "date": "2026-11-02",
+   "by": "engineering judgement (delegated by owner 2026-11-02)",
+   "resolves": [
+    "ISS-09",
+    "ISS-10",
+    "ISS-11",
+    "ISS-12"
+   ],
+   "decision": "Window heights from the dimensioned elevations: W2 2.50 (sill 0.30), W2B 1.60 (sill 1.10 above L2 beam level +4.10), W2C 1.70 (sill 0.30), W9 1.20.",
+   "effect": "Reason: the table rows for W2/W2B/W2C repeat the identical '2.05 x 0.60', which looks like a copied row, while each elevation is individually dimensioned. Check: W2 head 0.30 + 2.50 = 2.80 = L1 ceiling (DEC-02); W2B head +6.80 < L2 ceiling +7.25; W2C head 2.00 ≈ door head."
+  },
+  {
+   "id": "DEC-11",
+   "date": "2026-11-02",
+   "by": "engineering judgement (delegated by owner 2026-11-02)",
+   "resolves": [
+    "ISS-27"
+   ],
+   "decision": "Window W7 = 0.95 x 0.40 (table).",
+   "effect": "Reason: arithmetic check — head 2.05 - sill 1.65 = 0.40, which equals the table value. The 0.30 dimension on the elevation is the glazed sash."
+  },
+  {
+   "id": "DEC-12",
+   "date": "2026-11-02",
+   "by": "engineering judgement (delegated by owner 2026-11-02)",
+   "resolves": [
+    "ISS-14"
+   ],
+   "decision": "Tag 'B2' on AR-09 = W2B.",
+   "effect": "Reason: no type 'B2' exists, and with it the W2B count = 3 = schedule qty."
+  },
+  {
+   "id": "DEC-13",
+   "date": "2026-11-02",
+   "by": "engineering judgement (delegated by owner 2026-11-02)",
+   "resolves": [
+    "ISS-15"
+   ],
+   "decision": "Model all 10 D2 openings drawn on the plans; schedule qty 8 treated as out of date.",
+   "effect": "Reason: plans govern location and count; every D2 sits in a drawn opening with a swing."
+  },
+  {
+   "id": "DEC-14",
+   "date": "2026-11-02",
+   "by": "engineering judgement (delegated by owner 2026-11-02)",
+   "resolves": [
+    "ISS-18"
+   ],
+   "decision": "Porch (เฉลียง) ceiling = 6.30 m above porch floor (AR-12 ระดับฝ้า over the double-height porch void).",
+   "effect": "Reason: the porch is open to the AR-09 void (โล่ง), so AR-08 shows '-'. AR-12 is the only sheet with a value."
+  },
+  {
+   "id": "DEC-15",
+   "date": "2026-11-02",
+   "by": "engineering judgement (delegated by owner 2026-11-02)",
+   "resolves": [
+    "ISS-21"
+   ],
+   "decision": "Columns: the union of all sheets is modelled. ST-04 governs structural columns, so the ST-04-only columns at 2a/A, 2a/B and the carport mid-span y=22.20 are added. Columns on AR-08/AR-09 only are kept as drawn (stair, grid 2/3 posts).",
+   "effect": "Reason: structural drawings take precedence for structural members, and a 9.00 m E-F carport span needs the ST-04 mid supports (beams B6+3.70 at y=22.20). Kitchen A' columns are on AR-08 only because no other sheet covers that zone."
+  },
+  {
+   "id": "DEC-16",
+   "date": "2026-11-02",
+   "by": "engineering judgement (delegated by owner 2026-11-02)",
+   "resolves": [
+    "ISS-22"
+   ],
+   "decision": "W1 = frame 1.00 x 2.50 per AR-26 (DEC-01 rule).",
+   "effect": "The plan opening (~1.5 m) is the masonry opening."
+  },
+  {
+   "id": "DEC-17",
+   "date": "2026-11-02",
+   "by": "engineering judgement (delegated by owner 2026-11-02)",
+   "resolves": [
+    "ISS-28"
+   ],
+   "decision": "D7 = 2.40 m, D7.1 = 2.50 m.",
+   "effect": "Reason: computed from the bays — D7 bay 10.955-13.455 (2.50 between wall centres, ≈2.40 clear), D7.1 bay 13.455-16.055 (2.60, ≈2.50 clear). This matches the '2.40/2.50' pair on AR-26."
+  },
+  {
+   "id": "DEC-18",
+   "date": "2026-11-02",
+   "by": "engineering judgement (delegated by owner 2026-11-02)",
+   "resolves": [
+    "ISS-30"
+   ],
+   "decision": "Grid 5→5\" = 1.00 m.",
+   "effect": "Reason: measured from the vectors on AR-08, AR-09 and ST-04 (16.00 → 17.00). The 1.20 on AR-11 runs to the eave/ramp edge line beyond 5\", not to grid 5\"."
+  },
+  {
+   "id": "DEC-19",
+   "date": "2026-11-02",
+   "by": "engineering judgement (delegated by owner 2026-11-02)",
+   "resolves": [
+    "ISS-33"
+   ],
+   "decision": "Entrance porch openings follow the plan: front 2.80, side 1.70.",
+   "effect": "Reason: vector-measured gaps between the hatched piers are 2.85 (x 7.57-10.42) and 1.68 (y 13.95-15.63), which match the plan values within 0.05 m. Elevations at 1:75/1:100 are graphic and are used for heights only (Phase 4)."
   }
  ],
  "sheets": {

@@ -38,6 +38,20 @@ TYPES = {t["code"]: t for t in BUILDING["doorTypes"] + BUILDING["windowTypes"]}
 DECISIONS = BUILDING.get("decisions", [])
 RESOLVED = {iss: d["id"] for d in DECISIONS for iss in d["resolves"]}   # issue id -> decision id
 CEILING_ISSUES = {"ISS-03", "ISS-05", "ISS-17", "ISS-18"}
+FLOOR_ISSUES = {"ISS-04", "ISS-17"}
+
+
+def resolve(status, issues):
+    """A non-verified status whose related issues are all resolved by a decision becomes verified."""
+    rel = [i for i in issues if i.startswith("ISS-")]
+    if status != "verified" and rel and all(i in RESOLVED for i in rel):
+        return "verified", sorted({RESOLVED[i] for i in rel})
+    return status, []
+
+
+# apply decisions to the door/window types
+for _t in TYPES.values():
+    _t["status"], _t["decisions"] = resolve(_t["status"], _t.get("issues", []))
 
 
 def src(sheet, note=None):
@@ -260,7 +274,7 @@ def build_floor(fl, columns):
                 else:
                     size = "unverified"
                     notes.append("plan gap != schedule width (>0.15 m)")
-        tagst = o.get("status", "verified")
+        tagst, tagdec = resolve(o.get("status", "verified"), o.get("issues", []))
         status = worst(pos, size, tagst)
         type_sheet = T["sources"][0]["sheet"]
         openings.append({
@@ -274,6 +288,7 @@ def build_floor(fl, columns):
             "measuredGap": r3(gap) if gap is not None else None,
             "sources": [src(sheet, "tag + position"), src(type_sheet, f"type {o['code']} size")],
             "issues": sorted(set(o.get("issues", []) + T.get("issues", []))),
+            "decisions": sorted(set(T.get("decisions", []) + tagdec)),
             "note": "; ".join(notes),
         })
 
@@ -287,11 +302,11 @@ def build_floor(fl, columns):
         xs, ys = [p[0] for p in poly], [p[1] for p in poly]
         tag = r["tag"]
         st = dict(r["status"])
-        decided = []
-        ceil_iss = CEILING_ISSUES & set(r.get("issues", []))
-        if st["ceiling"] == "conflict" and ceil_iss and all(i in RESOLVED for i in ceil_iss):
-            st["ceiling"] = "verified"
-            decided = sorted({RESOLVED[i] for i in ceil_iss})
+        decided = set()
+        for field, rel in (("ceiling", CEILING_ISSUES), ("floor", FLOOR_ISSUES)):
+            st[field], d = resolve(st[field], sorted(rel & set(r.get("issues", []))))
+            decided |= set(d)
+        decided = sorted(decided)
         tagtxt = f'{tag["F"]} {tag["fl"]:+.2f} / {tag["C"] or "-"} {("%+.2f" % tag["cl"]) if tag["cl"] is not None else "-"}'
         rooms.append({
             "id": r["id"], "floorId": F, "name": r["name"], "nameEn": r["nameEn"],
@@ -312,11 +327,28 @@ def build_floor(fl, columns):
     return {
         "floorId": F, "name": fl["name"], "level": fl["level"], "sheet": sheet, "pdfPage": fl["pdfPage"],
         "walls": walls, "openings": openings, "rooms": rooms,
-        "stairs": fl["stairs"], "voids": fl["voids"], "slabs": fl["slabs"], "unassigned": fl["unassigned"],
+        "stairs": [_resolve_stair(x) for x in fl["stairs"]], "voids": fl["voids"], "slabs": fl["slabs"], "unassigned": fl["unassigned"],
     }
 
 
 # --------------------------------------------------------------------------- grids/columns/north
+def _resolve_stair(s):
+    s = json.loads(json.dumps(s))
+    s["landing"]["status"], s["landing"]["decisions"] = resolve(s["landing"]["status"], s["landing"].get("issues", []))
+    return s
+
+
+def levels():
+    out = []
+    for l in BUILDING["levels"]:
+        l = dict(l)
+        if l["status"] != "verified":
+            l["status"], d = resolve(l["status"], l.get("issues", []))
+            l["decisions"] = sorted(set(l.get("decisions", []) + d))
+        out.append(l)
+    return out
+
+
 def grids():
     out = {}
     for axis in ("x", "y"):
@@ -325,9 +357,10 @@ def grids():
             det = {s: any(abs(v - g["pos"]) < 0.03 for v in RAW["gridLines"][s][axis]) for s in RAW["gridLines"]}
             n = sum(det.values())
             status = "verified" if n >= 1 else "unverified"
+            dec = []
             if g.get("issues"):
-                status = "conflict"
-            lst.append({**g, "detectedOn": det, "status": status,
+                status, dec = resolve("conflict", g["issues"])
+            lst.append({**g, "detectedOn": det, "status": status, "decisions": dec,
                         "sources": [src(s, "grid line detected") for s, v in det.items() if v]})
         out[axis] = lst
     return out
@@ -359,11 +392,16 @@ def columns_check():
         else:
             st = "conflict"
         g = grid_name(c["x"], c["y"])
-        rec = {"id": f"C{n:02d}", "x": r3(c["x"]), "y": r3(c["y"]), "size": [0.2, 0.2], "grid": g, "shownOn": on,
-               "status": st, "sources": [src(s, "column 0.20x0.20") for s, v in on.items() if v],
-               "issues": ["ISS-21"] if st != "verified" else []}
+        was = st
+        dec = []
+        if st != "verified":
+            st, dec = resolve(st, ["ISS-21"])
+        role = "structural (ST-04)" if on["ST-04"] else "architectural plan only"
+        rec = {"id": f"C{n:02d}", "x": r3(c["x"]), "y": r3(c["y"]), "size": [0.2, 0.2], "grid": g, "shownOn": on, "role": role,
+               "status": st, "decisions": dec, "sources": [src(s, "column 0.20x0.20") for s, v in on.items() if v],
+               "issues": ["ISS-21"] if was != "verified" else []}
         out.append(rec)
-        if st == "conflict":
+        if was == "conflict":
             mism.append(f'{g or "(%.2f, %.2f)" % (c["x"], c["y"])}: ' + ", ".join(f'{s} {"yes" if v else "NO"}' for s, v in on.items()))
     return out, mism
 
@@ -477,8 +515,8 @@ def report(floors, bld):
             L += [f'- **{v["id"]}** {v["name"]} — {BADGE[v["status"]]} — {refs(v["sources"])}']
         L += [""]
     # decisions
-    L += ["## 8. Owner decisions", "", md_table([[d["id"], d["date"], ", ".join(d["resolves"]), d["decision"], d["effect"]] for d in bld["decisions"]],
-                                               ["ID", "Date", "Resolves", "Decision", "Effect"]), ""]
+    L += ["## 8. Decisions (owner + delegated engineering judgement)", "", md_table([[d["id"], d["date"], d["by"], ", ".join(d["resolves"]), d["decision"], d["effect"]] for d in bld["decisions"]],
+                                               ["ID", "Date", "By", "Resolves", "Decision", "Rationale / effect"]), ""]
     # issues
     L += ["## 9. Issues — Conflicts, Unverified items, Notes", ""]
     for kind in ("conflict", "unverified", "info"):
@@ -513,7 +551,7 @@ def main():
             i["resolution"] = {"decision": d["id"], "date": d["date"], "by": d["by"], "text": d["decision"]}
     bld = {
         "project": BUILDING["project"], "units": BUILDING["units"], "coordinateSystem": BUILDING["coordinateSystem"],
-        "north": north(), "levels": BUILDING["levels"], "grids": grids(), "columns": cols,
+        "north": north(), "levels": levels(), "grids": grids(), "columns": cols,
         "doorTypes": BUILDING["doorTypes"], "windowTypes": BUILDING["windowTypes"],
         "issues": issues, "decisions": DECISIONS, "sheets": SHEETS,
     }

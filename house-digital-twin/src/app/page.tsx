@@ -14,8 +14,8 @@ const PHASES = [
 
 export default function Home() {
   const rows = floors.map((f) => ({ f, walls: counts(f.walls), rooms: counts(f.rooms), openings: counts(f.openings) }));
-  const ic = { conflict: 0, unverified: 0, info: 0 };
-  building.issues.forEach((i) => ic[i.type]++);
+  const ic = { conflict: 0, unverified: 0, info: 0, resolved: 0 };
+  building.issues.forEach((i) => (i.resolution ? ic.resolved++ : ic[i.type]++));
   return (
     <div className="mx-auto w-full max-w-6xl px-4 py-6">
       <h1 className="text-xl font-semibold">Interactive 3D House Digital Twin</h1>
@@ -45,8 +45,9 @@ export default function Home() {
         <Card>
           <CardHeader><CardTitle>Issues register</CardTitle></CardHeader>
           <CardContent className="text-xs">
-            <div className="flex justify-between py-1"><span>Conflicts</span><StatusBadge status="conflict" /> <span className="tabular">{ic.conflict}</span></div>
-            <div className="flex justify-between py-1"><span>Unverified</span><StatusBadge status="unverified" /> <span className="tabular">{ic.unverified}</span></div>
+            <div className="flex justify-between py-1"><span>Open conflicts</span><StatusBadge status="conflict" /> <span className="tabular">{ic.conflict}</span></div>
+            <div className="flex justify-between py-1"><span>Open unverified</span><StatusBadge status="unverified" /> <span className="tabular">{ic.unverified}</span></div>
+            <div className="flex justify-between py-1"><span>Resolved by decision</span><StatusBadge status="verified" /> <span className="tabular">{ic.resolved}</span></div>
             <div className="flex justify-between py-1"><span>Info notes</span><span /> <span className="tabular">{ic.info}</span></div>
           </CardContent>
         </Card>
