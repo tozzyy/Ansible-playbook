@@ -46,6 +46,8 @@ export type Opening = {
   width: number;
   height: number;
   sillHeight?: number;
+  /** absolute level of the opening bottom (m) */
+  sillZ: number;
   status: VerificationStatus;
   fieldStatus: { position: VerificationStatus; size: VerificationStatus; tag: VerificationStatus };
   measuredGap: number | null;
@@ -71,6 +73,8 @@ export type Room = {
   fieldStatus: { polygon: VerificationStatus; floor: VerificationStatus; ceiling: VerificationStatus };
   sources: SourceRef[];
   issues: string[];
+  /** owner decisions applied to this room (e.g. DEC-02) */
+  decisions: string[];
   note: string;
 };
 
@@ -182,7 +186,10 @@ export type Issue = {
   detail?: string;
   values?: { value: string; sheet: string; pdfPage: number }[];
   sources?: SourceRef[];
+  resolution?: { decision: string; date: string; by: string; text: string };
 };
+
+export type Decision = { id: string; date: string; by: string; resolves: string[]; decision: string; effect: string };
 
 export type SheetInfo = {
   sheet: string;
@@ -212,6 +219,7 @@ export type Building = {
   doorTypes: OpeningType[];
   windowTypes: OpeningType[];
   issues: Issue[];
+  decisions: Decision[];
   sheets: { pdfFile: string; note: string; pageSizePt: Vec2; ptPerMetre1to125: number; sheets: SheetInfo[] };
 };
 

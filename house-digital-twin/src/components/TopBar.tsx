@@ -6,12 +6,12 @@ import { cn } from "@/lib/utils";
 
 const NAV = [
   { href: "/", label: "Home", icon: Home },
+  { href: "/3d", label: "3D", icon: Box },
   { href: "/verify", label: "2D Verify", icon: Layers },
   { href: "/report", label: "Report", icon: FileCheck2 },
 ];
 // Phase 2-3 tools: shown but disabled until geometry is approved.
 const LATER = [
-  { label: "3D", icon: Box },
   { label: "Section", icon: Scissors },
   { label: "Measure", icon: Ruler },
 ];
@@ -21,7 +21,7 @@ export function TopBar() {
   return (
     <header className="flex h-12 shrink-0 items-center gap-1 border-b border-border bg-card px-3">
       <span className="mr-3 text-sm font-semibold">House Digital Twin</span>
-      <span className="mr-2 hidden rounded bg-muted px-1.5 py-0.5 text-[11px] text-muted-foreground sm:inline">Phase 1 · Geometry verification</span>
+      <span className="mr-2 hidden rounded bg-muted px-1.5 py-0.5 text-[11px] text-muted-foreground sm:inline">Phase 2 · 3D model</span>
       <nav className="flex items-center gap-1">
         {NAV.map(({ href, label, icon: Icon }) => (
           <Link
@@ -39,7 +39,7 @@ export function TopBar() {
       </nav>
       <div className="ml-auto flex items-center gap-1">
         {LATER.map(({ label, icon: Icon }) => (
-          <button key={label} disabled title={`${label} – Phase 2/3 (after geometry approval)`}
+          <button key={label} disabled title={`${label} – Phase 3`}
             className="inline-flex h-8 items-center gap-1.5 rounded-md px-2 text-sm text-muted-foreground opacity-50 [&_svg]:size-4">
             <Icon /><span className="hidden lg:inline">{label}</span>
           </button>

@@ -1,9 +1,13 @@
 "use client";
 import { building, floors, issueById, openingType, OVERLAY_SHEETS } from "@/lib/data";
+import { createContext, useContext } from "react";
 import { useVerifyStore } from "@/lib/store";
 import { StatusBadge } from "@/components/ui/badge";
 import { fmt, fmtLevel } from "@/lib/utils";
-import type { SourceRef, VerificationStatus } from "@/types/geometry";
+import type { Selection, SourceRef, VerificationStatus } from "@/types/geometry";
+
+/** How "open" on a source sheet behaves (2D page: switch sheet; 3D page: navigate to /verify). */
+const OpenSheetCtx = createContext<((sheet: string) => void) | null>(null);
 
 function Row({ k, v }: { k: string; v: React.ReactNode }) {
   return (
@@ -15,7 +19,8 @@ function Row({ k, v }: { k: string; v: React.ReactNode }) {
 }
 
 function Sources({ sources }: { sources: SourceRef[] }) {
-  const setSheet = useVerifyStore((s) => s.setSheet);
+  const storeSetSheet = useVerifyStore((s) => s.setSheet);
+  const setSheet = useContext(OpenSheetCtx) ?? storeSetSheet;
   return (
     <div className="mt-3">
       <h5 className="mb-1 text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Source drawing</h5>
@@ -58,6 +63,11 @@ function Issues({ ids }: { ids: string[] }) {
                 <div key={k} className="mt-0.5 text-[11px]"><code>{v.value}</code> — {v.sheet} p.{v.pdfPage}</div>
               ))}
               {i.detail && <p className="mt-1 text-[11px] leading-snug text-muted-foreground">{i.detail}</p>}
+              {i.resolution && (
+                <p className="mt-1 rounded bg-verified/10 px-1.5 py-1 text-[11px] text-verified">
+                  Resolved {i.resolution.decision} ({i.resolution.date}): {i.resolution.text}
+                </p>
+              )}
             </li>
           );
         })}
@@ -76,9 +86,13 @@ function FieldStatus({ fs }: { fs: Record<string, VerificationStatus> }) {
   );
 }
 
-export function DetailsPanel() {
-  const sel = useVerifyStore((s) => s.selection);
-  const select = useVerifyStore((s) => s.select);
+type PanelProps = { selection?: Selection; onClear?: () => void; onOpenSheet?: (sheet: string) => void; extra?: React.ReactNode; className?: string };
+
+export function DetailsPanel(props: PanelProps) {
+  const storeSel = useVerifyStore((s) => s.selection);
+  const storeSelect = useVerifyStore((s) => s.select);
+  const sel = props.selection !== undefined ? props.selection : storeSel;
+  const clear = props.onClear ?? (() => storeSelect(null));
 
   let body: React.ReactNode = (
     <div className="text-xs text-muted-foreground">
@@ -99,6 +113,7 @@ export function DetailsPanel() {
           <Row k="Floor level (F)" v={`${fmtLevel(r.floorElevation)} · ${r.finish.floor ?? "–"}`} />
           <Row k="Ceiling height (C)" v={r.ceilingHeight != null ? `${fmt(r.ceilingHeight)} m · ${r.finish.ceiling}` : "–"} />
           <Row k="Ceiling level (abs)" v={fmtLevel(r.ceilingLevel)} />
+          {r.decisions?.length > 0 && <Row k="Owner decision" v={r.decisions.join(", ")} />}
           <Row k="Finish codes" v={<span className="text-unverified">undefined in set (ISS-01)</span>} />
         </div>
         {r.note && <p className="mt-2 text-xs text-muted-foreground">{r.note}</p>}
@@ -138,6 +153,7 @@ export function DetailsPanel() {
           <Row k="Width (frame)" v={`${fmt(o.width)} m`} />
           <Row k="Height" v={`${fmt(o.height)} m`} />
           <Row k="Sill" v={`${fmt(o.sillHeight ?? 0)} m${t.sillDatum ? ` (${t.sillDatum})` : ""}`} />
+          <Row k="Bottom level (abs)" v={fmtLevel(o.sillZ)} />
           <Row k="Plan clear gap" v={o.measuredGap != null ? `${fmt(o.measuredGap)} m` : "–"} />
           <Row k="Centre along wall" v={`${fmt(o.center, 3)} m`} />
           <Row k="Schedule qty" v={t.qty ?? "–"} />
@@ -205,13 +221,16 @@ export function DetailsPanel() {
   }
 
   return (
-    <aside className="flex w-80 shrink-0 flex-col overflow-y-auto border-l border-border bg-card p-3">
-      <div className="mb-2 flex items-center justify-between">
-        <h4 className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Details</h4>
-        {sel && <button className="text-[11px] text-primary underline" onClick={() => select(null)}>clear</button>}
-      </div>
-      {body}
-    </aside>
+    <OpenSheetCtx.Provider value={props.onOpenSheet ?? null}>
+      <aside className={props.className ?? "flex w-80 shrink-0 flex-col overflow-y-auto border-l border-border bg-card p-3"}>
+        <div className="mb-2 flex items-center justify-between">
+          <h4 className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Details</h4>
+          {sel && <button className="text-[11px] text-primary underline" onClick={clear}>clear</button>}
+        </div>
+        {props.extra}
+        {body}
+      </aside>
+    </OpenSheetCtx.Provider>
   );
 }
 

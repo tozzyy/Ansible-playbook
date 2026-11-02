@@ -11,11 +11,11 @@ Status legend: ✅ **Verified** = measured from vectors and/or confirmed by ≥1
 | Floor | Element | Total | Verified | Unverified | Conflict |
 |---|---|---|---|---|---|
 | F1 | walls | 59 | 28 | 31 | 0 |
-| F1 | rooms | 16 | 0 | 6 | 10 |
-| F1 | openings | 28 | 2 | 21 | 5 |
+| F1 | rooms | 16 | 4 | 9 | 3 |
+| F1 | openings | 28 | 12 | 11 | 5 |
 | F2 | walls | 53 | 36 | 17 | 0 |
 | F2 | rooms | 10 | 7 | 1 | 2 |
-| F2 | openings | 26 | 3 | 11 | 12 |
+| F2 | openings | 26 | 12 | 2 | 12 |
 | all | columns | 30 | 15 | 3 | 12 |
 
 ## 2. Source Drawing Mapping (sheet ↔ PDF page)
@@ -54,7 +54,7 @@ Status legend: ✅ **Verified** = measured from vectors and/or confirmed by ≥1
 | AR-09 | [345.6, 161.8546] | grid 1 line x=345.60pt; grid A line y=275.24pt; A' = A - 5.00 m. |
 | ST-04 | [345.6, 101.0146] | grid 1 line x=345.60pt; grid A line y=214.40pt; A' = A - 5.00 m (A' not drawn on ST-04). |
 
-- North (AR-07): 130.8° clockwise from sheet-up on AR-08; plan +Y (A→F) bears 49.2°. Status ⚠️ Unverified (ISS-29).
+- North (AR-07): 130.8° clockwise from sheet-up on AR-08; plan +Y (A→F) bears 49.2°. Status ✅ Verified (ISS-29).
 
 ## 4. Levels
 
@@ -70,7 +70,7 @@ Status legend: ✅ **Verified** = measured from vectors and/or confirmed by ≥1
 | ±4.25 ระดับพื้นชั้น 2 | +4.25 | ✅ Verified | AR-11 (p.6)<br>AR-12 (p.7)<br>AR-09 (p.4) |  |
 | ±7.35 ระดับหลังคาน ชั้นหลังคา | +7.35 | ✅ Verified | AR-12 (p.7) |  |
 | ±8.50 ระดับหลังอะเส | +8.50 | ✅ Verified | AR-11 (p.6)<br>AR-12 (p.7) |  |
-| ระดับหลังอกไก่ | +11.07 (AR-11)/+10.79 (AR-12) | ❌ Conflict | AR-11 (p.6)<br>AR-12 (p.7) | ISS-02 |
+| ระดับหลังอกไก่ | +11.07 (AR-11)/+10.79 (AR-12) | ✅ Verified | AR-11 (p.6)<br>AR-12 (p.7) | ISS-02 |
 
 ## 5. Grid lines (AR-08 / AR-09 / ST-04)
 
@@ -146,18 +146,18 @@ Dimension chains read:
 
 | ID | Name | EN | Area m² | W × D (m) | Floor | Ceil (rel) | polygon/floor/ceiling | Status | Sources | Issues |
 |---|---|---|---|---|---|---|---|---|---|---|
-| F1-R01 | ห้องน้ำ 1 | Bathroom 1 | 9.35 | 2.60 × 3.60 | +0.55 | 2.80 | polygon:✅ / floor:❌ / ceiling:❌ | ❌ Conflict | AR-08 (p.3) | ISS-04, ISS-03 |
+| F1-R01 | ห้องน้ำ 1 | Bathroom 1 | 9.35 | 2.60 × 3.60 | +0.55 | 2.80 | polygon:✅ / floor:❌ / ceiling:✅ | ❌ Conflict | AR-08 (p.3) | ISS-04, ISS-03 |
 | F1-R02 | ห้องน้ำ 1A | Bathroom 1A | 2.47 | 2.25 × 1.10 | +0.55 | 2.40 | polygon:⚠️ / floor:❌ / ceiling:✅ | ❌ Conflict | AR-08 (p.3) | ISS-04 |
-| F1-R03 | ห้องนอน 1 | Bedroom 1 | 16.18 | 4.50 × 3.60 | +0.65 | 2.80 | polygon:✅ / floor:✅ / ceiling:❌ | ❌ Conflict | AR-08 (p.3) | ISS-03 |
-| F1-R04 | ห้องนั่งเล่น | Living room | 15.62 | 4.00 × 3.90 | +0.65 | 2.80 | polygon:✅ / floor:✅ / ceiling:❌ | ❌ Conflict | AR-08 (p.3) | ISS-03 |
-| F1-R05 | รับแขก | Reception / sitting | 14.02 | 3.90 × 3.60 | +0.65 | 2.80 | polygon:⚠️ / floor:✅ / ceiling:❌ | ❌ Conflict | AR-08 (p.3) | ISS-24, ISS-03 |
-| F1-R06 | โถงรับประทานอาหาร | Dining hall | 8.99 | 2.50 × 3.60 | +0.65 | 2.80 | polygon:⚠️ / floor:✅ / ceiling:❌ | ❌ Conflict | AR-08 (p.3) | ISS-24, ISS-03 |
-| F1-R07 | ครัวฝรั่ง | Western kitchen | 9.35 | 2.60 × 3.60 | +0.65 | 2.80 | polygon:⚠️ / floor:✅ / ceiling:❌ | ❌ Conflict | AR-08 (p.3) | ISS-24, ISS-03 |
+| F1-R03 | ห้องนอน 1 | Bedroom 1 | 16.18 | 4.50 × 3.60 | +0.65 | 2.80 | polygon:✅ / floor:✅ / ceiling:✅ | ✅ Verified | AR-08 (p.3) | ISS-03 |
+| F1-R04 | ห้องนั่งเล่น | Living room | 15.62 | 4.00 × 3.90 | +0.65 | 2.80 | polygon:✅ / floor:✅ / ceiling:✅ | ✅ Verified | AR-08 (p.3) | ISS-03 |
+| F1-R05 | รับแขก | Reception / sitting | 14.02 | 3.90 × 3.60 | +0.65 | 2.80 | polygon:⚠️ / floor:✅ / ceiling:✅ | ⚠️ Unverified | AR-08 (p.3) | ISS-24, ISS-03 |
+| F1-R06 | โถงรับประทานอาหาร | Dining hall | 8.99 | 2.50 × 3.60 | +0.65 | 2.80 | polygon:⚠️ / floor:✅ / ceiling:✅ | ⚠️ Unverified | AR-08 (p.3) | ISS-24, ISS-03 |
+| F1-R07 | ครัวฝรั่ง | Western kitchen | 9.35 | 2.60 × 3.60 | +0.65 | 2.80 | polygon:⚠️ / floor:✅ / ceiling:✅ | ⚠️ Unverified | AR-08 (p.3) | ISS-24, ISS-03 |
 | F1-R08 | โถงต้อนรับ | Entrance hall (double height) | 19.50 | 3.90 × 5.00 | +0.65 | 6.60 | polygon:⚠️ / floor:✅ / ceiling:❌ | ❌ Conflict | AR-08 (p.3) | ISS-24, ISS-05 |
 | F1-R09 | ครัวไทย | Thai kitchen | 18.94 | 6.10 × 3.10 | +0.55 | 2.80 | polygon:⚠️ / floor:✅ / ceiling:⚠️ | ⚠️ Unverified | AR-08 (p.3) | ISS-24, ISS-19 |
 | F1-R10 | ซักล้าง | Laundry / wash | 11.59 | 6.10 × 1.90 | +0.55 | 2.80 | polygon:⚠️ / floor:✅ / ceiling:⚠️ | ⚠️ Unverified | AR-08 (p.3) | ISS-24, ISS-19 |
-| F1-R11 | โซนนั่งอ่านหนังสือ | Reading zone | 7.24 | 2.50 × 2.90 | +0.65 | 2.80 | polygon:✅ / floor:✅ / ceiling:❌ | ❌ Conflict | AR-08 (p.3) | ISS-03 |
-| F1-R12 | โซนลู่วิ่ง | Treadmill / fitness zone | 7.53 | 2.60 × 2.90 | +0.65 | 2.80 | polygon:✅ / floor:✅ / ceiling:❌ | ❌ Conflict | AR-08 (p.3) | ISS-03 |
+| F1-R11 | โซนนั่งอ่านหนังสือ | Reading zone | 7.24 | 2.50 × 2.90 | +0.65 | 2.80 | polygon:✅ / floor:✅ / ceiling:✅ | ✅ Verified | AR-08 (p.3) | ISS-03 |
+| F1-R12 | โซนลู่วิ่ง | Treadmill / fitness zone | 7.53 | 2.60 × 2.90 | +0.65 | 2.80 | polygon:✅ / floor:✅ / ceiling:✅ | ✅ Verified | AR-08 (p.3) | ISS-03 |
 | F1-R13 | เฉลียง | Porch | 9.77 | 3.90 × 2.50 | +0.55 | - | polygon:⚠️ / floor:✅ / ceiling:⚠️ | ⚠️ Unverified | AR-08 (p.3) | ISS-18 |
 | F1-R14 | ห้องเก็บของ | Store (garage) | 2.54 | 1.60 × 1.59 | +0.00 | 2.80 | polygon:✅ / floor:✅ / ceiling:⚠️ | ⚠️ Unverified | AR-08 (p.3) |  |
 | F1-R15 | โรงจอดรถ 3 คัน | Carport (3 cars) | 61.68 | 6.00 × 10.70 | +0.00 | 2.80 | polygon:⚠️ / floor:✅ / ceiling:⚠️ | ⚠️ Unverified | AR-08 (p.3) |  |
@@ -233,16 +233,16 @@ Dimension chains read:
 
 | ID | Type | Kind | Wall | Centre | W × H | Sill | Plan gap | position/size/tag | Status | Issues | Note |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| F1-O001 | D1 | door | F1-W021 | 8.99 | 2.60 × 2.10 | 0.00 | 2.85 | position:✅ / size:⚠️ / tag:✅ | ⚠️ Unverified |  | tag: circle 1 at (9.0, 14.3); gap 7.57-10.42 between wall and wall; measured clear gap 2.85 m vs scheduled width 2.60 m; plan gap != schedule width (>0.15 m) |
-| F1-O002 | D2 | door | F1-W012 | 6.33 | 0.90 × 2.05 | 0.00 | 1.14 | position:✅ / size:⚠️ / tag:✅ | ⚠️ Unverified | ISS-15 | tag: circle 2 at (6.4, 8.1) - ห้องนอน 1; gap 5.76-6.90 between wall and column; measured clear gap 1.14 m vs scheduled width 0.90 m; plan gap != schedule width (>0.15 m) |
+| F1-O001 | D1 | door | F1-W021 | 8.99 | 2.60 × 2.10 | 0.00 | 2.85 | position:✅ / size:✅ / tag:✅ | ✅ Verified |  | tag: circle 1 at (9.0, 14.3); gap 7.57-10.42 between wall and wall; measured clear gap 2.85 m vs scheduled width 2.60 m; plan gap != schedule width; schedule frame size used (DEC-01) |
+| F1-O002 | D2 | door | F1-W012 | 6.33 | 0.90 × 2.05 | 0.00 | 1.14 | position:✅ / size:✅ / tag:✅ | ✅ Verified | ISS-15 | tag: circle 2 at (6.4, 8.1) - ห้องนอน 1; gap 5.76-6.90 between wall and column; measured clear gap 1.14 m vs scheduled width 0.90 m; plan gap != schedule width; schedule frame size used (DEC-01) |
 | F1-O003 | D2 | door | F1-W049 | 3.75 | 0.90 × 2.05 | 0.00 | - | position:⚠️ / size:✅ / tag:✅ | ⚠️ Unverified | ISS-15 | tag: circle 2 at (9.6, 3.7) - ซักล้าง west; inside manual wall M-KW; position from tag only (host not hatched or jamb missing) |
 | F1-O004 | D2 | door | F1-W015 | 4.75 | 0.90 × 2.05 | 0.00 | - | position:⚠️ / size:✅ / tag:⚠️ | ⚠️ Unverified | ISS-15 | tag: circle 2 at (5.1, 9.75) - under-stair store; inside manual wall M-USD; position from tag only (host not hatched or jamb missing) |
 | F1-O005 | D2 | door | F1-W055 | 17.20 | 0.90 × 2.05 | 0.00 | 1.02 | position:✅ / size:✅ / tag:✅ | ✅ Verified | ISS-15 | tag: circle 2 at (15.75, 17.3) - ห้องเก็บของ; gap 16.67-17.70 between wall and cross-wall; measured clear gap 1.02 m vs scheduled width 0.90 m |
 | F1-O006 | D3 | door | F1-W058 | 9.24 | 1.10 × 2.05 | 0.00 | 1.22 | position:✅ / size:❌ / tag:❌ | ❌ Conflict | ISS-08 | tag: circle 3 at (16.45, 9.2) - to ramp; gap 8.60-9.81 between column and wall; measured clear gap 1.22 m vs scheduled width 1.10 m |
-| F1-O007 | D4 | door | F1-W014 | 3.35 | 0.90 × 2.05 | 0.00 | 1.12 | position:✅ / size:⚠️ / tag:✅ | ⚠️ Unverified |  | tag: circle 4 at (3.35, 10.0) - ห้องนั่งเล่น; gap 2.78-3.90 between wall and cross-wall; measured clear gap 1.12 m vs scheduled width 0.90 m; plan gap != schedule width (>0.15 m) |
-| F1-O008 | D5 | door | F1-W040 | 7.90 | 0.80 × 2.05 | 0.00 | 1.03 | position:✅ / size:⚠️ / tag:✅ | ⚠️ Unverified |  | tag: circle 5 at (1.75, 7.6) - ห้องน้ำ 1; gap 7.37-8.40 between wall and column; measured clear gap 1.03 m vs scheduled width 0.80 m; plan gap != schedule width (>0.15 m) |
+| F1-O007 | D4 | door | F1-W014 | 3.35 | 0.90 × 2.05 | 0.00 | 1.12 | position:✅ / size:✅ / tag:✅ | ✅ Verified |  | tag: circle 4 at (3.35, 10.0) - ห้องนั่งเล่น; gap 2.78-3.90 between wall and cross-wall; measured clear gap 1.12 m vs scheduled width 0.90 m; plan gap != schedule width; schedule frame size used (DEC-01) |
+| F1-O008 | D5 | door | F1-W040 | 7.90 | 0.80 × 2.05 | 0.00 | 1.03 | position:✅ / size:✅ / tag:✅ | ✅ Verified |  | tag: circle 5 at (1.75, 7.6) - ห้องน้ำ 1; gap 7.37-8.40 between wall and column; measured clear gap 1.03 m vs scheduled width 0.80 m; plan gap != schedule width; schedule frame size used (DEC-01) |
 | F1-O009 | D5 | door | F1-W039 | 9.10 | 0.80 × 2.05 | 0.00 | - | position:⚠️ / size:✅ / tag:✅ | ⚠️ Unverified |  | tag: circle 5 at (2.4, 9.2) - ห้องน้ำ 1A; inside manual wall M-B1A; position from tag only (host not hatched or jamb missing) |
-| F1-O010 | D6 | door | F1-W006 | 14.82 | 0.90 × 2.05 | 0.00 | 1.42 | position:✅ / size:⚠️ / tag:✅ | ⚠️ Unverified |  | tag: circle 6 at (14.7, 4.6) - ครัว; gap 14.11-15.53 between wall and wall; measured clear gap 1.42 m vs scheduled width 0.90 m; plan gap != schedule width (>0.15 m) |
+| F1-O010 | D6 | door | F1-W006 | 14.82 | 0.90 × 2.05 | 0.00 | 1.42 | position:✅ / size:✅ / tag:✅ | ✅ Verified |  | tag: circle 6 at (14.7, 4.6) - ครัว; gap 14.11-15.53 between wall and wall; measured clear gap 1.42 m vs scheduled width 0.90 m; plan gap != schedule width; schedule frame size used (DEC-01) |
 | F1-O011 | D7 | door | F1-W016 | 12.21 | 2.45 × 2.05 | 0.00 | - | position:⚠️ / size:⚠️ / tag:✅ | ⚠️ Unverified | ISS-28 | tag: circle 7 at (12.2, 10.2); inside manual wall M-FOLD; position from tag only (host not hatched or jamb missing) |
 | F1-O012 | D7.1 | door | F1-W016 | 14.76 | 2.45 × 2.05 | 0.00 | - | position:⚠️ / size:⚠️ / tag:✅ | ⚠️ Unverified | ISS-28 | tag: circle 7.1 at (14.7, 10.2); inside manual wall M-FOLD; position from tag only (host not hatched or jamb missing) |
 | F1-O013 | GL1 | door | F1-W010 | 2.10 | 0.70 × 1.80 | 0.00 | 0.82 | position:✅ / size:✅ / tag:✅ | ✅ Verified |  | tag: GL1 text at (2.22, 5.70); gap 1.68-2.50 between wall and cross-wall; measured clear gap 0.82 m vs scheduled width 0.70 m |
@@ -250,15 +250,15 @@ Dimension chains read:
 | F1-O015 | W1 | window | F1-W019 | 2.88 | 1.00 × 2.50 | 0.30 | - | position:⚠️ / size:✅ / tag:⚠️ | ⚠️ Unverified | ISS-22 | tag: hexagon 1 at (2.8, 14.3); inside manual wall M-LRS; position from tag only (host not hatched or jamb missing) |
 | F1-O016 | W2 | window | F1-W003 | 3.50 | 0.60 × 2.50 | 0.30 | 0.87 | position:✅ / size:❌ / tag:❌ | ❌ Conflict | ISS-09 | tag: hexagon 2 at (3.5, 4.6); gap 3.06-3.94 between wall and wall; measured clear gap 0.87 m vs scheduled width 0.60 m |
 | F1-O017 | W2 | window | F1-W003 | 6.01 | 0.60 × 2.50 | 0.30 | 0.87 | position:✅ / size:❌ / tag:❌ | ❌ Conflict | ISS-09 | tag: hexagon 2 at (6.0, 4.6); gap 5.58-6.45 between wall and wall; measured clear gap 0.87 m vs scheduled width 0.60 m |
-| F1-O018 | W2A | window | F1-W022 | 12.19 | 0.60 × 1.55 | 0.80 | 0.87 | position:✅ / size:⚠️ / tag:✅ | ⚠️ Unverified |  | tag: 2A text at (12.21, 13.79); gap 11.75-12.62 between wall and wall; measured clear gap 0.87 m vs scheduled width 0.60 m; plan gap != schedule width (>0.15 m) |
-| F1-O019 | W2A | window | F1-W023 | 14.78 | 0.60 × 1.55 | 0.80 | 0.87 | position:✅ / size:⚠️ / tag:✅ | ⚠️ Unverified |  | tag: 2A text at (14.79, 13.79); gap 14.34-15.21 between wall and wall; measured clear gap 0.87 m vs scheduled width 0.60 m; plan gap != schedule width (>0.15 m) |
+| F1-O018 | W2A | window | F1-W022 | 12.19 | 0.60 × 1.55 | 0.80 | 0.87 | position:✅ / size:✅ / tag:✅ | ✅ Verified |  | tag: 2A text at (12.21, 13.79); gap 11.75-12.62 between wall and wall; measured clear gap 0.87 m vs scheduled width 0.60 m; plan gap != schedule width; schedule frame size used (DEC-01) |
+| F1-O019 | W2A | window | F1-W023 | 14.78 | 0.60 × 1.55 | 0.80 | 0.87 | position:✅ / size:✅ / tag:✅ | ✅ Verified |  | tag: 2A text at (14.79, 13.79); gap 14.34-15.21 between wall and wall; measured clear gap 0.87 m vs scheduled width 0.60 m; plan gap != schedule width; schedule frame size used (DEC-01) |
 | F1-O020 | W2C | window | F1-W005 | 9.51 | 0.60 × 1.70 | 0.30 | 0.94 | position:✅ / size:❌ / tag:❌ | ❌ Conflict | ISS-11 | tag: 2C text at (9.43, 4.69); gap 8.97-9.90 between wall and cross-wall; measured clear gap 0.94 m vs scheduled width 0.60 m |
 | F1-O021 | W3 | window | F1-W020 | 4.74 | 0.60 × 4.50 | 1.95 | - | position:⚠️ / size:✅ / tag:✅ | ⚠️ Unverified | ISS-07 | tag: AR-28 hexagon 3 (1st); inside manual wall M-STS; position from tag only (host not hatched or jamb missing) |
 | F1-O022 | W3 | window | F1-W020 | 5.50 | 0.60 × 4.50 | 1.95 | - | position:⚠️ / size:✅ / tag:✅ | ⚠️ Unverified | ISS-07 | tag: AR-28 hexagon 3 (2nd); inside manual wall M-STS; position from tag only (host not hatched or jamb missing) |
 | F1-O023 | W3 | window | F1-W020 | 6.26 | 0.60 × 4.50 | 1.95 | - | position:⚠️ / size:✅ / tag:✅ | ⚠️ Unverified | ISS-07 | tag: AR-28 hexagon 3 (3rd); inside manual wall M-STS; position from tag only (host not hatched or jamb missing) |
-| F1-O024 | W4 | window | F1-W021 | 8.99 | 2.60 × 2.75 | 2.55 | 2.85 | position:✅ / size:⚠️ / tag:✅ | ⚠️ Unverified |  | tag: AR-09 hexagon 4 at (9.0, 13.75) - above D1; gap 7.57-10.42 between wall and wall; measured clear gap 2.85 m vs scheduled width 2.60 m; plan gap != schedule width (>0.15 m) |
-| F1-O025 | W5 | window | F1-W036 | 9.08 | 0.60 × 0.40 | 1.65 | 0.92 | position:✅ / size:⚠️ / tag:✅ | ⚠️ Unverified |  | tag: hexagon 5 at (-0.25, 9.1) - ห้องน้ำ 1A; gap 8.60-9.51 between column and wall; measured clear gap 0.92 m vs scheduled width 0.60 m; plan gap != schedule width (>0.15 m) |
-| F1-O026 | W5 | window | F1-W059 | 16.96 | 0.60 × 0.40 | 1.65 | 0.88 | position:✅ / size:⚠️ / tag:✅ | ⚠️ Unverified |  | tag: hexagon 5 at (17.65, 16.85) - ห้องเก็บของ; gap 16.52-17.40 between wall and wall; measured clear gap 0.88 m vs scheduled width 0.60 m; plan gap != schedule width (>0.15 m) |
+| F1-O024 | W4 | window | F1-W021 | 8.99 | 2.60 × 2.75 | 2.55 | 2.85 | position:✅ / size:✅ / tag:✅ | ✅ Verified |  | tag: AR-09 hexagon 4 at (9.0, 13.75) - above D1; gap 7.57-10.42 between wall and wall; measured clear gap 2.85 m vs scheduled width 2.60 m; plan gap != schedule width; schedule frame size used (DEC-01) |
+| F1-O025 | W5 | window | F1-W036 | 9.08 | 0.60 × 0.40 | 1.65 | 0.92 | position:✅ / size:✅ / tag:✅ | ✅ Verified |  | tag: hexagon 5 at (-0.25, 9.1) - ห้องน้ำ 1A; gap 8.60-9.51 between column and wall; measured clear gap 0.92 m vs scheduled width 0.60 m; plan gap != schedule width; schedule frame size used (DEC-01) |
+| F1-O026 | W5 | window | F1-W059 | 16.96 | 0.60 × 0.40 | 1.65 | 0.88 | position:✅ / size:✅ / tag:✅ | ✅ Verified |  | tag: hexagon 5 at (17.65, 16.85) - ห้องเก็บของ; gap 16.52-17.40 between wall and wall; measured clear gap 0.88 m vs scheduled width 0.60 m; plan gap != schedule width; schedule frame size used (DEC-01) |
 | F1-O027 | W6 | window | F1-W049 | 1.85 | 1.15 × 0.95 | 1.00 | - | position:⚠️ / size:✅ / tag:✅ | ⚠️ Unverified |  | tag: hexagon 6 at (9.2, 2.0) - ครัวไทย; inside manual wall M-KW; position from tag only (host not hatched or jamb missing) |
 | F1-O028 | W7 | window | F1-W003 | 1.45 | 0.95 × 0.40 | 1.65 | 1.22 | position:✅ / size:❌ / tag:❌ | ❌ Conflict | ISS-27 | tag: hexagon 7 at (1.45, 4.6) - ห้องน้ำ 1; gap 0.84-2.06 between wall and wall; measured clear gap 1.22 m vs scheduled width 0.95 m |
 
@@ -349,15 +349,15 @@ Dimension chains read:
 
 | ID | Type | Kind | Wall | Centre | W × H | Sill | Plan gap | position/size/tag | Status | Issues | Note |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| F2-O001 | D2 | door | F2-W013 | 3.15 | 0.90 × 2.05 | 0.00 | 1.32 | position:✅ / size:⚠️ / tag:⚠️ | ⚠️ Unverified | ISS-15 | tag: circle 2 near (3.6, 9.6) - WALK IN CLOSET / MASTER; gap 2.60-3.92 between column and wall; measured clear gap 1.32 m vs scheduled width 0.90 m; plan gap != schedule width (>0.15 m) |
-| F2-O002 | D2 | door | F2-W032 | 9.15 | 0.90 × 2.05 | 0.00 | 1.12 | position:✅ / size:⚠️ / tag:⚠️ | ⚠️ Unverified | ISS-15 | tag: circle 2 near (3.6, 9.6) - MASTER from โถง; gap 8.61-9.72 between cross-wall and wall; measured clear gap 1.12 m vs scheduled width 0.90 m; plan gap != schedule width (>0.15 m) |
-| F2-O003 | D2 | door | F2-W008 | 6.58 | 0.90 × 2.05 | 0.00 | 1.26 | position:✅ / size:⚠️ / tag:✅ | ⚠️ Unverified | ISS-15 | tag: circle 2 at (6.7, 8.2) - ห้องพระ; gap 5.95-7.21 between wall and cross-wall; measured clear gap 1.26 m vs scheduled width 0.90 m; plan gap != schedule width (>0.15 m) |
-| F2-O004 | D2 | door | F2-W009 | 7.88 | 0.90 × 2.05 | 0.00 | 1.18 | position:✅ / size:⚠️ / tag:✅ | ⚠️ Unverified | ISS-15 | tag: circle 2 at (7.95, 8.3) - ห้องเก็บของ; gap 7.30-8.48 between cross-wall and wall; measured clear gap 1.18 m vs scheduled width 0.90 m; plan gap != schedule width (>0.15 m) |
-| F2-O005 | D2 | door | F2-W009 | 9.51 | 0.90 × 2.05 | 0.00 | 1.14 | position:✅ / size:⚠️ / tag:✅ | ⚠️ Unverified | ISS-15 | tag: circle 2 at (9.95, 8.3) - ห้องนอน 3; gap 9.01-10.14 between cross-wall and wall; measured clear gap 1.14 m vs scheduled width 0.90 m; plan gap != schedule width (>0.15 m) |
-| F2-O006 | D2 | door | F2-W041 | 9.27 | 0.90 × 2.05 | 0.00 | 1.33 | position:✅ / size:⚠️ / tag:✅ | ⚠️ Unverified | ISS-15 | tag: circle 2 at (11.2, 9.15) - ห้องนอน 2; gap 8.61-9.93 between cross-wall and wall; measured clear gap 1.33 m vs scheduled width 0.90 m; plan gap != schedule width (>0.15 m) |
-| F2-O007 | D5 | door | F2-W029 | 7.90 | 0.80 × 2.05 | 0.00 | 1.04 | position:✅ / size:⚠️ / tag:✅ | ⚠️ Unverified |  | tag: circle 5 at (2.25, 7.85) - ห้องน้ำ M; gap 7.37-8.40 between wall and column; measured clear gap 1.04 m vs scheduled width 0.80 m; plan gap != schedule width (>0.15 m) |
-| F2-O008 | D5 | door | F2-W047 | 5.56 | 0.80 × 2.05 | 0.00 | 1.02 | position:✅ / size:⚠️ / tag:✅ | ⚠️ Unverified |  | tag: circle 5 at (13.25, 5.5) - ห้องน้ำ 3; gap 5.00-6.02 between cross-wall and wall; measured clear gap 1.02 m vs scheduled width 0.80 m; plan gap != schedule width (>0.15 m) |
-| F2-O009 | D5 | door | F2-W011 | 15.41 | 0.80 × 2.05 | 0.00 | 1.02 | position:✅ / size:⚠️ / tag:✅ | ⚠️ Unverified |  | tag: circle 5 at (15.5, 8.25) - ห้องน้ำ 2; gap 14.88-15.90 between wall and column; measured clear gap 1.02 m vs scheduled width 0.80 m; plan gap != schedule width (>0.15 m) |
+| F2-O001 | D2 | door | F2-W013 | 3.15 | 0.90 × 2.05 | 0.00 | 1.32 | position:✅ / size:✅ / tag:⚠️ | ⚠️ Unverified | ISS-15 | tag: circle 2 near (3.6, 9.6) - WALK IN CLOSET / MASTER; gap 2.60-3.92 between column and wall; measured clear gap 1.32 m vs scheduled width 0.90 m; plan gap != schedule width; schedule frame size used (DEC-01) |
+| F2-O002 | D2 | door | F2-W032 | 9.15 | 0.90 × 2.05 | 0.00 | 1.12 | position:✅ / size:✅ / tag:⚠️ | ⚠️ Unverified | ISS-15 | tag: circle 2 near (3.6, 9.6) - MASTER from โถง; gap 8.61-9.72 between cross-wall and wall; measured clear gap 1.12 m vs scheduled width 0.90 m; plan gap != schedule width; schedule frame size used (DEC-01) |
+| F2-O003 | D2 | door | F2-W008 | 6.58 | 0.90 × 2.05 | 0.00 | 1.26 | position:✅ / size:✅ / tag:✅ | ✅ Verified | ISS-15 | tag: circle 2 at (6.7, 8.2) - ห้องพระ; gap 5.95-7.21 between wall and cross-wall; measured clear gap 1.26 m vs scheduled width 0.90 m; plan gap != schedule width; schedule frame size used (DEC-01) |
+| F2-O004 | D2 | door | F2-W009 | 7.88 | 0.90 × 2.05 | 0.00 | 1.18 | position:✅ / size:✅ / tag:✅ | ✅ Verified | ISS-15 | tag: circle 2 at (7.95, 8.3) - ห้องเก็บของ; gap 7.30-8.48 between cross-wall and wall; measured clear gap 1.18 m vs scheduled width 0.90 m; plan gap != schedule width; schedule frame size used (DEC-01) |
+| F2-O005 | D2 | door | F2-W009 | 9.51 | 0.90 × 2.05 | 0.00 | 1.14 | position:✅ / size:✅ / tag:✅ | ✅ Verified | ISS-15 | tag: circle 2 at (9.95, 8.3) - ห้องนอน 3; gap 9.01-10.14 between cross-wall and wall; measured clear gap 1.14 m vs scheduled width 0.90 m; plan gap != schedule width; schedule frame size used (DEC-01) |
+| F2-O006 | D2 | door | F2-W041 | 9.27 | 0.90 × 2.05 | 0.00 | 1.33 | position:✅ / size:✅ / tag:✅ | ✅ Verified | ISS-15 | tag: circle 2 at (11.2, 9.15) - ห้องนอน 2; gap 8.61-9.93 between cross-wall and wall; measured clear gap 1.33 m vs scheduled width 0.90 m; plan gap != schedule width; schedule frame size used (DEC-01) |
+| F2-O007 | D5 | door | F2-W029 | 7.90 | 0.80 × 2.05 | 0.00 | 1.04 | position:✅ / size:✅ / tag:✅ | ✅ Verified |  | tag: circle 5 at (2.25, 7.85) - ห้องน้ำ M; gap 7.37-8.40 between wall and column; measured clear gap 1.04 m vs scheduled width 0.80 m; plan gap != schedule width; schedule frame size used (DEC-01) |
+| F2-O008 | D5 | door | F2-W047 | 5.56 | 0.80 × 2.05 | 0.00 | 1.02 | position:✅ / size:✅ / tag:✅ | ✅ Verified |  | tag: circle 5 at (13.25, 5.5) - ห้องน้ำ 3; gap 5.00-6.02 between cross-wall and wall; measured clear gap 1.02 m vs scheduled width 0.80 m; plan gap != schedule width; schedule frame size used (DEC-01) |
+| F2-O009 | D5 | door | F2-W011 | 15.41 | 0.80 × 2.05 | 0.00 | 1.02 | position:✅ / size:✅ / tag:✅ | ✅ Verified |  | tag: circle 5 at (15.5, 8.25) - ห้องน้ำ 2; gap 14.88-15.90 between wall and column; measured clear gap 1.02 m vs scheduled width 0.80 m; plan gap != schedule width; schedule frame size used (DEC-01) |
 | F2-O010 | GL1 | door | F2-W006 | 2.10 | 0.70 × 1.80 | 0.00 | 0.82 | position:✅ / size:✅ / tag:✅ | ✅ Verified |  | tag: GL1 text at (2.19, 5.69) - ห้องน้ำ M; gap 1.68-2.49 between wall and cross-wall; measured clear gap 0.82 m vs scheduled width 0.70 m |
 | F2-O011 | GL1 | door | F2-W049 | 5.43 | 0.70 × 1.80 | 0.00 | 0.82 | position:✅ / size:✅ / tag:✅ | ✅ Verified |  | tag: GL1 text at (15.25, 5.38) - ห้องน้ำ 3; gap 5.00-5.82 between cross-wall and wall; measured clear gap 0.82 m vs scheduled width 0.70 m |
 | F2-O012 | GL1 | door | F2-W048 | 8.10 | 0.70 × 1.80 | 0.00 | 0.81 | position:✅ / size:✅ / tag:✅ | ✅ Verified |  | tag: GL1 text at (13.84, 8.19) - ห้องน้ำ 2; gap 7.69-8.49 between wall and cross-wall; measured clear gap 0.81 m vs scheduled width 0.70 m |
@@ -370,8 +370,8 @@ Dimension chains read:
 | F2-O019 | W2B | window | F2-W003 | 3.60 | 0.60 × 1.60 | 1.10 | 0.84 | position:✅ / size:❌ / tag:⚠️ | ❌ Conflict | ISS-10, ISS-14 | tag: text 'B2' at (3.62, 4.70); gap 3.17-4.02 between wall and wall; measured clear gap 0.84 m vs scheduled width 0.60 m |
 | F2-O020 | W2B | window | F2-W001 | 10.50 | 0.60 × 1.60 | 1.10 | 0.81 | position:✅ / size:❌ / tag:❌ | ❌ Conflict | ISS-10 | tag: 2B text at (10.52, 4.70) - ห้องนอน 3; gap 10.09-10.90 between wall and column; measured clear gap 0.81 m vs scheduled width 0.60 m |
 | F2-O021 | W2B | window | F2-W002 | 11.52 | 0.60 × 1.60 | 1.10 | 0.83 | position:✅ / size:❌ / tag:❌ | ❌ Conflict | ISS-10 | tag: 2B text at (11.52, 4.70) - ห้องนอน 3; gap 11.10-11.93 between column and wall; measured clear gap 0.83 m vs scheduled width 0.60 m |
-| F2-O022 | W5 | window | F2-W004 | 6.33 | 0.60 × 0.40 | 1.65 | 0.93 | position:✅ / size:⚠️ / tag:✅ | ⚠️ Unverified |  | tag: hexagon 5 at (6.34, 4.5) - ห้องพระ; gap 5.87-6.80 between wall and wall; measured clear gap 0.93 m vs scheduled width 0.60 m; plan gap != schedule width (>0.15 m) |
-| F2-O023 | W5 | window | F2-W001 | 8.08 | 0.60 × 0.40 | 1.65 | 0.84 | position:✅ / size:⚠️ / tag:✅ | ⚠️ Unverified |  | tag: hexagon 5 at (8.07, 4.5) - ห้องเก็บของ; gap 7.66-8.50 between wall and wall; measured clear gap 0.84 m vs scheduled width 0.60 m; plan gap != schedule width (>0.15 m) |
+| F2-O022 | W5 | window | F2-W004 | 6.33 | 0.60 × 0.40 | 1.65 | 0.93 | position:✅ / size:✅ / tag:✅ | ✅ Verified |  | tag: hexagon 5 at (6.34, 4.5) - ห้องพระ; gap 5.87-6.80 between wall and wall; measured clear gap 0.93 m vs scheduled width 0.60 m; plan gap != schedule width; schedule frame size used (DEC-01) |
+| F2-O023 | W5 | window | F2-W001 | 8.08 | 0.60 × 0.40 | 1.65 | 0.84 | position:✅ / size:✅ / tag:✅ | ✅ Verified |  | tag: hexagon 5 at (8.07, 4.5) - ห้องเก็บของ; gap 7.66-8.50 between wall and wall; measured clear gap 0.84 m vs scheduled width 0.60 m; plan gap != schedule width; schedule frame size used (DEC-01) |
 | F2-O024 | W7 | window | F2-W003 | 1.45 | 0.95 × 0.40 | 1.65 | 1.22 | position:✅ / size:❌ / tag:❌ | ❌ Conflict | ISS-27 | tag: hexagon 7 at (1.45, 4.6) - ห้องน้ำ M; gap 0.84-2.06 between wall and wall; measured clear gap 1.22 m vs scheduled width 0.95 m |
 | F2-O025 | W7 | window | F2-W052 | 5.80 | 0.95 × 0.40 | 1.65 | 1.37 | position:✅ / size:❌ / tag:❌ | ❌ Conflict | ISS-27 | tag: hexagon 7 at (16.65, 6.0) - ห้องน้ำ 3; gap 5.10-6.47 between column and wall; measured clear gap 1.37 m vs scheduled width 0.95 m |
 | F2-O026 | W7 | window | F2-W052 | 7.72 | 0.95 × 0.40 | 1.65 | 1.38 | position:✅ / size:❌ / tag:❌ | ❌ Conflict | ISS-27 | tag: hexagon 7 at (16.65, 7.6) - ห้องน้ำ 2; gap 7.03-8.40 between wall and column; measured clear gap 1.38 m vs scheduled width 0.95 m |
@@ -380,16 +380,29 @@ Dimension chains read:
 - **F2-V02** โล่ง (void over เฉลียง) — ✅ Verified — AR-09 (p.4)<br>AR-12 (p.7)
 - **F2-S01** พื้นหลังคาคอนกรีตทำผิวขัดมัน (F3) - carport roof slab — ⚠️ Unverified — AR-09 (p.4)<br>ST-04 (p.16)
 
-## 8. Issues — Conflicts, Unverified items, Notes
+## 8. Owner decisions
 
-### ISS-02 · CONFLICT · Ridge level (ระดับหลังอกไก่)
+| ID | Date | Resolves | Decision | Effect |
+|---|---|---|---|---|
+| DEC-01 | 2026-11-02 | ISS-32 | Door/window sizes = frame (วงกบ) sizes from AR-26 / AR-27. The wider plan gap is the masonry opening and is not modelled. | Opening size no longer downgraded by the plan-gap check; measured gap kept for reference. |
+| DEC-02 | 2026-11-02 | ISS-03 | First-floor ceiling height = 2.80 m above floor (AR-08 room tags). AR-11 / AR-12 +2.90 not used. | Ceiling field of first-floor rooms tagged C +2.80 becomes Verified (owner decision). |
+| DEC-03 | 2026-11-02 | ISS-02 | Ridge (ระดับหลังอกไก่) = +11.07 (AR-11). AR-12 +10.79 not used. | RIDGE level z = 11.07, Verified (owner decision). |
+| DEC-04 | 2026-11-02 | ISS-29 | North direction derived from AR-07 confirmed: 130.8 deg clockwise from sheet-up on AR-08 (plan +Y bears ~49 deg, NE). | North status Verified. |
+
+## 9. Issues — Conflicts, Unverified items, Notes
+
+### ISS-02 · CONFLICT · RESOLVED by DEC-03 · Ridge level (ระดับหลังอกไก่)
+
+> **DEC-03 (2026-11-02, owner):** Ridge (ระดับหลังอกไก่) = +11.07 (AR-11). AR-12 +10.79 not used.
 
 - `+11.07` — AR-11 (p.6)
 - `+10.79` — AR-12 (p.7)
 
 Both labelled ระดับหลังอกไก่. Not resolved; roof (Phase 4) must show both.
 
-### ISS-03 · CONFLICT · First-floor ceiling height
+### ISS-03 · CONFLICT · RESOLVED by DEC-02 · First-floor ceiling height
+
+> **DEC-02 (2026-11-02, owner):** First-floor ceiling height = 2.80 m above floor (AR-08 room tags). AR-11 / AR-12 +2.90 not used.
 
 - `C +2.80 (room tags)` — AR-08 (p.3)
 - `ระดับฝ้า +2.90 / dim 2.900` — AR-11 (p.6)
@@ -522,12 +535,16 @@ Default wall heights are verified from sections (L1 3.60 = +0.65 to +4.25; L2 3.
 
 AR-26 gives width as '2.40/2.50' and size '2.00 x 2.40-2.50' for both. Exact per-door width not stated.
 
-### ISS-29 · UNVERIFIED · North direction
+### ISS-29 · UNVERIFIED · RESOLVED by DEC-04 · North direction
+
+> **DEC-04 (2026-11-02, owner):** North direction derived from AR-07 confirmed: 130.8 deg clockwise from sheet-up on AR-08 (plan +Y bears ~49 deg, NE).
 
 
 Derived from AR-07 north arrow and building orientation; plan +Y (A->F) points ~NE. Needs user confirmation.
 
-### ISS-32 · UNVERIFIED · Plan opening gaps are systematically wider than scheduled widths
+### ISS-32 · UNVERIFIED · RESOLVED by DEC-01 · Plan opening gaps are systematically wider than scheduled widths
+
+> **DEC-01 (2026-11-02, owner):** Door/window sizes = frame (วงกบ) sizes from AR-26 / AR-27. The wider plan gap is the masonry opening and is not modelled.
 
 
 Measured clear gaps between hatched jambs on AR-08/AR-09: D2 1.12-1.33 m vs 0.90; D5 1.02-1.04 vs 0.80; W2/W2A/W5 0.84-0.93 vs 0.60. The offset (+0.22-0.27 m) is consistent, which suggests the plan shows the rough masonry opening while AR-26/AR-27 give frame (วงกบ) sizes. Opening positions (centres) are reliable; the width used in the model is always the scheduled one. Needs a decision before Phase 2 (keep schedule size, or model the rough opening).

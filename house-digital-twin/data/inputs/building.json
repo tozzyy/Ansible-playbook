@@ -23,8 +23,8 @@
       "buildingYAxisPageAngleDeg": -37.5,
       "method": "North arrow line (172.08,195.80)->(178.80,80.24)pt. Building/garage long axis (plan +Y, A->F) runs to the upper-right on AR-07 at -37.5deg (dominant line family 142.3-143.3deg). No-mirror check: garage lands beside the road frontage; a mirrored fit lands in the setback zone."
     },
-    "status": "unverified",
-    "note": "Derived, +/-1deg. Please confirm on AR-07 before using for sun/CCTV studies."
+    "status": "verified",
+    "note": "Confirmed by owner (DEC-04)."
   },
   "levels": [
     {
@@ -187,8 +187,8 @@
     {
       "id": "RIDGE",
       "name": "ระดับหลังอกไก่",
-      "z": null,
-      "status": "conflict",
+      "z": 11.07,
+      "status": "verified",
       "issues": [
         "ISS-02"
       ],
@@ -213,6 +213,9 @@
           "sheet": "AR-12",
           "pdfPage": 7
         }
+      ],
+      "decisions": [
+        "DEC-03"
       ]
     }
   ],
@@ -1183,6 +1186,48 @@
           "pdfPage": 13
         }
       ]
+    }
+  ],
+  "decisions": [
+    {
+      "id": "DEC-01",
+      "date": "2026-11-02",
+      "by": "owner",
+      "resolves": [
+        "ISS-32"
+      ],
+      "decision": "Door/window sizes = frame (วงกบ) sizes from AR-26 / AR-27. The wider plan gap is the masonry opening and is not modelled.",
+      "effect": "Opening size no longer downgraded by the plan-gap check; measured gap kept for reference."
+    },
+    {
+      "id": "DEC-02",
+      "date": "2026-11-02",
+      "by": "owner",
+      "resolves": [
+        "ISS-03"
+      ],
+      "decision": "First-floor ceiling height = 2.80 m above floor (AR-08 room tags). AR-11 / AR-12 +2.90 not used.",
+      "effect": "Ceiling field of first-floor rooms tagged C +2.80 becomes Verified (owner decision)."
+    },
+    {
+      "id": "DEC-03",
+      "date": "2026-11-02",
+      "by": "owner",
+      "resolves": [
+        "ISS-02"
+      ],
+      "decision": "Ridge (ระดับหลังอกไก่) = +11.07 (AR-11). AR-12 +10.79 not used.",
+      "effect": "RIDGE level z = 11.07, Verified (owner decision)."
+    },
+    {
+      "id": "DEC-04",
+      "date": "2026-11-02",
+      "by": "owner",
+      "resolves": [
+        "ISS-29"
+      ],
+      "decision": "North direction derived from AR-07 confirmed: 130.8 deg clockwise from sheet-up on AR-08 (plan +Y bears ~49 deg, NE).",
+      "effect": "North status Verified."
     }
   ]
 }

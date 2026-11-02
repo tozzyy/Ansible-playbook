@@ -35,6 +35,9 @@ RANK = {"verified": 0, "unverified": 1, "conflict": 2}
 
 PAGE = {s["sheet"]: s["pdfPage"] for s in SHEETS["sheets"]}
 TYPES = {t["code"]: t for t in BUILDING["doorTypes"] + BUILDING["windowTypes"]}
+DECISIONS = BUILDING.get("decisions", [])
+RESOLVED = {iss: d["id"] for d in DECISIONS for iss in d["resolves"]}   # issue id -> decision id
+CEILING_ISSUES = {"ISS-03", "ISS-05", "ISS-17", "ISS-18"}
 
 
 def src(sheet, note=None):
@@ -252,8 +255,11 @@ def build_floor(fl, columns):
         if gap is not None:
             notes.append(f"measured clear gap {gap:.2f} m vs scheduled width {T['width']:.2f} m")
             if abs(gap - T["width"]) > GAP_TOL and size == "verified":
-                size = "unverified"
-                notes.append("plan gap != schedule width (>0.15 m)")
+                if "ISS-32" in RESOLVED:
+                    notes.append(f'plan gap != schedule width; schedule frame size used ({RESOLVED["ISS-32"]})')
+                else:
+                    size = "unverified"
+                    notes.append("plan gap != schedule width (>0.15 m)")
         tagst = o.get("status", "verified")
         status = worst(pos, size, tagst)
         type_sheet = T["sources"][0]["sheet"]
@@ -261,6 +267,8 @@ def build_floor(fl, columns):
             "id": f"{F}-O{n:03d}", "floorId": F, "wallId": wall["id"], "kind": T["kind"], "typeCode": o["code"],
             "offset": r3(o["center"] - T["width"] / 2 - s0), "center": r3(o["center"]),
             "width": T["width"], "height": T["height"], "sillHeight": T["sill"],
+            # absolute bottom level of the opening; sill datum = host wall base unless the type says otherwise
+            "sillZ": r3((4.10 if "คานชั้น 2" in T.get("sillDatum", "") else wall["baseElevation"]) + T["sill"]),
             "status": status,
             "fieldStatus": {"position": pos, "size": size, "tag": tagst},
             "measuredGap": r3(gap) if gap is not None else None,
@@ -278,7 +286,12 @@ def build_floor(fl, columns):
                        for i in range(len(poly)))) / 2
         xs, ys = [p[0] for p in poly], [p[1] for p in poly]
         tag = r["tag"]
-        st = r["status"]
+        st = dict(r["status"])
+        decided = []
+        ceil_iss = CEILING_ISSUES & set(r.get("issues", []))
+        if st["ceiling"] == "conflict" and ceil_iss and all(i in RESOLVED for i in ceil_iss):
+            st["ceiling"] = "verified"
+            decided = sorted({RESOLVED[i] for i in ceil_iss})
         tagtxt = f'{tag["F"]} {tag["fl"]:+.2f} / {tag["C"] or "-"} {("%+.2f" % tag["cl"]) if tag["cl"] is not None else "-"}'
         rooms.append({
             "id": r["id"], "floorId": F, "name": r["name"], "nameEn": r["nameEn"],
@@ -292,6 +305,7 @@ def build_floor(fl, columns):
             "fieldStatus": st,
             "sources": [src(sheet, f"room tag {tagtxt}; polygon from wall centre-lines")] + r.get("sources", []),
             "issues": r.get("issues", []),
+            "decisions": decided,
             "note": r.get("note", ""),
         })
 
@@ -462,13 +476,19 @@ def report(floors, bld):
         for v in f["voids"] + f["slabs"]:
             L += [f'- **{v["id"]}** {v["name"]} — {BADGE[v["status"]]} — {refs(v["sources"])}']
         L += [""]
+    # decisions
+    L += ["## 8. Owner decisions", "", md_table([[d["id"], d["date"], ", ".join(d["resolves"]), d["decision"], d["effect"]] for d in bld["decisions"]],
+                                               ["ID", "Date", "Resolves", "Decision", "Effect"]), ""]
     # issues
-    L += ["## 8. Issues — Conflicts, Unverified items, Notes", ""]
+    L += ["## 9. Issues — Conflicts, Unverified items, Notes", ""]
     for kind in ("conflict", "unverified", "info"):
         for i in bld["issues"]:
             if i["type"] != kind:
                 continue
-            L += [f'### {i["id"]} · {kind.upper()} · {i["title"]}', ""]
+            res = f' · RESOLVED by {i["resolution"]["decision"]}' if i.get("resolution") else ""
+            L += [f'### {i["id"]} · {kind.upper()}{res} · {i["title"]}', ""]
+            if i.get("resolution"):
+                L += [f'> **{i["resolution"]["decision"]} ({i["resolution"]["date"]}, {i["resolution"]["by"]}):** {i["resolution"]["text"]}', ""]
             for v in i.get("values", []):
                 L += [f'- `{v["value"]}` — {v["sheet"]} (p.{v["pdfPage"]})']
             if i.get("detail"):
@@ -487,11 +507,15 @@ def main():
                    "values": [{"value": m, "sheet": "AR-08/AR-09/ST-04", "pdfPage": 3} for m in mism],
                    "detail": "Columns are 0.20 m quads extracted from the vectors. A column missing on a sheet that covers its position is flagged. ST-04 is a level-2 beam plan, so some differences may be by design (e.g. columns that stop at L2) - needs structural confirmation."})
     issues.sort(key=lambda i: i["id"])
+    for i in issues:
+        if i["id"] in RESOLVED:
+            d = next(x for x in DECISIONS if x["id"] == RESOLVED[i["id"]])
+            i["resolution"] = {"decision": d["id"], "date": d["date"], "by": d["by"], "text": d["decision"]}
     bld = {
         "project": BUILDING["project"], "units": BUILDING["units"], "coordinateSystem": BUILDING["coordinateSystem"],
         "north": north(), "levels": BUILDING["levels"], "grids": grids(), "columns": cols,
         "doorTypes": BUILDING["doorTypes"], "windowTypes": BUILDING["windowTypes"],
-        "issues": issues, "sheets": SHEETS,
+        "issues": issues, "decisions": DECISIONS, "sheets": SHEETS,
     }
     out = ROOT / "src/data"
     (out / "geometry").mkdir(parents=True, exist_ok=True)

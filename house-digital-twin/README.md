@@ -4,8 +4,7 @@ Web-based digital twin of an RC 2-storey residence, built **only** from the cons
 `House-Phrae_Core+Infra_20p.pdf` (20-page extract of the 64/65-sheet set). It is the base for home
 infrastructure planning (LAN, fibre, conduit, Wi-Fi AP, CCTV, network cabinet, electrical).
 
-> **Status: Phase 1 complete — waiting for geometry review.** Phase 2 (3D model) starts only after the
-> 2D geometry has been checked against the PDF and the open conflicts are decided.
+> **Status: Phase 1 approved (owner decisions DEC-01…04, 2026-11-02). Phase 2 3D model ready for review at `/3d`.**
 
 ## What is in Phase 1
 
@@ -32,6 +31,41 @@ infrastructure planning (LAN, fibre, conduit, Wi-Fi AP, CCTV, network cabinet, e
 5. **Rooms** use wall centre-lines and the room tags (F = floor level, C = ceiling height above the floor).
 6. **Conflicts are never resolved.** The element is marked **Conflict** and its issue (`ISS-xx`) lists
    every value with its sheet and page.
+
+## Owner decisions (2026-11-02)
+
+| ID | Resolves | Decision |
+|---|---|---|
+| DEC-01 | ISS-32 | Door/window sizes = frame (วงกบ) sizes from AR-26 / AR-27 |
+| DEC-02 | ISS-03 | First-floor ceiling = 2.80 m above floor (AR-08) |
+| DEC-03 | ISS-02 | Ridge = +11.07 (AR-11) — used for the roof in Phase 4 |
+| DEC-04 | ISS-29 | North derived from AR-07 confirmed (plan +Y ≈ NE) |
+
+Decisions live in `data/inputs/building.json` → `decisions`. The build script applies them, and every resolved issue keeps its original values plus the decision text.
+
+## Phase 2 — 3D viewer (`/3d`)
+
+Built with React Three Fiber + drei, reading **only** `src/data/*.json`:
+
+- **Walls:** each wall's elevation profile is extruded to the wall thickness. Doors are cut as notches and windows as holes, using the opening `offset`, `width`, `height` and `sillZ`.
+- **Floors:** room slabs at the room-tag level (wet rooms +0.55 / +4.15, garage ±0.00). The carport roof slab sits at +3.70 (ST-04). Voids are drawn as dashed outlines.
+- **Stairs (AR-28/29):** 2 × 9 treads of 0.25 m, 20 risers of 0.18 m, and the landing at +2.45 (ISS-07 is still open).
+- **Columns:** 0.20 m columns drawn floor-to-floor; they are visual only, because column heights aren't dimensioned on the sheets.
+- **Viewer UX** (adapted from a reference viewer):
+  - critically-damped spring camera for presets and room focus;
+  - presets: Iso / Top / Front (Elevation A) / Back / Left / Right / Reset;
+  - optional auto-orbit after 8 s idle;
+  - grid dimension chains that appear in top view;
+  - room focus: other walls ghosted, width/length lines and an info card;
+  - room pill bar for mobile; a compass driven by the confirmed north.
+- **Controls:**
+  - floor selector (all / F1 / F2) and exploded floors;
+  - wall transparency;
+  - colour by material or by verification status;
+  - layer toggles;
+  - click any element to see its sources and issues.
+
+The roof (AR-10) and finish materials are Phase 4. Section and measure tools are Phase 3.
 
 ## Install & run
 
@@ -99,8 +133,8 @@ CCTV positions, Wi-Fi APs). Those are security-sensitive for a private residence
 
 | Phase | Scope | State |
 |---|---|---|
-| 1 | Floor-plan extraction, Geometry JSON, 2D overlay, verification report | ✅ ready for review |
-| 2 | 3D floors, walls, doors, windows, stairs (Three.js / R3F) | after Phase 1 approval |
+| 1 | Floor-plan extraction, Geometry JSON, 2D overlay, verification report | ✅ approved |
+| 2 | 3D floors, walls, doors, windows, stairs (Three.js / R3F) | ✅ ready for review |
 | 3 | Camera presets, floor switching, room focus, layer visibility, section / measure tools | |
 | 4 | Materials (finish codes once defined), lighting, roof (AR-10, AR-11/12 – ridge conflict) | |
 | 5 | Infrastructure layers + EE-02…EE-05 device positions (no invented circuits) | |

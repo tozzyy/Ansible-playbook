@@ -2681,10 +2681,11 @@
    "width": 2.6,
    "height": 2.1,
    "sillHeight": 0,
-   "status": "unverified",
+   "sillZ": 0.65,
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "unverified",
+    "size": "verified",
     "tag": "verified"
    },
    "measuredGap": 2.852,
@@ -2701,7 +2702,7 @@
     }
    ],
    "issues": [],
-   "note": "tag: circle 1 at (9.0, 14.3); gap 7.57-10.42 between wall and wall; measured clear gap 2.85 m vs scheduled width 2.60 m; plan gap != schedule width (>0.15 m)"
+   "note": "tag: circle 1 at (9.0, 14.3); gap 7.57-10.42 between wall and wall; measured clear gap 2.85 m vs scheduled width 2.60 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
    "id": "F1-O002",
@@ -2714,10 +2715,11 @@
    "width": 0.9,
    "height": 2.05,
    "sillHeight": 0,
-   "status": "unverified",
+   "sillZ": 0.65,
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "unverified",
+    "size": "verified",
     "tag": "verified"
    },
    "measuredGap": 1.138,
@@ -2736,7 +2738,7 @@
    "issues": [
     "ISS-15"
    ],
-   "note": "tag: circle 2 at (6.4, 8.1) - ห้องนอน 1; gap 5.76-6.90 between wall and column; measured clear gap 1.14 m vs scheduled width 0.90 m; plan gap != schedule width (>0.15 m)"
+   "note": "tag: circle 2 at (6.4, 8.1) - ห้องนอน 1; gap 5.76-6.90 between wall and column; measured clear gap 1.14 m vs scheduled width 0.90 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
    "id": "F1-O003",
@@ -2749,6 +2751,7 @@
    "width": 0.9,
    "height": 2.05,
    "sillHeight": 0,
+   "sillZ": 0.55,
    "status": "unverified",
    "fieldStatus": {
     "position": "unverified",
@@ -2784,6 +2787,7 @@
    "width": 0.9,
    "height": 2.05,
    "sillHeight": 0,
+   "sillZ": 0.65,
    "status": "unverified",
    "fieldStatus": {
     "position": "unverified",
@@ -2819,6 +2823,7 @@
    "width": 0.9,
    "height": 2.05,
    "sillHeight": 0,
+   "sillZ": 0.0,
    "status": "verified",
    "fieldStatus": {
     "position": "verified",
@@ -2854,6 +2859,7 @@
    "width": 1.1,
    "height": 2.05,
    "sillHeight": 0,
+   "sillZ": 0.65,
    "status": "conflict",
    "fieldStatus": {
     "position": "verified",
@@ -2889,10 +2895,11 @@
    "width": 0.9,
    "height": 2.05,
    "sillHeight": 0,
-   "status": "unverified",
+   "sillZ": 0.65,
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "unverified",
+    "size": "verified",
     "tag": "verified"
    },
    "measuredGap": 1.122,
@@ -2909,7 +2916,7 @@
     }
    ],
    "issues": [],
-   "note": "tag: circle 4 at (3.35, 10.0) - ห้องนั่งเล่น; gap 2.78-3.90 between wall and cross-wall; measured clear gap 1.12 m vs scheduled width 0.90 m; plan gap != schedule width (>0.15 m)"
+   "note": "tag: circle 4 at (3.35, 10.0) - ห้องนั่งเล่น; gap 2.78-3.90 between wall and cross-wall; measured clear gap 1.12 m vs scheduled width 0.90 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
    "id": "F1-O008",
@@ -2922,10 +2929,11 @@
    "width": 0.8,
    "height": 2.05,
    "sillHeight": 0,
-   "status": "unverified",
+   "sillZ": 0.65,
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "unverified",
+    "size": "verified",
     "tag": "verified"
    },
    "measuredGap": 1.033,
@@ -2942,7 +2950,7 @@
     }
    ],
    "issues": [],
-   "note": "tag: circle 5 at (1.75, 7.6) - ห้องน้ำ 1; gap 7.37-8.40 between wall and column; measured clear gap 1.03 m vs scheduled width 0.80 m; plan gap != schedule width (>0.15 m)"
+   "note": "tag: circle 5 at (1.75, 7.6) - ห้องน้ำ 1; gap 7.37-8.40 between wall and column; measured clear gap 1.03 m vs scheduled width 0.80 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
    "id": "F1-O009",
@@ -2955,6 +2963,7 @@
    "width": 0.8,
    "height": 2.05,
    "sillHeight": 0,
+   "sillZ": 0.65,
    "status": "unverified",
    "fieldStatus": {
     "position": "unverified",
@@ -2988,10 +2997,11 @@
    "width": 0.9,
    "height": 2.05,
    "sillHeight": 0,
-   "status": "unverified",
+   "sillZ": 0.65,
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "unverified",
+    "size": "verified",
     "tag": "verified"
    },
    "measuredGap": 1.418,
@@ -3008,7 +3018,7 @@
     }
    ],
    "issues": [],
-   "note": "tag: circle 6 at (14.7, 4.6) - ครัว; gap 14.11-15.53 between wall and wall; measured clear gap 1.42 m vs scheduled width 0.90 m; plan gap != schedule width (>0.15 m)"
+   "note": "tag: circle 6 at (14.7, 4.6) - ครัว; gap 14.11-15.53 between wall and wall; measured clear gap 1.42 m vs scheduled width 0.90 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
    "id": "F1-O011",
@@ -3021,6 +3031,7 @@
    "width": 2.45,
    "height": 2.05,
    "sillHeight": 0,
+   "sillZ": 0.65,
    "status": "unverified",
    "fieldStatus": {
     "position": "unverified",
@@ -3056,6 +3067,7 @@
    "width": 2.45,
    "height": 2.05,
    "sillHeight": 0,
+   "sillZ": 0.65,
    "status": "unverified",
    "fieldStatus": {
     "position": "unverified",
@@ -3091,6 +3103,7 @@
    "width": 0.7,
    "height": 1.8,
    "sillHeight": 0,
+   "sillZ": 0.65,
    "status": "verified",
    "fieldStatus": {
     "position": "verified",
@@ -3124,6 +3137,7 @@
    "width": 1.0,
    "height": 2.5,
    "sillHeight": 0.3,
+   "sillZ": 0.95,
    "status": "unverified",
    "fieldStatus": {
     "position": "unverified",
@@ -3159,6 +3173,7 @@
    "width": 1.0,
    "height": 2.5,
    "sillHeight": 0.3,
+   "sillZ": 0.95,
    "status": "unverified",
    "fieldStatus": {
     "position": "unverified",
@@ -3194,6 +3209,7 @@
    "width": 0.6,
    "height": 2.5,
    "sillHeight": 0.3,
+   "sillZ": 0.95,
    "status": "conflict",
    "fieldStatus": {
     "position": "verified",
@@ -3229,6 +3245,7 @@
    "width": 0.6,
    "height": 2.5,
    "sillHeight": 0.3,
+   "sillZ": 0.95,
    "status": "conflict",
    "fieldStatus": {
     "position": "verified",
@@ -3264,10 +3281,11 @@
    "width": 0.6,
    "height": 1.55,
    "sillHeight": 0.8,
-   "status": "unverified",
+   "sillZ": 1.45,
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "unverified",
+    "size": "verified",
     "tag": "verified"
    },
    "measuredGap": 0.874,
@@ -3284,7 +3302,7 @@
     }
    ],
    "issues": [],
-   "note": "tag: 2A text at (12.21, 13.79); gap 11.75-12.62 between wall and wall; measured clear gap 0.87 m vs scheduled width 0.60 m; plan gap != schedule width (>0.15 m)"
+   "note": "tag: 2A text at (12.21, 13.79); gap 11.75-12.62 between wall and wall; measured clear gap 0.87 m vs scheduled width 0.60 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
    "id": "F1-O019",
@@ -3297,10 +3315,11 @@
    "width": 0.6,
    "height": 1.55,
    "sillHeight": 0.8,
-   "status": "unverified",
+   "sillZ": 1.45,
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "unverified",
+    "size": "verified",
     "tag": "verified"
    },
    "measuredGap": 0.873,
@@ -3317,7 +3336,7 @@
     }
    ],
    "issues": [],
-   "note": "tag: 2A text at (14.79, 13.79); gap 14.34-15.21 between wall and wall; measured clear gap 0.87 m vs scheduled width 0.60 m; plan gap != schedule width (>0.15 m)"
+   "note": "tag: 2A text at (14.79, 13.79); gap 14.34-15.21 between wall and wall; measured clear gap 0.87 m vs scheduled width 0.60 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
    "id": "F1-O020",
@@ -3330,6 +3349,7 @@
    "width": 0.6,
    "height": 1.7,
    "sillHeight": 0.3,
+   "sillZ": 0.95,
    "status": "conflict",
    "fieldStatus": {
     "position": "verified",
@@ -3365,6 +3385,7 @@
    "width": 0.6,
    "height": 4.5,
    "sillHeight": 1.95,
+   "sillZ": 2.6,
    "status": "unverified",
    "fieldStatus": {
     "position": "unverified",
@@ -3400,6 +3421,7 @@
    "width": 0.6,
    "height": 4.5,
    "sillHeight": 1.95,
+   "sillZ": 2.6,
    "status": "unverified",
    "fieldStatus": {
     "position": "unverified",
@@ -3435,6 +3457,7 @@
    "width": 0.6,
    "height": 4.5,
    "sillHeight": 1.95,
+   "sillZ": 2.6,
    "status": "unverified",
    "fieldStatus": {
     "position": "unverified",
@@ -3470,10 +3493,11 @@
    "width": 2.6,
    "height": 2.75,
    "sillHeight": 2.55,
-   "status": "unverified",
+   "sillZ": 3.2,
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "unverified",
+    "size": "verified",
     "tag": "verified"
    },
    "measuredGap": 2.852,
@@ -3490,7 +3514,7 @@
     }
    ],
    "issues": [],
-   "note": "tag: AR-09 hexagon 4 at (9.0, 13.75) - above D1; gap 7.57-10.42 between wall and wall; measured clear gap 2.85 m vs scheduled width 2.60 m; plan gap != schedule width (>0.15 m)"
+   "note": "tag: AR-09 hexagon 4 at (9.0, 13.75) - above D1; gap 7.57-10.42 between wall and wall; measured clear gap 2.85 m vs scheduled width 2.60 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
    "id": "F1-O025",
@@ -3503,10 +3527,11 @@
    "width": 0.6,
    "height": 0.4,
    "sillHeight": 1.65,
-   "status": "unverified",
+   "sillZ": 2.3,
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "unverified",
+    "size": "verified",
     "tag": "verified"
    },
    "measuredGap": 0.916,
@@ -3523,7 +3548,7 @@
     }
    ],
    "issues": [],
-   "note": "tag: hexagon 5 at (-0.25, 9.1) - ห้องน้ำ 1A; gap 8.60-9.51 between column and wall; measured clear gap 0.92 m vs scheduled width 0.60 m; plan gap != schedule width (>0.15 m)"
+   "note": "tag: hexagon 5 at (-0.25, 9.1) - ห้องน้ำ 1A; gap 8.60-9.51 between column and wall; measured clear gap 0.92 m vs scheduled width 0.60 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
    "id": "F1-O026",
@@ -3536,10 +3561,11 @@
    "width": 0.6,
    "height": 0.4,
    "sillHeight": 1.65,
-   "status": "unverified",
+   "sillZ": 1.65,
+   "status": "verified",
    "fieldStatus": {
     "position": "verified",
-    "size": "unverified",
+    "size": "verified",
     "tag": "verified"
    },
    "measuredGap": 0.884,
@@ -3556,7 +3582,7 @@
     }
    ],
    "issues": [],
-   "note": "tag: hexagon 5 at (17.65, 16.85) - ห้องเก็บของ; gap 16.52-17.40 between wall and wall; measured clear gap 0.88 m vs scheduled width 0.60 m; plan gap != schedule width (>0.15 m)"
+   "note": "tag: hexagon 5 at (17.65, 16.85) - ห้องเก็บของ; gap 16.52-17.40 between wall and wall; measured clear gap 0.88 m vs scheduled width 0.60 m; plan gap != schedule width; schedule frame size used (DEC-01)"
   },
   {
    "id": "F1-O027",
@@ -3569,6 +3595,7 @@
    "width": 1.15,
    "height": 0.95,
    "sillHeight": 1.0,
+   "sillZ": 1.55,
    "status": "unverified",
    "fieldStatus": {
     "position": "unverified",
@@ -3602,6 +3629,7 @@
    "width": 0.95,
    "height": 0.4,
    "sillHeight": 1.65,
+   "sillZ": 2.3,
    "status": "conflict",
    "fieldStatus": {
     "position": "verified",
@@ -3672,7 +3700,7 @@
    "fieldStatus": {
     "polygon": "verified",
     "floor": "conflict",
-    "ceiling": "conflict"
+    "ceiling": "verified"
    },
    "sources": [
     {
@@ -3684,6 +3712,9 @@
    "issues": [
     "ISS-04",
     "ISS-03"
+   ],
+   "decisions": [
+    "DEC-02"
    ],
    "note": ""
   },
@@ -3743,6 +3774,7 @@
    "issues": [
     "ISS-04"
    ],
+   "decisions": [],
    "note": "East side defined only by D5 frame (M-B1A); tag is placed outside the building with a leader."
   },
   {
@@ -3785,11 +3817,11 @@
     "y": 3.595
    },
    "areaBasis": "wall centre-lines",
-   "status": "conflict",
+   "status": "verified",
    "fieldStatus": {
     "polygon": "verified",
     "floor": "verified",
-    "ceiling": "conflict"
+    "ceiling": "verified"
    },
    "sources": [
     {
@@ -3800,6 +3832,9 @@
    ],
    "issues": [
     "ISS-03"
+   ],
+   "decisions": [
+    "DEC-02"
    ],
    "note": ""
   },
@@ -3843,11 +3878,11 @@
     "y": 3.9
    },
    "areaBasis": "wall centre-lines",
-   "status": "conflict",
+   "status": "verified",
    "fieldStatus": {
     "polygon": "verified",
     "floor": "verified",
-    "ceiling": "conflict"
+    "ceiling": "verified"
    },
    "sources": [
     {
@@ -3858,6 +3893,9 @@
    ],
    "issues": [
     "ISS-03"
+   ],
+   "decisions": [
+    "DEC-02"
    ],
    "note": "Section A-A: tag C1 +2.90 for this room."
   },
@@ -3901,11 +3939,11 @@
     "y": 3.595
    },
    "areaBasis": "wall centre-lines",
-   "status": "conflict",
+   "status": "unverified",
    "fieldStatus": {
     "polygon": "unverified",
     "floor": "verified",
-    "ceiling": "conflict"
+    "ceiling": "verified"
    },
    "sources": [
     {
@@ -3917,6 +3955,9 @@
    "issues": [
     "ISS-24",
     "ISS-03"
+   ],
+   "decisions": [
+    "DEC-02"
    ],
    "note": ""
   },
@@ -3960,11 +4001,11 @@
     "y": 3.595
    },
    "areaBasis": "wall centre-lines",
-   "status": "conflict",
+   "status": "unverified",
    "fieldStatus": {
     "polygon": "unverified",
     "floor": "verified",
-    "ceiling": "conflict"
+    "ceiling": "verified"
    },
    "sources": [
     {
@@ -3976,6 +4017,9 @@
    "issues": [
     "ISS-24",
     "ISS-03"
+   ],
+   "decisions": [
+    "DEC-02"
    ],
    "note": ""
   },
@@ -4019,11 +4063,11 @@
     "y": 3.595
    },
    "areaBasis": "wall centre-lines",
-   "status": "conflict",
+   "status": "unverified",
    "fieldStatus": {
     "polygon": "unverified",
     "floor": "verified",
-    "ceiling": "conflict"
+    "ceiling": "verified"
    },
    "sources": [
     {
@@ -4035,6 +4079,9 @@
    "issues": [
     "ISS-24",
     "ISS-03"
+   ],
+   "decisions": [
+    "DEC-02"
    ],
    "note": ""
   },
@@ -4095,6 +4142,7 @@
     "ISS-24",
     "ISS-05"
    ],
+   "decisions": [],
    "note": ""
   },
   {
@@ -4154,6 +4202,7 @@
     "ISS-24",
     "ISS-19"
    ],
+   "decisions": [],
    "note": "No section through the kitchen block, so +2.80 cannot be cross-checked."
   },
   {
@@ -4213,6 +4262,7 @@
     "ISS-24",
     "ISS-19"
    ],
+   "decisions": [],
    "note": ""
   },
   {
@@ -4255,11 +4305,11 @@
     "y": 2.895
    },
    "areaBasis": "wall centre-lines",
-   "status": "conflict",
+   "status": "verified",
    "fieldStatus": {
     "polygon": "verified",
     "floor": "verified",
-    "ceiling": "conflict"
+    "ceiling": "verified"
    },
    "sources": [
     {
@@ -4270,6 +4320,9 @@
    ],
    "issues": [
     "ISS-03"
+   ],
+   "decisions": [
+    "DEC-02"
    ],
    "note": "North side = folding door D7 line."
   },
@@ -4313,11 +4366,11 @@
     "y": 2.895
    },
    "areaBasis": "wall centre-lines",
-   "status": "conflict",
+   "status": "verified",
    "fieldStatus": {
     "polygon": "verified",
     "floor": "verified",
-    "ceiling": "conflict"
+    "ceiling": "verified"
    },
    "sources": [
     {
@@ -4328,6 +4381,9 @@
    ],
    "issues": [
     "ISS-03"
+   ],
+   "decisions": [
+    "DEC-02"
    ],
    "note": "North side = folding door D7.1 line."
   },
@@ -4387,6 +4443,7 @@
    "issues": [
     "ISS-18"
    ],
+   "decisions": [],
    "note": "Open porch bounded by columns at grid 3/4 x C/D."
   },
   {
@@ -4443,6 +4500,7 @@
     }
    ],
    "issues": [],
+   "decisions": [],
    "note": ""
   },
   {
@@ -4507,6 +4565,7 @@
     }
    ],
    "issues": [],
+   "decisions": [],
    "note": "Open-sided carport; boundary = column grid 4/5\" x D/F (AR-08 6.00 x 9.00+1.70)."
   },
   {
@@ -4568,6 +4627,7 @@
     }
    ],
    "issues": [],
+   "decisions": [],
    "note": "Extent not drawn on plan; shown under the upper flight only."
   }
  ],
