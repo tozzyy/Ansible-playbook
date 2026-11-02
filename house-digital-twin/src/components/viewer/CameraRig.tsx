@@ -17,20 +17,15 @@ function damp(cur: number, goal: number, vel: { v: number }, smooth: number, dt:
   return goal + (change + temp) * exp;
 }
 
-type Props = {
-  onTopView: (top: boolean) => void;
-  compassRef: React.RefObject<HTMLDivElement | null>;
-};
+type Props = { compassRef: React.RefObject<HTMLDivElement | null> };
 
-export function CameraRig({ onTopView, compassRef }: Props) {
+export function CameraRig({ compassRef }: Props) {
   const { camera, size } = useThree();
   const controls = useRef<OrbitControlsImpl>(null);
   const camRequest = useViewerStore((s) => s.camRequest);
-  const autoOrbit = useViewerStore((s) => s.autoOrbit);
 
   const anim = useRef<null | { goal: number[]; cur: number[]; vel: { v: number }[] }>(null);
   const lastUser = useRef(performance.now());
-  const wasTop = useRef<boolean | null>(null);
 
   const startTo = (p: typeof HOME) => {
     const c = controls.current;
@@ -84,12 +79,7 @@ export function CameraRig({ onTopView, compassRef }: Props) {
       camera.lookAt(c.target);
       if (done) anim.current = null;
     }
-    c.autoRotate = autoOrbit && !A && performance.now() - lastUser.current > 8000;
     c.update();
-
-    // top view => show grid dimension chains (reference-site idea)
-    const top = c.getPolarAngle() < 0.35;
-    if (top !== wasTop.current) { wasTop.current = top; onTopView(top); }
 
     // compass: project the plan north vector to screen space
     if (compassRef.current) {

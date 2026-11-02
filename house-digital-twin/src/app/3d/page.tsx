@@ -1,7 +1,5 @@
-import { ViewerClient } from "@/components/viewer/ViewerClient";
+import { redirect } from "next/navigation";
 
-export const metadata = { title: "3D Viewer · House Digital Twin" };
-
-export default function Viewer3DPage() {
-  return <ViewerClient />;
+export default function Old3D() {
+  redirect("/");
 }

@@ -96,14 +96,14 @@ export const EXTENTS = { x0: -0.2, x1: 17.2, y0: -0.2, y1: 26.8, zTop: 8.5 };
 const C: [number, number, number] = [8.5, 2.5, 12.5];
 
 export const PRESETS: Record<string, { label: string; preset: CamPreset }> = {
-  iso:   { label: "ไอโซ (Iso)",    preset: { theta: Math.PI / 4,      phi: 0.95, radius: 38, target: C } },
-  top:   { label: "มุมบน (Top)",   preset: { theta: 0,                phi: 0.001, radius: 40, target: [8.5, 0, 13] } },
-  front: { label: "ด้านหน้า (A)",  preset: { theta: 0,                phi: 1.35, radius: 34, target: C } },
-  back:  { label: "ด้านหลัง",      preset: { theta: Math.PI,          phi: 1.35, radius: 34, target: C } },
-  left:  { label: "ด้านซ้าย",       preset: { theta: -Math.PI / 2,     phi: 1.35, radius: 34, target: C } },
-  right: { label: "ด้านขวา",       preset: { theta: Math.PI / 2,      phi: 1.35, radius: 34, target: C } },
+  home:      { label: "หน้าบ้าน",  preset: { theta: -0.45, phi: 1.32, radius: 34, target: [9, 3.2, 14] } },
+  front:     { label: "ด้านหน้า",  preset: { theta: 0,     phi: 1.42, radius: 36, target: C } },
+  side:      { label: "ด้านข้าง",  preset: { theta: -Math.PI / 2, phi: 1.32, radius: 34, target: C } },
+  back:      { label: "ด้านหลัง",  preset: { theta: Math.PI, phi: 1.32, radius: 34, target: C } },
+  top:       { label: "มุมบน",    preset: { theta: 0, phi: 0.001, radius: 40, target: [8.5, 0, 13] } },
+  dollhouse: { label: "ภายใน",    preset: { theta: 0.35, phi: 0.75, radius: 32, target: [8.5, 0.65, 10] } },
 };
-export const HOME = PRESETS.iso.preset;
+export const HOME = PRESETS.home.preset;
 
 export function roomPreset(r: Room): CamPreset {
   const b = roomBounds(r);
@@ -190,5 +190,4 @@ export function snapPoint(p: [number, number, number], ray?: Ray): SnapResult {
 }
 
 /** Plane helpers for the section tool (world coords). */
-export const sectionLine = (id: "A-A" | "B-B" | "C-C") => building.sections.find((s) => s.id === id)!;
 export const floorLevel = (floorId: "F1" | "F2") => (floorId === "F2" ? 4.25 : 0.65);
