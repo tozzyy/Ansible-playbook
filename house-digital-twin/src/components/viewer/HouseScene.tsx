@@ -6,9 +6,9 @@
 import { useMemo, useRef, useState } from "react";
 import * as THREE from "three";
 import { useFrame, type ThreeEvent } from "@react-three/fiber";
-import { Html, Line } from "@react-three/drei";
+import { Environment as DreiEnvironment, Html, Line } from "@react-three/drei";
 import { building, floors } from "@/lib/data";
-import { centroid, openingCenter, roomBounds, stairSteps, wallLength, wallPlacement, wallProfile } from "@/lib/model";
+import { centroid, isArched, openingCenter, roomBounds, stairSteps, wallLength, wallPlacement, wallProfile } from "@/lib/model";
 import { useViewerStore } from "@/lib/viewerStore";
 import type { Floor, Opening, Room, Selection, Wall } from "@/types/geometry";
 
@@ -62,8 +62,13 @@ function WallMesh({ w, openings, ghost }: { w: Wall; openings: Opening[]; ghost:
   const geom = useMemo(() => {
     const p = wallProfile(w, openings);
     const shape = new THREE.Shape(p.outline.map(([u, v]) => new THREE.Vector2(u, v)));
-    for (const [u0, v0, u1, v1] of p.holes) {
-      shape.holes.push(new THREE.Path([new THREE.Vector2(u0, v0), new THREE.Vector2(u1, v0), new THREE.Vector2(u1, v1), new THREE.Vector2(u0, v1)]));
+    for (const [u0, v0, u1, v1, r] of p.holes) {
+      const path = new THREE.Path();
+      path.moveTo(u0, v0); path.lineTo(u1, v0);
+      if (r > 0) { path.lineTo(u1, v1 - r); path.absarc((u0 + u1) / 2, v1 - r, r, 0, Math.PI, false); }
+      else { path.lineTo(u1, v1); path.lineTo(u0, v1); }
+      path.closePath();
+      shape.holes.push(path);
     }
     return new THREE.ExtrudeGeometry(shape, { depth: w.thickness, bevelEnabled: false });
   }, [w, openings]);
@@ -79,6 +84,7 @@ function OpeningMesh({ o, w, ghost }: { o: Opening; w: Wall; ghost: boolean }) {
   const W = o.width, H = o.height;
   const op = ghost ? 0.15 : 1;
   const glass = o.kind === "window" || o.typeCode === "GL1";
+  if (isArched(o)) return <ArchedWindow o={o} w={w} ghost={ghost} />;
   return (
     <group position={[x, y, z]} rotation={[0, rotY, 0]} onClick={measureOnly}>
       <mesh material={glass ? mat(MAT.glass, ghost ? 0.1 : 0.35, { roughness: 0.05, metalness: 0.4 }) : mat(MAT.door, op, { roughness: 0.5 })}>
@@ -88,6 +94,34 @@ function OpeningMesh({ o, w, ghost }: { o: Opening; w: Wall; ghost: boolean }) {
       {o.kind === "window" && <mesh position={[0, -H / 2 + f / 2, 0]} material={mat(MAT.frame, op, { roughness: 0.4 })}><boxGeometry args={[W, f, w.thickness + 0.02]} /></mesh>}
       <mesh position={[-W / 2 + f / 2, 0, 0]} material={mat(MAT.frame, op, { roughness: 0.4 })}><boxGeometry args={[f, H, w.thickness + 0.02]} /></mesh>
       <mesh position={[W / 2 - f / 2, 0, 0]} material={mat(MAT.frame, op, { roughness: 0.4 })}><boxGeometry args={[f, H, w.thickness + 0.02]} /></mesh>
+    </group>
+  );
+}
+
+/** Arched fixed window (W4): arched glass, black frame and the 4 x 3 mullion grid of AR-27. */
+function ArchedWindow({ o, w, ghost }: { o: Opening; w: Wall; ghost: boolean }) {
+  const [x, y, z] = openingCenter(o, w);
+  const W = o.width, H = o.height, r = W / 2, f = 0.05;
+  const glassGeom = useMemo(() => {
+    const sh = new THREE.Shape();
+    sh.moveTo(-W / 2, -H / 2); sh.lineTo(W / 2, -H / 2); sh.lineTo(W / 2, H / 2 - r);
+    sh.absarc(0, H / 2 - r, r, 0, Math.PI, false); sh.closePath();
+    return new THREE.ShapeGeometry(sh, 32);
+  }, [W, H, r]);
+  const frameM = mat(MAT.frame, ghost ? 0.15 : 1, { roughness: 0.4 });
+  const bars: React.ReactNode[] = [];
+  for (const u of [-W / 4, 0, W / 4]) {
+    const top = Math.sqrt(Math.max(r * r - u * u, 0)) + H / 2 - r;
+    bars.push(<mesh key={"v" + u} position={[u, (-H / 2 + top) / 2, 0]} material={frameM}><boxGeometry args={[0.04, top + H / 2, 0.06]} /></mesh>);
+  }
+  for (const v of [-H / 2 + (H - r) / 3, -H / 2 + (2 * (H - r)) / 3, H / 2 - r]) {
+    bars.push(<mesh key={"h" + v} position={[0, v, 0]} material={frameM}><boxGeometry args={[W, 0.04, 0.06]} /></mesh>);
+  }
+  return (
+    <group position={[x, y, z]} rotation={[0, w.axis === "h" ? 0 : Math.PI / 2, 0]} onClick={measureOnly}>
+      <mesh geometry={glassGeom} material={mat(MAT.glass, ghost ? 0.1 : 0.35, { roughness: 0.05, metalness: 0.4, side: THREE.DoubleSide })} />
+      {bars}
+      <mesh position={[0, -H / 2 + f / 2, 0]} material={frameM}><boxGeometry args={[W, f, w.thickness + 0.02]} /></mesh>
     </group>
   );
 }
@@ -122,9 +156,10 @@ function RoomLabel({ r, show }: { r: Room; show: boolean }) {
 }
 
 function FloorGroup({ floor, visible, labels }: { floor: Floor; visible: boolean; labels: boolean }) {
-  const { show, focusRoomId } = useViewerStore();
+  const { show, focusRoomId, viewMode } = useViewerStore();
   const focusRoom = floors.flatMap((f) => f.rooms).find((r) => r.id === focusRoomId);
   const b = focusRoom ? roomBounds(focusRoom) : null;
+  const labelMode = viewMode === "interior" || !!focusRoom; // names only inside, never on the facade
   const near = (x: number, y: number) => !b || (x >= b.x0 - 0.2 && x <= b.x1 + 0.2 && y >= b.y0 - 0.2 && y <= b.y1 + 0.2);
   const ghost = (w: Wall) => !!b && !(near(w.start[0], w.start[1]) && near(w.end[0], w.end[1]));
   const byWall = useMemo(() => {
@@ -146,7 +181,7 @@ function FloorGroup({ floor, visible, labels }: { floor: Floor; visible: boolean
         return <OpeningMesh key={o.id} o={o} w={w} ghost={ghost(w)} />;
       })}
       {floor.rooms.map((r) => (
-        <RoomLabel key={r.id} r={r} show={show.labels && visible && labels && (!focusRoom || r.id === focusRoom.id)} />
+        <RoomLabel key={r.id} r={r} show={show.labels && labelMode && visible && labels && (!focusRoom || r.id === focusRoom.id)} />
       ))}
     </group>
   );
@@ -263,14 +298,11 @@ export function Environment() {
   useFrame(() => { if (ref.current) ref.current.target = target; });
   return (
     <>
-      <hemisphereLight args={["#ffffff", "#8a9a7a", 0.9]} />
-      <directionalLight ref={ref} position={sunPos.toArray()} intensity={1.6} castShadow
-        shadow-mapSize={[2048, 2048]} shadow-camera-left={-25} shadow-camera-right={25} shadow-camera-top={25} shadow-camera-bottom={-25} shadow-camera-far={120} shadow-bias={-0.0004} />
+      <DreiEnvironment files="/hdri/sky_1k.hdr" background environmentIntensity={0.9} />
+      <hemisphereLight args={["#ffffff", "#8a9a7a", 0.35]} />
+      <directionalLight ref={ref} position={sunPos.toArray()} intensity={2.2} castShadow
+        shadow-mapSize={[2048, 2048]} shadow-camera-left={-30} shadow-camera-right={30} shadow-camera-top={30} shadow-camera-bottom={-30} shadow-camera-far={120} shadow-bias={-0.0004} />
       <primitive object={target} />
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[8.5, -0.03, 13]} receiveShadow onClick={measureOnly}>
-        <planeGeometry args={[140, 140]} />
-        <meshStandardMaterial color="#9fbf86" roughness={1} />
-      </mesh>
     </>
   );
 }

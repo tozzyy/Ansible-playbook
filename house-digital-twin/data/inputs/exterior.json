@@ -1,0 +1,350 @@
+{
+  "_doc": "Exterior dressing for the Modern Classic look (owner reference renders). Plan metres (x along numeric grids, y towards F), z = absolute level. Values read from AR-10 (roof plan), AR-14 / AR-16 (elevations); site items (fence, gate, driveway, planting, cars) are approximate - not in the construction drawings.",
+  "colors": {
+    "wall": "#f4f3ef",
+    "plinth": "#8c9097",
+    "roof": "#4a4f57",
+    "trim": "#ffffff",
+    "frame": "#22252b",
+    "gate": "#6b7079",
+    "lawn": "#7ea55e",
+    "paver": "#b9bcc0"
+  },
+  "roofs": [
+    {
+      "id": "main",
+      "rect": [
+        -1.18,
+        3.85,
+        17.18,
+        14.71
+      ],
+      "eave": 8.45,
+      "ridge": 11.07,
+      "ridgeAxis": "x",
+      "hip": [
+        true,
+        true
+      ],
+      "source": "AR-10 eave outline; AR-14/AR-16 wall plate +8.50, ridge +11.07 (DEC-03)"
+    },
+    {
+      "id": "kitchen",
+      "rect": [
+        8.99,
+        -0.97,
+        16.97,
+        4.9
+      ],
+      "eave": 3.4,
+      "ridge": 5.56,
+      "ridgeAxis": "y",
+      "hip": [
+        true,
+        false
+      ],
+      "source": "AR-10 outline; AR-16 eave ~+3.40, ridge ~+5.56 against the main wall"
+    }
+  ],
+  "frieze": {
+    "rect": [
+      -0.1,
+      4.9,
+      16.1,
+      13.6
+    ],
+    "z0": 7.35,
+    "z1": 8.45,
+    "source": "AR-14: wall continues from roof beam +7.35 to wall plate +8.50 with cornice"
+  },
+  "plinth": {
+    "height": 0.6,
+    "rects": [
+      [
+        -0.1,
+        4.9,
+        16.1,
+        13.6
+      ],
+      [
+        9.9,
+        -0.1,
+        16.1,
+        4.95
+      ]
+    ]
+  },
+  "pilasters": [
+    {
+      "x": 0.0,
+      "y": 13.6,
+      "z0": 0.0,
+      "z1": 4.15,
+      "w": 0.5,
+      "d": 0.2,
+      "stone": true
+    },
+    {
+      "x": 2.5,
+      "y": 13.6,
+      "z0": 0.0,
+      "z1": 4.15,
+      "w": 0.5,
+      "d": 0.2,
+      "stone": true
+    },
+    {
+      "x": 0.0,
+      "y": 13.6,
+      "z0": 4.15,
+      "z1": 8.2,
+      "w": 0.4,
+      "d": 0.12,
+      "stone": false
+    },
+    {
+      "x": 2.5,
+      "y": 13.6,
+      "z0": 4.15,
+      "z1": 8.2,
+      "w": 0.4,
+      "d": 0.12,
+      "stone": false
+    },
+    {
+      "x": 16.0,
+      "y": 13.6,
+      "z0": 4.15,
+      "z1": 8.2,
+      "w": 0.4,
+      "d": 0.12,
+      "stone": false
+    }
+  ],
+  "portal": {
+    "x0": 6.85,
+    "x1": 11.15,
+    "y0": 13.6,
+    "y1": 16.25,
+    "z0": 0.55,
+    "z1": 7.45,
+    "sideArch": {
+      "y0": 14.05,
+      "y1": 15.75,
+      "spring": 6.0
+    },
+    "frontLintel": 6.95,
+    "source": "AR-14 / AR-16 double-height entrance portal (arched side openings R0.65); plan widths 2.80 / 1.70 (DEC-19)"
+  },
+  "steps": {
+    "x0": 7.6,
+    "x1": 10.4,
+    "y0": 16.25,
+    "n": 3,
+    "rise": 0.18,
+    "tread": 0.3,
+    "top": 0.55
+  },
+  "carport": {
+    "fascia": [
+      3.25,
+      4.05
+    ],
+    "pillars": [
+      [
+        11.0,
+        17.7
+      ],
+      [
+        17.0,
+        17.7
+      ],
+      [
+        11.0,
+        22.2
+      ],
+      [
+        17.0,
+        22.2
+      ],
+      [
+        11.0,
+        26.7
+      ],
+      [
+        17.0,
+        26.7
+      ]
+    ],
+    "pillarSize": 0.5
+  },
+  "driveway": [
+    [
+      6.3,
+      13.6,
+      11.5,
+      31.0
+    ],
+    [
+      11.0,
+      13.6,
+      17.5,
+      31.0
+    ]
+  ],
+  "fence": {
+    "rect": [
+      -4.5,
+      -4.5,
+      21.5,
+      31.0
+    ],
+    "height": 1.8,
+    "gate": [
+      9.0,
+      15.0
+    ],
+    "pedestrianGate": [
+      15.6,
+      16.6
+    ]
+  },
+  "cars": [
+    {
+      "x": 12.2,
+      "y": 22.6
+    },
+    {
+      "x": 14.0,
+      "y": 22.6
+    },
+    {
+      "x": 15.8,
+      "y": 22.6
+    }
+  ],
+  "palms": [
+    [
+      -3.2,
+      0
+    ],
+    [
+      -3.2,
+      6
+    ],
+    [
+      -3.2,
+      12
+    ],
+    [
+      -3.2,
+      18
+    ],
+    [
+      -3.2,
+      24
+    ],
+    [
+      20.3,
+      -2
+    ],
+    [
+      20.3,
+      4
+    ],
+    [
+      20.3,
+      10
+    ],
+    [
+      3,
+      -3.3
+    ],
+    [
+      8,
+      -3.3
+    ],
+    [
+      19.5,
+      28.5
+    ],
+    [
+      -2.5,
+      29
+    ]
+  ],
+  "topiary": [
+    [
+      1.2,
+      17.5
+    ],
+    [
+      2.8,
+      18.5
+    ],
+    [
+      4.4,
+      17.5
+    ],
+    [
+      1.2,
+      21
+    ],
+    [
+      4.4,
+      21.5
+    ]
+  ],
+  "hedges": [
+    [
+      0.0,
+      13.75,
+      6.8,
+      14.15
+    ],
+    [
+      6.4,
+      16.3,
+      7.5,
+      16.7
+    ],
+    [
+      10.5,
+      16.3,
+      11.0,
+      16.7
+    ]
+  ],
+  "wallLights": [
+    [
+      0.0,
+      13.75,
+      2.9
+    ],
+    [
+      2.5,
+      13.75,
+      2.9
+    ],
+    [
+      7.0,
+      16.3,
+      3.2
+    ],
+    [
+      11.0,
+      16.3,
+      3.2
+    ],
+    [
+      0.0,
+      13.7,
+      6.6
+    ],
+    [
+      2.5,
+      13.7,
+      6.6
+    ]
+  ]
+}

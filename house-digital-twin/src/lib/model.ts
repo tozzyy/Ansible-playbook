@@ -9,11 +9,14 @@ import type { CamPreset } from "@/lib/viewerStore";
 
 export const wallLength = (w: Wall) => Math.hypot(w.end[0] - w.start[0], w.end[1] - w.start[1]);
 
+/** W4 is the arched entrance window (AR-27: R1.300, 2.60 wide). */
+export const isArched = (o: Opening) => o.typeCode === "W4";
+
 export type WallProfile = {
   /** closed outline in wall-local (u along wall from start, v up from wall base) */
   outline: [number, number][];
-  /** rectangular holes (windows) in wall-local coords: [u0, v0, u1, v1] */
-  holes: [number, number, number, number][];
+  /** window holes in wall-local coords: [u0, v0, u1, v1, archRadius] (archRadius 0 = rectangle) */
+  holes: [number, number, number, number, number][];
 };
 
 /** Wall elevation profile: doors (sill at base) are cut as notches, windows as holes. */
@@ -22,7 +25,7 @@ export function wallProfile(w: Wall, openings: Opening[]): WallProfile {
   const H = w.height;
   const eps = 0.02;
   const notches: [number, number, number][] = [];
-  const holes: [number, number, number, number][] = [];
+  const holes: [number, number, number, number, number][] = [];
   for (const o of openings) {
     const u0 = Math.max(o.offset, 0);
     const u1 = Math.min(o.offset + o.width, L);
@@ -30,7 +33,7 @@ export function wallProfile(w: Wall, openings: Opening[]): WallProfile {
     const v0 = o.sillZ - w.baseElevation;
     const v1 = Math.min(v0 + o.height, H - eps);
     if (v0 <= eps) notches.push([u0, u1, v1]);
-    else if (v1 - v0 > 0.05) holes.push([Math.max(u0, eps), v0, Math.min(u1, L - eps), v1]);
+    else if (v1 - v0 > 0.05) holes.push([Math.max(u0, eps), v0, Math.min(u1, L - eps), v1, isArched(o) ? (u1 - u0) / 2 : 0]);
   }
   notches.sort((a, b) => a[0] - b[0]);
   const outline: [number, number][] = [[0, 0]];
@@ -191,3 +194,26 @@ export function snapPoint(p: [number, number, number], ray?: Ray): SnapResult {
 
 /** Plane helpers for the section tool (world coords). */
 export const floorLevel = (floorId: "F1" | "F2") => (floorId === "F2" ? 4.25 : 0.65);
+
+// ------------------------------------------------------------------ roof
+export type RoofFace = { pts: [number, number, number][]; gable: boolean; eaveAlong: [number, number, number]; eave: number };
+
+/**
+ * Hip roof over a plan rectangle. Ridge along `ridgeAxis`; each end is hipped (true) or a vertical gable (false).
+ * Returns faces in world coords [x, z(level), planY].
+ */
+export function hipRoof(rect: [number, number, number, number], eave: number, ridge: number, ridgeAxis: "x" | "y", hip: [boolean, boolean]): RoofFace[] {
+  const [x0, y0, x1, y1] = rect;
+  const [u0, u1, v0, v1] = ridgeAxis === "x" ? [x0, x1, y0, y1] : [y0, y1, x0, x1];
+  const h = (v1 - v0) / 2, vm = (v0 + v1) / 2;
+  const r0 = u0 + (hip[0] ? h : 0), r1 = u1 - (hip[1] ? h : 0);
+  const P = (u: number, v: number, z: number): [number, number, number] => (ridgeAxis === "x" ? [u, z, v] : [v, z, u]);
+  const U: [number, number, number] = ridgeAxis === "x" ? [1, 0, 0] : [0, 0, 1];
+  const V: [number, number, number] = ridgeAxis === "x" ? [0, 0, 1] : [1, 0, 0];
+  return [
+    { pts: [P(u0, v0, eave), P(u1, v0, eave), P(r1, vm, ridge), P(r0, vm, ridge)], gable: false, eaveAlong: U, eave },
+    { pts: [P(u1, v1, eave), P(u0, v1, eave), P(r0, vm, ridge), P(r1, vm, ridge)], gable: false, eaveAlong: U, eave },
+    { pts: [P(u0, v1, eave), P(u0, v0, eave), P(r0, vm, ridge)], gable: !hip[0], eaveAlong: V, eave },
+    { pts: [P(u1, v0, eave), P(u1, v1, eave), P(r1, vm, ridge)], gable: !hip[1], eaveAlong: V, eave },
+  ];
+}

@@ -8,6 +8,7 @@ import { HouseScene, Environment } from "./HouseScene";
 import { CameraRig } from "./CameraRig";
 import { SectionTool } from "./SectionTool";
 import { MeasureTool } from "./MeasureTool";
+import { Exterior } from "./Exterior";
 import { Checkbox } from "@/components/ui/checkbox";
 import { cn, fmt, fmtLevel } from "@/lib/utils";
 
@@ -171,10 +172,11 @@ export function Viewer3D() {
     <div className="flex min-h-0 flex-1" style={{ height: "calc(100dvh - 3rem)" }}>
       <aside className="hidden w-64 shrink-0 flex-col overflow-y-auto border-r border-border bg-card text-sm md:flex"><SidebarContent /></aside>
       <div className="relative min-w-0 flex-1" style={{ background: "var(--canvas)" }}>
-        <Canvas shadows="percentage" dpr={[1, 2]} camera={{ fov: 40, near: 0.1, far: 400, position: [40, 30, 50] }} gl={{ antialias: true, preserveDrawingBuffer: true }}
+        <Canvas shadows="percentage" dpr={[1, 1.5]} camera={{ fov: 40, near: 0.1, far: 600, position: [40, 30, 50] }} gl={{ antialias: true, preserveDrawingBuffer: true }}
           onPointerMissed={(e) => { if (e.type === "click" && s.tool !== "measure") s.select(null); }}>
           <Environment />
           <HouseScene />
+          <Exterior />
           <SectionTool />
           <MeasureTool />
           <CameraRig compassRef={compassRef} />
